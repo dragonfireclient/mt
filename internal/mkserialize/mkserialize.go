@@ -82,10 +82,10 @@ func structPragma(c *ast.Comment, sp *[]func(), expr string, de bool) {
 		if de {
 			fmt.Println("{ r, err := zstd.NewReader(byteReader{r}); chk(err)")
 			*sp = append(*sp, func() {
-				fmt.Println("chk(r.Close()) }")
+				fmt.Println("r.Close() }")
 			})
 		} else {
-			fmt.Println("{ w := zstd.NewWriter(w)")
+			fmt.Println("{ w, err := zstd.NewWriter(w); chk(err)")
 			*sp = append(*sp, func() {
 				fmt.Println("chk(w.Close()) }")
 			})

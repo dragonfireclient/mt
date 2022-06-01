@@ -22881,7 +22881,8 @@ func (obj *MapBlk) serialize(w io.Writer) {
 		}
 	}
 	{
-		w := zstd.NewWriter(w)
+		w, err := zstd.NewWriter(w)
+		chk(err)
 		for local285 := range (*(*(struct {
 			Flags   MapBlkFlags
 			LitFrom LitFromBlks
@@ -23124,7 +23125,7 @@ func (obj *MapBlk) deserialize(r io.Reader) {
 			}))(obj)).Param2)[:])
 			chk(err)
 		}
-		chk(r.Close())
+		r.Close()
 	}
 	{
 		p := &(*(*(struct {
