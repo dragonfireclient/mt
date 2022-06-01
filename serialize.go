@@ -13,6 +13,8 @@ import (
 	"math"
 	"sort"
 	"unicode/utf16"
+
+	"github.com/klauspost/compress/zstd"
 )
 
 func write8(w io.Writer, x uint8) {
