@@ -23,30 +23,30 @@
 		_, err := w.Write(buf)
 		chk(err)
 	}
-
+	
 byte	write8(w, uint8(x))
 uint8	write8(w, uint8(x))
 uint16	write16(w, uint16(x))
 uint32	write32(w, uint32(x))
 uint64	write64(w, uint64(x))
-
+	
 int8	write8(w, uint8(x))
 int16	write16(w, uint16(x))
 int32	write32(w, uint32(x))
 int64	write64(w, uint64(x))
-
+	
 bool	if x { write8(w, 1) } else { write8(w, 0) }
-
+	
 float32	write32(w, math.Float32bits(x))
 float64	write64(w, math.Float64bits(x))
-
+	
 AOMsg	writeAOMsg(w, x)
-
+	
 image/color.NRGBA	w.Write([]byte{x.A, x.R, x.G, x.B})
-
+	
 map[uint16]*NodeMeta	{
 		w := zlib.NewWriter(w)
-
+	
 		if x == nil {
 			write8(w, 0)
 		} else {
@@ -61,9 +61,9 @@ map[uint16]*NodeMeta	{
 				i2pos := func(i int) [3]int16 {
 					return Blkpos2Pos([3]int16{}, keys[i])
 				}
-
+	
 				p, q := i2pos(i), i2pos(j)
-
+	
 				for i := range p {
 					switch {
 					case p[i] < q[i]:
@@ -72,7 +72,7 @@ map[uint16]*NodeMeta	{
 						return false
 					}
 				}
-
+	
 				return false
 			})
 			for _, key := range keys {
@@ -80,13 +80,13 @@ map[uint16]*NodeMeta	{
 				chk(serialize(w, x[key]))
 			}
 		}
-
+	
 		chk(w.Close())
 	}
-
+	
 map[[3]int16]*NodeMeta	{
 		w := zlib.NewWriter(w)
-
+	
 		if x == nil {
 			write8(w, 0)
 		} else {
@@ -101,7 +101,7 @@ map[[3]int16]*NodeMeta	{
 			}
 			sort.Slice(keys, func(i, j int) bool {
 				p, q := keys[i], keys[j]
-
+	
 				for i := range p {
 					switch {
 					case p[i] < q[i]:
@@ -110,7 +110,7 @@ map[[3]int16]*NodeMeta	{
 						return false
 					}
 				}
-
+	
 				return false
 			})
 			for _, key := range keys {
@@ -120,12 +120,12 @@ map[[3]int16]*NodeMeta	{
 				chk(serialize(w, x[key]))
 			}
 		}
-
+	
 		chk(w.Close())
 	}
-
+	
 PointedThing	chk(writePointedThing(w, x))
-
+	
 []AOMsg	{ // For AOInitData.Msgs.
 		if len(x) > math.MaxUint8 {
 			chk(ErrTooLong)
@@ -142,7 +142,7 @@ PointedThing	chk(writePointedThing(w, x))
 			chk(err)
 		}
 	}
-
+	
 []NodeDef	{ // For ToCltNodeDefs.Defs.
 		if len(x) > math.MaxUint16 {
 			chk(ErrTooLong)

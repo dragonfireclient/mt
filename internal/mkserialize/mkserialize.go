@@ -78,6 +78,18 @@ func structPragma(c *ast.Comment, sp *[]func(), expr string, de bool) {
 				fmt.Println("chk(w.Close()) }")
 			})
 		}
+	case "zstd":
+		if de {
+			fmt.Println("{ r, err := zstd.NewReader(byteReader{r}); chk(err)")
+			*sp = append(*sp, func() {
+				fmt.Println("chk(r.Close()) }")
+			})
+		} else {
+			fmt.Println("{ w := zstd.NewWriter(w)")
+			*sp = append(*sp, func() {
+				fmt.Println("chk(w.Close()) }")
+			})
+		}
 	case "lenhdr":
 		if arg != "8" && arg != "16" && arg != "32" {
 			error(c.Pos(), "usage: //mt:lenhdr (8|16|32)")

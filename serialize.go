@@ -40,6 +40,7 @@ func write64(w io.Writer, x uint64) {
 	_, err := w.Write(buf)
 	chk(err)
 }
+
 func readBuf(r io.Reader, n int) []byte {
 	buf := make([]byte, n)
 	_, err := io.ReadFull(r, buf)
@@ -162,6 +163,7 @@ func (obj *ToSrvInit) serialize(w io.Writer) {
 			} else {
 				write8(w, 0)
 			}
+
 		}
 	}); err != nil && err != io.EOF {
 		chk(err)
@@ -260,6 +262,7 @@ func (obj *ToSrvInit) deserialize(r io.Reader) {
 			default:
 				chk(fmt.Errorf("invalid bool: %d", n))
 			}
+
 		}
 	}); err != nil && err != io.EOF {
 		chk(err)
@@ -748,6 +751,7 @@ func (obj *ToSrvInteract) serialize(w io.Writer) {
 				Pos PlayerPos
 			}))(obj)).Pointed
 			chk(writePointedThing(w, x))
+
 		}
 		{
 			buf := w
@@ -830,6 +834,7 @@ func (obj *ToSrvInteract) deserialize(r io.Reader) {
 				*p, err = readPointedThing(r)
 				chk(err)
 			}
+
 		}
 		if r.N > 0 {
 			chk(fmt.Errorf("%d bytes of trailing data", r.N))
@@ -1409,6 +1414,7 @@ func (obj *ToSrvFirstSRP) serialize(w io.Writer) {
 		} else {
 			write8(w, 0)
 		}
+
 	}
 }
 
@@ -1463,6 +1469,7 @@ func (obj *ToSrvFirstSRP) deserialize(r io.Reader) {
 		default:
 			chk(fmt.Errorf("invalid bool: %d", n))
 		}
+
 	}
 }
 
@@ -1497,6 +1504,7 @@ func (obj *ToSrvSRPBytesA) serialize(w io.Writer) {
 		} else {
 			write8(w, 0)
 		}
+
 	}
 }
 
@@ -1530,6 +1538,7 @@ func (obj *ToSrvSRPBytesA) deserialize(r io.Reader) {
 		default:
 			chk(fmt.Errorf("invalid bool: %d", n))
 		}
+
 	}
 }
 
@@ -1749,6 +1758,7 @@ func (obj *ToCltAcceptAuth) serialize(w io.Writer) {
 			SudoAuthMethods AuthMethods
 		}))(obj)).MapSeed
 		write64(w, uint64(x))
+
 	}
 	{
 		x := (*(*(struct {
@@ -1812,6 +1822,7 @@ func (obj *ToCltAcceptAuth) deserialize(r io.Reader) {
 			SudoAuthMethods AuthMethods
 		}))(obj)).MapSeed
 		*p = read64(r)
+
 	}
 	{
 		p := &(*(*(struct {
@@ -1992,6 +2003,7 @@ func (obj *ToCltKick) serialize(w io.Writer) {
 			} else {
 				write8(w, 0)
 			}
+
 		}
 	}
 }
@@ -2081,6 +2093,7 @@ func (obj *ToCltKick) deserialize(r io.Reader) {
 			default:
 				chk(fmt.Errorf("invalid bool: %d", n))
 			}
+
 		}
 	}
 }
@@ -2175,6 +2188,7 @@ func (obj *ToCltAddNode) serialize(w io.Writer) {
 		} else {
 			write8(w, 0)
 		}
+
 	}
 }
 
@@ -2219,6 +2233,7 @@ func (obj *ToCltAddNode) deserialize(r io.Reader) {
 		default:
 			chk(fmt.Errorf("invalid bool: %d", n))
 		}
+
 	}
 }
 
@@ -2455,6 +2470,7 @@ func (obj *ToCltMediaPush) serialize(w io.Writer) {
 		} else {
 			write8(w, 0)
 		}
+
 	}
 	if len(((*(*(struct {
 		//mt:const uint16(sha1.Size)
@@ -2555,6 +2571,7 @@ func (obj *ToCltMediaPush) deserialize(r io.Reader) {
 		default:
 			chk(fmt.Errorf("invalid bool: %d", n))
 		}
+
 	}
 	var local74 uint32
 	{
@@ -2659,6 +2676,7 @@ func (obj *ToCltChatMsg) serialize(w io.Writer) {
 			Timestamp int64 // Unix time.
 		}))(obj)).Timestamp
 		write64(w, uint64(x))
+
 	}
 }
 
@@ -2741,6 +2759,7 @@ func (obj *ToCltChatMsg) deserialize(r io.Reader) {
 			Timestamp int64 // Unix time.
 		}))(obj)).Timestamp
 		*p = int64(read64(r))
+
 	}
 }
 
@@ -3038,6 +3057,7 @@ func (obj *ToCltFOV) serialize(w io.Writer) {
 		} else {
 			write8(w, 0)
 		}
+
 	}
 	{
 		x := (*(*(struct {
@@ -3072,6 +3092,7 @@ func (obj *ToCltFOV) deserialize(r io.Reader) {
 		default:
 			chk(fmt.Errorf("invalid bool: %d", n))
 		}
+
 	}
 	{
 		p := &(*(*(struct {
@@ -3094,6 +3115,7 @@ func (obj *ToCltDeathScreen) serialize(w io.Writer) {
 		} else {
 			write8(w, 0)
 		}
+
 	}
 	if err := pcall(func() {
 		((*(*(struct {
@@ -3122,6 +3144,7 @@ func (obj *ToCltDeathScreen) deserialize(r io.Reader) {
 		default:
 			chk(fmt.Errorf("invalid bool: %d", n))
 		}
+
 	}
 	if err := pcall(func() {
 		((*(*(struct {
@@ -4114,6 +4137,7 @@ func (obj *ToCltPlaySound) serialize(w io.Writer) {
 		} else {
 			write8(w, 0)
 		}
+
 	}
 	{
 		x := (*(*(struct {
@@ -4163,6 +4187,7 @@ func (obj *ToCltPlaySound) serialize(w io.Writer) {
 		} else {
 			write8(w, 0)
 		}
+
 	}
 }
 
@@ -4302,6 +4327,7 @@ func (obj *ToCltPlaySound) deserialize(r io.Reader) {
 		default:
 			chk(fmt.Errorf("invalid bool: %d", n))
 		}
+
 	}
 	{
 		p := &(*(*(struct {
@@ -4354,6 +4380,7 @@ func (obj *ToCltPlaySound) deserialize(r io.Reader) {
 		default:
 			chk(fmt.Errorf("invalid bool: %d", n))
 		}
+
 	}
 }
 
@@ -4535,6 +4562,7 @@ func (obj *ToCltDetachedInv) serialize(w io.Writer) {
 		} else {
 			write8(w, 0)
 		}
+
 	}
 	{
 		x := (*(*(struct {
@@ -4597,6 +4625,7 @@ func (obj *ToCltDetachedInv) deserialize(r io.Reader) {
 		default:
 			chk(fmt.Errorf("invalid bool: %d", n))
 		}
+
 	}
 	{
 		p := &(*(*(struct {
@@ -5126,6 +5155,7 @@ func (obj *ToCltSpawnParticle) serialize(w io.Writer) {
 		} else {
 			write8(w, 0)
 		}
+
 	}
 	if len(([]byte(*(*string)(&((*(*(struct {
 		Pos, Vel, Acc  [3]float32
@@ -5213,6 +5243,7 @@ func (obj *ToCltSpawnParticle) serialize(w io.Writer) {
 		} else {
 			write8(w, 0)
 		}
+
 	}
 	{
 		x := (*(*(struct {
@@ -5238,6 +5269,7 @@ func (obj *ToCltSpawnParticle) serialize(w io.Writer) {
 		} else {
 			write8(w, 0)
 		}
+
 	}
 	if err := pcall(func() {
 		((*(*(struct {
@@ -5309,6 +5341,7 @@ func (obj *ToCltSpawnParticle) serialize(w io.Writer) {
 		} else {
 			write8(w, 0)
 		}
+
 	}
 	if err := pcall(func() {
 		((*(*(struct {
@@ -5569,6 +5602,7 @@ func (obj *ToCltSpawnParticle) deserialize(r io.Reader) {
 		default:
 			chk(fmt.Errorf("invalid bool: %d", n))
 		}
+
 	}
 	var local154 []uint8
 	var local155 uint32
@@ -5626,6 +5660,7 @@ func (obj *ToCltSpawnParticle) deserialize(r io.Reader) {
 		default:
 			chk(fmt.Errorf("invalid bool: %d", n))
 		}
+
 	}
 	{
 		p := &(*(*(struct {
@@ -5654,6 +5689,7 @@ func (obj *ToCltSpawnParticle) deserialize(r io.Reader) {
 		default:
 			chk(fmt.Errorf("invalid bool: %d", n))
 		}
+
 	}
 	if err := pcall(func() {
 		((*(*(struct {
@@ -5728,6 +5764,7 @@ func (obj *ToCltSpawnParticle) deserialize(r io.Reader) {
 		default:
 			chk(fmt.Errorf("invalid bool: %d", n))
 		}
+
 	}
 	if err := pcall(func() {
 		((*(*(struct {
@@ -6186,6 +6223,7 @@ func (obj *ToCltAddParticleSpawner) serialize(w io.Writer) {
 		} else {
 			write8(w, 0)
 		}
+
 	}
 	if len(([]byte(*(*string)(&((*(*(struct {
 		Amount         uint16
@@ -6318,6 +6356,7 @@ func (obj *ToCltAddParticleSpawner) serialize(w io.Writer) {
 		} else {
 			write8(w, 0)
 		}
+
 	}
 	{
 		x := (*(*(struct {
@@ -6347,6 +6386,7 @@ func (obj *ToCltAddParticleSpawner) serialize(w io.Writer) {
 		} else {
 			write8(w, 0)
 		}
+
 	}
 	if err := pcall(func() {
 		((*(*(struct {
@@ -6459,6 +6499,7 @@ func (obj *ToCltAddParticleSpawner) serialize(w io.Writer) {
 		} else {
 			write8(w, 0)
 		}
+
 	}
 	if err := pcall(func() {
 		((*(*(struct {
@@ -6932,6 +6973,7 @@ func (obj *ToCltAddParticleSpawner) deserialize(r io.Reader) {
 		default:
 			chk(fmt.Errorf("invalid bool: %d", n))
 		}
+
 	}
 	var local172 []uint8
 	var local173 uint32
@@ -7026,6 +7068,7 @@ func (obj *ToCltAddParticleSpawner) deserialize(r io.Reader) {
 		default:
 			chk(fmt.Errorf("invalid bool: %d", n))
 		}
+
 	}
 	{
 		p := &(*(*(struct {
@@ -7058,6 +7101,7 @@ func (obj *ToCltAddParticleSpawner) deserialize(r io.Reader) {
 		default:
 			chk(fmt.Errorf("invalid bool: %d", n))
 		}
+
 	}
 	if err := pcall(func() {
 		((*(*(struct {
@@ -7173,6 +7217,7 @@ func (obj *ToCltAddParticleSpawner) deserialize(r io.Reader) {
 		default:
 			chk(fmt.Errorf("invalid bool: %d", n))
 		}
+
 	}
 	if err := pcall(func() {
 		((*(*(struct {
@@ -11040,6 +11085,7 @@ func (obj *ToCltSkyParams) serialize(w io.Writer) {
 			Indoor color.NRGBA
 		}))(obj)).BgColor
 		w.Write([]byte{x.A, x.R, x.G, x.B})
+
 	}
 	if len(([]byte((*(*(struct {
 		BgColor     color.NRGBA
@@ -11123,6 +11169,7 @@ func (obj *ToCltSkyParams) serialize(w io.Writer) {
 		} else {
 			write8(w, 0)
 		}
+
 	}
 	{
 		x := (*(*(struct {
@@ -11143,6 +11190,7 @@ func (obj *ToCltSkyParams) serialize(w io.Writer) {
 			Indoor color.NRGBA
 		}))(obj)).SunFogTint
 		w.Write([]byte{x.A, x.R, x.G, x.B})
+
 	}
 	{
 		x := (*(*(struct {
@@ -11163,6 +11211,7 @@ func (obj *ToCltSkyParams) serialize(w io.Writer) {
 			Indoor color.NRGBA
 		}))(obj)).MoonFogTint
 		w.Write([]byte{x.A, x.R, x.G, x.B})
+
 	}
 	if len(([]byte((*(*(struct {
 		BgColor     color.NRGBA
@@ -11358,6 +11407,7 @@ func (obj *ToCltSkyParams) serialize(w io.Writer) {
 				Indoor color.NRGBA
 			}))(obj)).DaySky
 			w.Write([]byte{x.A, x.R, x.G, x.B})
+
 		}
 		{
 			x := (*(*(struct {
@@ -11378,6 +11428,7 @@ func (obj *ToCltSkyParams) serialize(w io.Writer) {
 				Indoor color.NRGBA
 			}))(obj)).DayHorizon
 			w.Write([]byte{x.A, x.R, x.G, x.B})
+
 		}
 		{
 			x := (*(*(struct {
@@ -11398,6 +11449,7 @@ func (obj *ToCltSkyParams) serialize(w io.Writer) {
 				Indoor color.NRGBA
 			}))(obj)).DawnSky
 			w.Write([]byte{x.A, x.R, x.G, x.B})
+
 		}
 		{
 			x := (*(*(struct {
@@ -11418,6 +11470,7 @@ func (obj *ToCltSkyParams) serialize(w io.Writer) {
 				Indoor color.NRGBA
 			}))(obj)).DawnHorizon
 			w.Write([]byte{x.A, x.R, x.G, x.B})
+
 		}
 		{
 			x := (*(*(struct {
@@ -11438,6 +11491,7 @@ func (obj *ToCltSkyParams) serialize(w io.Writer) {
 				Indoor color.NRGBA
 			}))(obj)).NightSky
 			w.Write([]byte{x.A, x.R, x.G, x.B})
+
 		}
 		{
 			x := (*(*(struct {
@@ -11458,6 +11512,7 @@ func (obj *ToCltSkyParams) serialize(w io.Writer) {
 				Indoor color.NRGBA
 			}))(obj)).NightHorizon
 			w.Write([]byte{x.A, x.R, x.G, x.B})
+
 		}
 		{
 			x := (*(*(struct {
@@ -11478,6 +11533,7 @@ func (obj *ToCltSkyParams) serialize(w io.Writer) {
 				Indoor color.NRGBA
 			}))(obj)).Indoor
 			w.Write([]byte{x.A, x.R, x.G, x.B})
+
 		}
 	}
 }
@@ -11502,6 +11558,7 @@ func (obj *ToCltSkyParams) deserialize(r io.Reader) {
 			Indoor color.NRGBA
 		}))(obj)).BgColor
 		*p = color.NRGBA{A: read8(r), R: read8(r), G: read8(r), B: read8(r)}
+
 	}
 	var local194 []uint8
 	var local195 uint16
@@ -11557,6 +11614,7 @@ func (obj *ToCltSkyParams) deserialize(r io.Reader) {
 		default:
 			chk(fmt.Errorf("invalid bool: %d", n))
 		}
+
 	}
 	{
 		p := &(*(*(struct {
@@ -11577,6 +11635,7 @@ func (obj *ToCltSkyParams) deserialize(r io.Reader) {
 			Indoor color.NRGBA
 		}))(obj)).SunFogTint
 		*p = color.NRGBA{A: read8(r), R: read8(r), G: read8(r), B: read8(r)}
+
 	}
 	{
 		p := &(*(*(struct {
@@ -11597,6 +11656,7 @@ func (obj *ToCltSkyParams) deserialize(r io.Reader) {
 			Indoor color.NRGBA
 		}))(obj)).MoonFogTint
 		*p = color.NRGBA{A: read8(r), R: read8(r), G: read8(r), B: read8(r)}
+
 	}
 	var local196 []uint8
 	var local197 uint16
@@ -11744,6 +11804,7 @@ func (obj *ToCltSkyParams) deserialize(r io.Reader) {
 				Indoor color.NRGBA
 			}))(obj)).DaySky
 			*p = color.NRGBA{A: read8(r), R: read8(r), G: read8(r), B: read8(r)}
+
 		}
 		{
 			p := &(*(*(struct {
@@ -11764,6 +11825,7 @@ func (obj *ToCltSkyParams) deserialize(r io.Reader) {
 				Indoor color.NRGBA
 			}))(obj)).DayHorizon
 			*p = color.NRGBA{A: read8(r), R: read8(r), G: read8(r), B: read8(r)}
+
 		}
 		{
 			p := &(*(*(struct {
@@ -11784,6 +11846,7 @@ func (obj *ToCltSkyParams) deserialize(r io.Reader) {
 				Indoor color.NRGBA
 			}))(obj)).DawnSky
 			*p = color.NRGBA{A: read8(r), R: read8(r), G: read8(r), B: read8(r)}
+
 		}
 		{
 			p := &(*(*(struct {
@@ -11804,6 +11867,7 @@ func (obj *ToCltSkyParams) deserialize(r io.Reader) {
 				Indoor color.NRGBA
 			}))(obj)).DawnHorizon
 			*p = color.NRGBA{A: read8(r), R: read8(r), G: read8(r), B: read8(r)}
+
 		}
 		{
 			p := &(*(*(struct {
@@ -11824,6 +11888,7 @@ func (obj *ToCltSkyParams) deserialize(r io.Reader) {
 				Indoor color.NRGBA
 			}))(obj)).NightSky
 			*p = color.NRGBA{A: read8(r), R: read8(r), G: read8(r), B: read8(r)}
+
 		}
 		{
 			p := &(*(*(struct {
@@ -11844,6 +11909,7 @@ func (obj *ToCltSkyParams) deserialize(r io.Reader) {
 				Indoor color.NRGBA
 			}))(obj)).NightHorizon
 			*p = color.NRGBA{A: read8(r), R: read8(r), G: read8(r), B: read8(r)}
+
 		}
 		{
 			p := &(*(*(struct {
@@ -11864,6 +11930,7 @@ func (obj *ToCltSkyParams) deserialize(r io.Reader) {
 				Indoor color.NRGBA
 			}))(obj)).Indoor
 			*p = color.NRGBA{A: read8(r), R: read8(r), G: read8(r), B: read8(r)}
+
 		}
 	}
 }
@@ -11879,6 +11946,7 @@ func (obj *ToCltOverrideDayNightRatio) serialize(w io.Writer) {
 		} else {
 			write8(w, 0)
 		}
+
 	}
 	{
 		x := (*(*(struct {
@@ -11903,6 +11971,7 @@ func (obj *ToCltOverrideDayNightRatio) deserialize(r io.Reader) {
 		default:
 			chk(fmt.Errorf("invalid bool: %d", n))
 		}
+
 	}
 	{
 		p := &(*(*(struct {
@@ -12123,6 +12192,7 @@ func (obj *ToCltCloudParams) serialize(w io.Writer) {
 			Speed        [2]float32
 		}))(obj)).DiffuseColor
 		w.Write([]byte{x.A, x.R, x.G, x.B})
+
 	}
 	{
 		x := (*(*(struct {
@@ -12134,6 +12204,7 @@ func (obj *ToCltCloudParams) serialize(w io.Writer) {
 			Speed        [2]float32
 		}))(obj)).AmbientColor
 		w.Write([]byte{x.A, x.R, x.G, x.B})
+
 	}
 	{
 		x := (*(*(struct {
@@ -12201,6 +12272,7 @@ func (obj *ToCltCloudParams) deserialize(r io.Reader) {
 			Speed        [2]float32
 		}))(obj)).DiffuseColor
 		*p = color.NRGBA{A: read8(r), R: read8(r), G: read8(r), B: read8(r)}
+
 	}
 	{
 		p := &(*(*(struct {
@@ -12212,6 +12284,7 @@ func (obj *ToCltCloudParams) deserialize(r io.Reader) {
 			Speed        [2]float32
 		}))(obj)).AmbientColor
 		*p = color.NRGBA{A: read8(r), R: read8(r), G: read8(r), B: read8(r)}
+
 	}
 	{
 		p := &(*(*(struct {
@@ -12611,6 +12684,7 @@ func (obj *ToCltNodeMetasChanged) serialize(w io.Writer) {
 			}))(obj)).Changed
 			{
 				w := zlib.NewWriter(w)
+
 				if x == nil {
 					write8(w, 0)
 				} else {
@@ -12625,6 +12699,7 @@ func (obj *ToCltNodeMetasChanged) serialize(w io.Writer) {
 					}
 					sort.Slice(keys, func(i, j int) bool {
 						p, q := keys[i], keys[j]
+
 						for i := range p {
 							switch {
 							case p[i] < q[i]:
@@ -12633,6 +12708,7 @@ func (obj *ToCltNodeMetasChanged) serialize(w io.Writer) {
 								return false
 							}
 						}
+
 						return false
 					})
 					for _, key := range keys {
@@ -12642,8 +12718,10 @@ func (obj *ToCltNodeMetasChanged) serialize(w io.Writer) {
 						chk(serialize(w, x[key]))
 					}
 				}
+
 				chk(w.Close())
 			}
+
 		}
 		{
 			buf := w
@@ -12679,6 +12757,7 @@ func (obj *ToCltNodeMetasChanged) deserialize(r io.Reader) {
 			{
 				r, err := zlib.NewReader(byteReader{r})
 				chk(err)
+
 				switch ver := read8(r); ver {
 				case 0:
 					*p = nil
@@ -12697,8 +12776,10 @@ func (obj *ToCltNodeMetasChanged) deserialize(r io.Reader) {
 				default:
 					chk(fmt.Errorf("unsupported nodemetas version: %d", ver))
 				}
+
 				chk(r.Close())
 			}
+
 		}
 		if r.N > 0 {
 			chk(fmt.Errorf("%d bytes of trailing data", r.N))
@@ -12721,6 +12802,7 @@ func (obj *ToCltSunParams) serialize(w io.Writer) {
 		} else {
 			write8(w, 0)
 		}
+
 	}
 	if err := pcall(func() {
 		((*(*(struct {
@@ -12781,6 +12863,7 @@ func (obj *ToCltSunParams) serialize(w io.Writer) {
 		} else {
 			write8(w, 0)
 		}
+
 	}
 	{
 		x := (*(*(struct {
@@ -12813,6 +12896,7 @@ func (obj *ToCltSunParams) deserialize(r io.Reader) {
 		default:
 			chk(fmt.Errorf("invalid bool: %d", n))
 		}
+
 	}
 	if err := pcall(func() {
 		((*(*(struct {
@@ -12876,6 +12960,7 @@ func (obj *ToCltSunParams) deserialize(r io.Reader) {
 		default:
 			chk(fmt.Errorf("invalid bool: %d", n))
 		}
+
 	}
 	{
 		p := &(*(*(struct {
@@ -12903,6 +12988,7 @@ func (obj *ToCltMoonParams) serialize(w io.Writer) {
 		} else {
 			write8(w, 0)
 		}
+
 	}
 	if err := pcall(func() {
 		((*(*(struct {
@@ -12957,6 +13043,7 @@ func (obj *ToCltMoonParams) deserialize(r io.Reader) {
 		default:
 			chk(fmt.Errorf("invalid bool: %d", n))
 		}
+
 	}
 	if err := pcall(func() {
 		((*(*(struct {
@@ -13008,6 +13095,7 @@ func (obj *ToCltStarParams) serialize(w io.Writer) {
 		} else {
 			write8(w, 0)
 		}
+
 	}
 	{
 		x := (*(*(struct {
@@ -13026,6 +13114,7 @@ func (obj *ToCltStarParams) serialize(w io.Writer) {
 			Size    float32
 		}))(obj)).Color
 		w.Write([]byte{x.A, x.R, x.G, x.B})
+
 	}
 	{
 		x := (*(*(struct {
@@ -13054,6 +13143,7 @@ func (obj *ToCltStarParams) deserialize(r io.Reader) {
 		default:
 			chk(fmt.Errorf("invalid bool: %d", n))
 		}
+
 	}
 	{
 		p := &(*(*(struct {
@@ -13072,6 +13162,7 @@ func (obj *ToCltStarParams) deserialize(r io.Reader) {
 			Size    float32
 		}))(obj)).Color
 		*p = color.NRGBA{A: read8(r), R: read8(r), G: read8(r), B: read8(r)}
+
 	}
 	{
 		p := &(*(*(struct {
@@ -15307,6 +15398,7 @@ func (obj *NodeDef) serialize(w io.Writer) {
 				AlphaUse
 			}))(obj)).Color
 			w.Write([]byte{x.A, x.R, x.G, x.B})
+
 		}
 		if err := pcall(func() {
 			((*(*(struct {
@@ -15844,6 +15936,7 @@ func (obj *NodeDef) serialize(w io.Writer) {
 				AlphaUse
 			}))(obj)).InsideTint
 			w.Write([]byte{x.A, x.R, x.G, x.B})
+
 		}
 		{
 			x := (*(*(struct {
@@ -15980,6 +16073,7 @@ func (obj *NodeDef) serialize(w io.Writer) {
 			} else {
 				write8(w, 0)
 			}
+
 		}
 		{
 			x := (*(*(struct {
@@ -16050,6 +16144,7 @@ func (obj *NodeDef) serialize(w io.Writer) {
 			} else {
 				write8(w, 0)
 			}
+
 		}
 		{
 			x := (*(*(struct {
@@ -16186,6 +16281,7 @@ func (obj *NodeDef) serialize(w io.Writer) {
 			} else {
 				write8(w, 0)
 			}
+
 		}
 		{
 			x := (*(*(struct {
@@ -16256,6 +16352,7 @@ func (obj *NodeDef) serialize(w io.Writer) {
 			} else {
 				write8(w, 0)
 			}
+
 		}
 		{
 			x := (*(*(struct {
@@ -16326,6 +16423,7 @@ func (obj *NodeDef) serialize(w io.Writer) {
 			} else {
 				write8(w, 0)
 			}
+
 		}
 		{
 			x := (*(*(struct {
@@ -16396,6 +16494,7 @@ func (obj *NodeDef) serialize(w io.Writer) {
 			} else {
 				write8(w, 0)
 			}
+
 		}
 		{
 			x := (*(*(struct {
@@ -16466,6 +16565,7 @@ func (obj *NodeDef) serialize(w io.Writer) {
 			} else {
 				write8(w, 0)
 			}
+
 		}
 		{
 			x := (*(*(struct {
@@ -16536,6 +16636,7 @@ func (obj *NodeDef) serialize(w io.Writer) {
 			} else {
 				write8(w, 0)
 			}
+
 		}
 		{
 			x := (*(*(struct {
@@ -16606,6 +16707,7 @@ func (obj *NodeDef) serialize(w io.Writer) {
 			} else {
 				write8(w, 0)
 			}
+
 		}
 		{
 			x := (*(*(struct {
@@ -17272,6 +17374,7 @@ func (obj *NodeDef) serialize(w io.Writer) {
 			} else {
 				write8(w, 0)
 			}
+
 		}
 		{
 			x := (*(*(struct {
@@ -17474,6 +17577,7 @@ func (obj *NodeDef) serialize(w io.Writer) {
 			} else {
 				write8(w, 0)
 			}
+
 		}
 		if err := pcall(func() {
 			((*(*(struct {
@@ -17964,6 +18068,7 @@ func (obj *NodeDef) serialize(w io.Writer) {
 			} else {
 				write8(w, 0)
 			}
+
 		}
 		{
 			x := (*(*(struct {
@@ -18034,6 +18139,7 @@ func (obj *NodeDef) serialize(w io.Writer) {
 			} else {
 				write8(w, 0)
 			}
+
 		}
 		if len(([]byte((*(*(struct {
 			Param0 Content
@@ -19590,6 +19696,7 @@ func (obj *NodeDef) deserialize(r io.Reader) {
 				AlphaUse
 			}))(obj)).Color
 			*p = color.NRGBA{A: read8(r), R: read8(r), G: read8(r), B: read8(r)}
+
 		}
 		if err := pcall(func() {
 			((*(*(struct {
@@ -20064,6 +20171,7 @@ func (obj *NodeDef) deserialize(r io.Reader) {
 				AlphaUse
 			}))(obj)).InsideTint
 			*p = color.NRGBA{A: read8(r), R: read8(r), G: read8(r), B: read8(r)}
+
 		}
 		{
 			p := &(*(*(struct {
@@ -20203,6 +20311,7 @@ func (obj *NodeDef) deserialize(r io.Reader) {
 			default:
 				chk(fmt.Errorf("invalid bool: %d", n))
 			}
+
 		}
 		{
 			p := &(*(*(struct {
@@ -20276,6 +20385,7 @@ func (obj *NodeDef) deserialize(r io.Reader) {
 			default:
 				chk(fmt.Errorf("invalid bool: %d", n))
 			}
+
 		}
 		{
 			p := &(*(*(struct {
@@ -20415,6 +20525,7 @@ func (obj *NodeDef) deserialize(r io.Reader) {
 			default:
 				chk(fmt.Errorf("invalid bool: %d", n))
 			}
+
 		}
 		{
 			p := &(*(*(struct {
@@ -20488,6 +20599,7 @@ func (obj *NodeDef) deserialize(r io.Reader) {
 			default:
 				chk(fmt.Errorf("invalid bool: %d", n))
 			}
+
 		}
 		{
 			p := &(*(*(struct {
@@ -20561,6 +20673,7 @@ func (obj *NodeDef) deserialize(r io.Reader) {
 			default:
 				chk(fmt.Errorf("invalid bool: %d", n))
 			}
+
 		}
 		{
 			p := &(*(*(struct {
@@ -20634,6 +20747,7 @@ func (obj *NodeDef) deserialize(r io.Reader) {
 			default:
 				chk(fmt.Errorf("invalid bool: %d", n))
 			}
+
 		}
 		{
 			p := &(*(*(struct {
@@ -20707,6 +20821,7 @@ func (obj *NodeDef) deserialize(r io.Reader) {
 			default:
 				chk(fmt.Errorf("invalid bool: %d", n))
 			}
+
 		}
 		{
 			p := &(*(*(struct {
@@ -20780,6 +20895,7 @@ func (obj *NodeDef) deserialize(r io.Reader) {
 			default:
 				chk(fmt.Errorf("invalid bool: %d", n))
 			}
+
 		}
 		{
 			p := &(*(*(struct {
@@ -20853,6 +20969,7 @@ func (obj *NodeDef) deserialize(r io.Reader) {
 			default:
 				chk(fmt.Errorf("invalid bool: %d", n))
 			}
+
 		}
 		{
 			p := &(*(*(struct {
@@ -21276,6 +21393,7 @@ func (obj *NodeDef) deserialize(r io.Reader) {
 			default:
 				chk(fmt.Errorf("invalid bool: %d", n))
 			}
+
 		}
 		{
 			p := &(*(*(struct {
@@ -21481,6 +21599,7 @@ func (obj *NodeDef) deserialize(r io.Reader) {
 			default:
 				chk(fmt.Errorf("invalid bool: %d", n))
 			}
+
 		}
 		if err := pcall(func() {
 			((*(*(struct {
@@ -21974,6 +22093,7 @@ func (obj *NodeDef) deserialize(r io.Reader) {
 			default:
 				chk(fmt.Errorf("invalid bool: %d", n))
 			}
+
 		}
 		{
 			p := &(*(*(struct {
@@ -22047,6 +22167,7 @@ func (obj *NodeDef) deserialize(r io.Reader) {
 			default:
 				chk(fmt.Errorf("invalid bool: %d", n))
 			}
+
 		}
 		var local269 []uint8
 		var local270 uint16
@@ -22712,7 +22833,7 @@ func (obj *MapBlk) serialize(w io.Writer) {
 			Flags   MapBlkFlags
 			LitFrom LitFromBlks
 
-			//mt:zlib
+			//mt:zstd
 			Param0 [4096]Content
 			Param1 [4096]uint8
 			Param2 [4096]uint8
@@ -22730,7 +22851,7 @@ func (obj *MapBlk) serialize(w io.Writer) {
 			Flags   MapBlkFlags
 			LitFrom LitFromBlks
 
-			//mt:zlib
+			//mt:zstd
 			Param0 [4096]Content
 			Param1 [4096]uint8
 			Param2 [4096]uint8
@@ -22758,12 +22879,12 @@ func (obj *MapBlk) serialize(w io.Writer) {
 		}
 	}
 	{
-		w := zlib.NewWriter(w)
+		w := zstd.NewWriter(w)
 		for local285 := range (*(*(struct {
 			Flags   MapBlkFlags
 			LitFrom LitFromBlks
 
-			//mt:zlib
+			//mt:zstd
 			Param0 [4096]Content
 			Param1 [4096]uint8
 			Param2 [4096]uint8
@@ -22775,7 +22896,7 @@ func (obj *MapBlk) serialize(w io.Writer) {
 					Flags   MapBlkFlags
 					LitFrom LitFromBlks
 
-					//mt:zlib
+					//mt:zstd
 					Param0 [4096]Content
 					Param1 [4096]uint8
 					Param2 [4096]uint8
@@ -22794,7 +22915,7 @@ func (obj *MapBlk) serialize(w io.Writer) {
 				Flags   MapBlkFlags
 				LitFrom LitFromBlks
 
-				//mt:zlib
+				//mt:zstd
 				Param0 [4096]Content
 				Param1 [4096]uint8
 				Param2 [4096]uint8
@@ -22808,7 +22929,7 @@ func (obj *MapBlk) serialize(w io.Writer) {
 				Flags   MapBlkFlags
 				LitFrom LitFromBlks
 
-				//mt:zlib
+				//mt:zstd
 				Param0 [4096]Content
 				Param1 [4096]uint8
 				Param2 [4096]uint8
@@ -22824,7 +22945,7 @@ func (obj *MapBlk) serialize(w io.Writer) {
 			Flags   MapBlkFlags
 			LitFrom LitFromBlks
 
-			//mt:zlib
+			//mt:zstd
 			Param0 [4096]Content
 			Param1 [4096]uint8
 			Param2 [4096]uint8
@@ -22833,6 +22954,7 @@ func (obj *MapBlk) serialize(w io.Writer) {
 		}))(obj)).NodeMetas
 		{
 			w := zlib.NewWriter(w)
+
 			if x == nil {
 				write8(w, 0)
 			} else {
@@ -22847,7 +22969,9 @@ func (obj *MapBlk) serialize(w io.Writer) {
 					i2pos := func(i int) [3]int16 {
 						return Blkpos2Pos([3]int16{}, keys[i])
 					}
+
 					p, q := i2pos(i), i2pos(j)
+
 					for i := range p {
 						switch {
 						case p[i] < q[i]:
@@ -22856,6 +22980,7 @@ func (obj *MapBlk) serialize(w io.Writer) {
 							return false
 						}
 					}
+
 					return false
 				})
 				for _, key := range keys {
@@ -22863,8 +22988,10 @@ func (obj *MapBlk) serialize(w io.Writer) {
 					chk(serialize(w, x[key]))
 				}
 			}
+
 			chk(w.Close())
 		}
+
 	}
 	{
 		local286 := uint8(2) // version
@@ -22881,7 +23008,7 @@ func (obj *MapBlk) deserialize(r io.Reader) {
 			Flags   MapBlkFlags
 			LitFrom LitFromBlks
 
-			//mt:zlib
+			//mt:zstd
 			Param0 [4096]Content
 			Param1 [4096]uint8
 			Param2 [4096]uint8
@@ -22899,7 +23026,7 @@ func (obj *MapBlk) deserialize(r io.Reader) {
 			Flags   MapBlkFlags
 			LitFrom LitFromBlks
 
-			//mt:zlib
+			//mt:zstd
 			Param0 [4096]Content
 			Param1 [4096]uint8
 			Param2 [4096]uint8
@@ -22935,13 +23062,13 @@ func (obj *MapBlk) deserialize(r io.Reader) {
 		}
 	}
 	{
-		r, err := zlib.NewReader(byteReader{r})
+		r, err := zstd.NewReader(byteReader{r})
 		chk(err)
 		for local291 := range (*(*(struct {
 			Flags   MapBlkFlags
 			LitFrom LitFromBlks
 
-			//mt:zlib
+			//mt:zstd
 			Param0 [4096]Content
 			Param1 [4096]uint8
 			Param2 [4096]uint8
@@ -22953,7 +23080,7 @@ func (obj *MapBlk) deserialize(r io.Reader) {
 					Flags   MapBlkFlags
 					LitFrom LitFromBlks
 
-					//mt:zlib
+					//mt:zstd
 					Param0 [4096]Content
 					Param1 [4096]uint8
 					Param2 [4096]uint8
@@ -22972,7 +23099,7 @@ func (obj *MapBlk) deserialize(r io.Reader) {
 				Flags   MapBlkFlags
 				LitFrom LitFromBlks
 
-				//mt:zlib
+				//mt:zstd
 				Param0 [4096]Content
 				Param1 [4096]uint8
 				Param2 [4096]uint8
@@ -22986,7 +23113,7 @@ func (obj *MapBlk) deserialize(r io.Reader) {
 				Flags   MapBlkFlags
 				LitFrom LitFromBlks
 
-				//mt:zlib
+				//mt:zstd
 				Param0 [4096]Content
 				Param1 [4096]uint8
 				Param2 [4096]uint8
@@ -23002,7 +23129,7 @@ func (obj *MapBlk) deserialize(r io.Reader) {
 			Flags   MapBlkFlags
 			LitFrom LitFromBlks
 
-			//mt:zlib
+			//mt:zstd
 			Param0 [4096]Content
 			Param1 [4096]uint8
 			Param2 [4096]uint8
@@ -23012,6 +23139,7 @@ func (obj *MapBlk) deserialize(r io.Reader) {
 		{
 			r, err := zlib.NewReader(byteReader{r})
 			chk(err)
+
 			switch ver := read8(r); ver {
 			case 0:
 				*p = nil
@@ -23027,8 +23155,10 @@ func (obj *MapBlk) deserialize(r io.Reader) {
 			default:
 				chk(fmt.Errorf("unsupported nodemetas version: %d", ver))
 			}
+
 			chk(r.Close())
 		}
+
 	}
 	{
 		var local292 uint8
@@ -23103,6 +23233,7 @@ func (obj *CSMRestrictionFlags) serialize(w io.Writer) {
 	{
 		x := *(*(uint64))(obj)
 		write64(w, uint64(x))
+
 	}
 }
 
@@ -23110,6 +23241,7 @@ func (obj *CSMRestrictionFlags) deserialize(r io.Reader) {
 	{
 		p := &*(*(uint64))(obj)
 		*p = read64(r)
+
 	}
 }
 
@@ -23296,6 +23428,7 @@ func (obj *IDAOMsg) serialize(w io.Writer) {
 				Msg AOMsg
 			}))(obj)).Msg
 			writeAOMsg(w, x)
+
 		}
 		{
 			buf := w
@@ -23346,6 +23479,7 @@ func (obj *IDAOMsg) deserialize(r io.Reader) {
 				*p, err = readAOMsg(r)
 				chk(err)
 			}
+
 		}
 		if r.N > 0 {
 			chk(fmt.Errorf("%d bytes of trailing data", r.N))
@@ -23843,6 +23977,7 @@ func (obj *ItemDef) serialize(w io.Writer) {
 			} else {
 				write8(w, 0)
 			}
+
 		}
 		{
 			x := (*(*(struct {
@@ -23883,6 +24018,7 @@ func (obj *ItemDef) serialize(w io.Writer) {
 			} else {
 				write8(w, 0)
 			}
+
 		}
 		if err := pcall(func() {
 			((*(*(struct {
@@ -24367,6 +24503,7 @@ func (obj *ItemDef) serialize(w io.Writer) {
 				ShortDesc string
 			}))(obj)).Color
 			w.Write([]byte{x.A, x.R, x.G, x.B})
+
 		}
 		if err := pcall(func() {
 			((*(*(struct {
@@ -24948,6 +25085,7 @@ func (obj *ItemDef) deserialize(r io.Reader) {
 			default:
 				chk(fmt.Errorf("invalid bool: %d", n))
 			}
+
 		}
 		{
 			p := &(*(*(struct {
@@ -24991,6 +25129,7 @@ func (obj *ItemDef) deserialize(r io.Reader) {
 			default:
 				chk(fmt.Errorf("invalid bool: %d", n))
 			}
+
 		}
 		if err := pcall(func() {
 			((*(*(struct {
@@ -25379,6 +25518,7 @@ func (obj *ItemDef) deserialize(r io.Reader) {
 				ShortDesc string
 			}))(obj)).Color
 			*p = color.NRGBA{A: read8(r), R: read8(r), G: read8(r), B: read8(r)}
+
 		}
 		if err := pcall(func() {
 			((*(*(struct {
@@ -26941,6 +27081,7 @@ func (obj *AOProps) serialize(w io.Writer) {
 		} else {
 			write8(w, 0)
 		}
+
 	}
 	{
 		x := (*(*(struct {
@@ -27109,6 +27250,7 @@ func (obj *AOProps) serialize(w io.Writer) {
 		} else {
 			write8(w, 0)
 		}
+
 	}
 	if len(([]byte((*(*(struct {
 		MaxHP            uint16 // Player only.
@@ -27653,6 +27795,7 @@ func (obj *AOProps) serialize(w io.Writer) {
 		} else {
 			write8(w, 0)
 		}
+
 	}
 	{
 		x := (*(*(struct {
@@ -27696,6 +27839,7 @@ func (obj *AOProps) serialize(w io.Writer) {
 		} else {
 			write8(w, 0)
 		}
+
 	}
 	{
 		x := (*(*(struct {
@@ -28003,6 +28147,7 @@ func (obj *AOProps) serialize(w io.Writer) {
 				NametagBG        color.NRGBA
 			}))(obj)).Colors)[local340]
 			w.Write([]byte{x.A, x.R, x.G, x.B})
+
 		}
 	}
 	{
@@ -28047,6 +28192,7 @@ func (obj *AOProps) serialize(w io.Writer) {
 		} else {
 			write8(w, 0)
 		}
+
 	}
 	{
 		x := (*(*(struct {
@@ -28129,6 +28275,7 @@ func (obj *AOProps) serialize(w io.Writer) {
 		} else {
 			write8(w, 0)
 		}
+
 	}
 	{
 		x := (*(*(struct {
@@ -28211,6 +28358,7 @@ func (obj *AOProps) serialize(w io.Writer) {
 		} else {
 			write8(w, 0)
 		}
+
 	}
 	if len(([]byte((*(*(struct {
 		MaxHP            uint16 // Player only.
@@ -28366,6 +28514,7 @@ func (obj *AOProps) serialize(w io.Writer) {
 			NametagBG        color.NRGBA
 		}))(obj)).NametagColor
 		w.Write([]byte{x.A, x.R, x.G, x.B})
+
 	}
 	{
 		x := (*(*(struct {
@@ -28836,6 +28985,7 @@ func (obj *AOProps) serialize(w io.Writer) {
 		} else {
 			write8(w, 0)
 		}
+
 	}
 	if err := pcall(func() {
 		((*(*(struct {
@@ -28922,6 +29072,7 @@ func (obj *AOProps) serialize(w io.Writer) {
 		} else {
 			write8(w, 0)
 		}
+
 	}
 	{
 		x := (*(*(struct {
@@ -28965,6 +29116,7 @@ func (obj *AOProps) serialize(w io.Writer) {
 		} else {
 			write8(w, 0)
 		}
+
 	}
 	{
 		x := (*(*(struct {
@@ -29004,6 +29156,7 @@ func (obj *AOProps) serialize(w io.Writer) {
 			NametagBG        color.NRGBA
 		}))(obj)).NametagBG
 		w.Write([]byte{x.A, x.R, x.G, x.B})
+
 	}
 }
 
@@ -29103,6 +29256,7 @@ func (obj *AOProps) deserialize(r io.Reader) {
 		default:
 			chk(fmt.Errorf("invalid bool: %d", n))
 		}
+
 	}
 	{
 		p := &(*(*(struct {
@@ -29274,6 +29428,7 @@ func (obj *AOProps) deserialize(r io.Reader) {
 		default:
 			chk(fmt.Errorf("invalid bool: %d", n))
 		}
+
 	}
 	var local343 []uint8
 	var local344 uint16
@@ -29716,6 +29871,7 @@ func (obj *AOProps) deserialize(r io.Reader) {
 		default:
 			chk(fmt.Errorf("invalid bool: %d", n))
 		}
+
 	}
 	{
 		p := &(*(*(struct {
@@ -29762,6 +29918,7 @@ func (obj *AOProps) deserialize(r io.Reader) {
 		default:
 			chk(fmt.Errorf("invalid bool: %d", n))
 		}
+
 	}
 	{
 		p := &(*(*(struct {
@@ -29964,6 +30121,7 @@ func (obj *AOProps) deserialize(r io.Reader) {
 				NametagBG        color.NRGBA
 			}))(obj)).Colors)[local353]
 			*p = color.NRGBA{A: read8(r), R: read8(r), G: read8(r), B: read8(r)}
+
 		}
 	}
 	{
@@ -30011,6 +30169,7 @@ func (obj *AOProps) deserialize(r io.Reader) {
 		default:
 			chk(fmt.Errorf("invalid bool: %d", n))
 		}
+
 	}
 	{
 		p := &(*(*(struct {
@@ -30096,6 +30255,7 @@ func (obj *AOProps) deserialize(r io.Reader) {
 		default:
 			chk(fmt.Errorf("invalid bool: %d", n))
 		}
+
 	}
 	{
 		p := &(*(*(struct {
@@ -30181,6 +30341,7 @@ func (obj *AOProps) deserialize(r io.Reader) {
 		default:
 			chk(fmt.Errorf("invalid bool: %d", n))
 		}
+
 	}
 	var local354 []uint8
 	var local355 uint16
@@ -30267,6 +30428,7 @@ func (obj *AOProps) deserialize(r io.Reader) {
 			NametagBG        color.NRGBA
 		}))(obj)).NametagColor
 		*p = color.NRGBA{A: read8(r), R: read8(r), G: read8(r), B: read8(r)}
+
 	}
 	{
 		p := &(*(*(struct {
@@ -30602,6 +30764,7 @@ func (obj *AOProps) deserialize(r io.Reader) {
 		default:
 			chk(fmt.Errorf("invalid bool: %d", n))
 		}
+
 	}
 	if err := pcall(func() {
 		((*(*(struct {
@@ -30691,6 +30854,7 @@ func (obj *AOProps) deserialize(r io.Reader) {
 		default:
 			chk(fmt.Errorf("invalid bool: %d", n))
 		}
+
 	}
 	{
 		p := &(*(*(struct {
@@ -30737,6 +30901,7 @@ func (obj *AOProps) deserialize(r io.Reader) {
 		default:
 			chk(fmt.Errorf("invalid bool: %d", n))
 		}
+
 	}
 	{
 		p := &(*(*(struct {
@@ -30776,6 +30941,7 @@ func (obj *AOProps) deserialize(r io.Reader) {
 			NametagBG        color.NRGBA
 		}))(obj)).NametagBG
 		*p = color.NRGBA{A: read8(r), R: read8(r), G: read8(r), B: read8(r)}
+
 	}
 }
 
@@ -30865,6 +31031,7 @@ func (obj *AOPos) serialize(w io.Writer) {
 		} else {
 			write8(w, 0)
 		}
+
 	}
 	{
 		x := (*(*(struct {
@@ -30881,6 +31048,7 @@ func (obj *AOPos) serialize(w io.Writer) {
 		} else {
 			write8(w, 0)
 		}
+
 	}
 	{
 		x := (*(*(struct {
@@ -30985,6 +31153,7 @@ func (obj *AOPos) deserialize(r io.Reader) {
 		default:
 			chk(fmt.Errorf("invalid bool: %d", n))
 		}
+
 	}
 	{
 		p := &(*(*(struct {
@@ -31004,6 +31173,7 @@ func (obj *AOPos) deserialize(r io.Reader) {
 		default:
 			chk(fmt.Errorf("invalid bool: %d", n))
 		}
+
 	}
 	{
 		p := &(*(*(struct {
@@ -31066,6 +31236,7 @@ func (obj *AOSprite) serialize(w io.Writer) {
 		} else {
 			write8(w, 0)
 		}
+
 	}
 }
 
@@ -31119,6 +31290,7 @@ func (obj *AOSprite) deserialize(r io.Reader) {
 		default:
 			chk(fmt.Errorf("invalid bool: %d", n))
 		}
+
 	}
 }
 
@@ -31224,6 +31396,7 @@ func (obj *AOAnim) serialize(w io.Writer) {
 		} else {
 			write8(w, 0)
 		}
+
 	}
 }
 
@@ -31277,6 +31450,7 @@ func (obj *AOAnim) deserialize(r io.Reader) {
 		default:
 			chk(fmt.Errorf("invalid bool: %d", n))
 		}
+
 	}
 }
 
@@ -31421,6 +31595,7 @@ func (obj *AOAttach) serialize(w io.Writer) {
 		} else {
 			write8(w, 0)
 		}
+
 	}
 }
 
@@ -31505,6 +31680,7 @@ func (obj *AOAttach) deserialize(r io.Reader) {
 		default:
 			chk(fmt.Errorf("invalid bool: %d", n))
 		}
+
 	}
 }
 
@@ -31548,6 +31724,7 @@ func (obj *AOPhysOverride) serialize(w io.Writer) {
 		} else {
 			write8(w, 0)
 		}
+
 	}
 	{
 		x := (*(*(struct {
@@ -31561,6 +31738,7 @@ func (obj *AOPhysOverride) serialize(w io.Writer) {
 		} else {
 			write8(w, 0)
 		}
+
 	}
 	{
 		x := (*(*(struct {
@@ -31574,6 +31752,7 @@ func (obj *AOPhysOverride) serialize(w io.Writer) {
 		} else {
 			write8(w, 0)
 		}
+
 	}
 }
 
@@ -31620,6 +31799,7 @@ func (obj *AOPhysOverride) deserialize(r io.Reader) {
 		default:
 			chk(fmt.Errorf("invalid bool: %d", n))
 		}
+
 	}
 	{
 		p := &(*(*(struct {
@@ -31636,6 +31816,7 @@ func (obj *AOPhysOverride) deserialize(r io.Reader) {
 		default:
 			chk(fmt.Errorf("invalid bool: %d", n))
 		}
+
 	}
 	{
 		p := &(*(*(struct {
@@ -31652,6 +31833,7 @@ func (obj *AOPhysOverride) deserialize(r io.Reader) {
 		default:
 			chk(fmt.Errorf("invalid bool: %d", n))
 		}
+
 	}
 }
 
@@ -31691,6 +31873,7 @@ func (obj *NodeMetaField) serialize(w io.Writer) {
 		} else {
 			write8(w, 0)
 		}
+
 	}
 }
 
@@ -31719,6 +31902,7 @@ func (obj *NodeMetaField) deserialize(r io.Reader) {
 		default:
 			chk(fmt.Errorf("invalid bool: %d", n))
 		}
+
 	}
 }
 
@@ -33178,6 +33362,7 @@ func (obj *AOInitData) serialize(w io.Writer) {
 		} else {
 			write8(w, 0)
 		}
+
 	}
 	if err := pcall(func() {
 		((*(*(struct {
@@ -33313,6 +33498,7 @@ func (obj *AOInitData) serialize(w io.Writer) {
 				chk(err)
 			}
 		}
+
 	}
 }
 
@@ -33380,6 +33566,7 @@ func (obj *AOInitData) deserialize(r io.Reader) {
 		default:
 			chk(fmt.Errorf("invalid bool: %d", n))
 		}
+
 	}
 	if err := pcall(func() {
 		((*(*(struct {
@@ -33511,6 +33698,7 @@ func (obj *AOInitData) deserialize(r io.Reader) {
 				}
 			}
 		}
+
 	}
 }
 
@@ -33567,6 +33755,7 @@ func (obj *ToolCaps) serialize(w io.Writer) {
 			} else {
 				write8(w, 0)
 			}
+
 		}
 	}
 	{
@@ -33885,6 +34074,7 @@ func (obj *ToolCaps) deserialize(r io.Reader) {
 			default:
 				chk(fmt.Errorf("invalid bool: %d", n))
 			}
+
 		}
 	}
 	{
