@@ -62,7 +62,7 @@ type ToSrvGotBlks struct {
 // ToSrvHaveMedia tells the server that the client has received the media.
 type ToSrvHaveMedia struct {
 	//mt:len8
-	Token uint32
+	Tokens []uint32
 }
 
 // ToSrvDeletedBlks tells the server that the client has deleted Blks.
