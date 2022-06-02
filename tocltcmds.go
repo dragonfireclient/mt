@@ -1,7 +1,6 @@
 package mt
 
 import (
-	"crypto/sha1"
 	"fmt"
 	"image/color"
 	"io"
@@ -178,13 +177,10 @@ type ToCltAddPlayerVel struct {
 
 // ToCltMediaPush is sent when a media file is dynamically added.
 type ToCltMediaPush struct {
-	//mt:const uint16(sha1.Size)
-	SHA1        [sha1.Size]byte
-	Filename    string
-	ShouldCache bool
-
-	//mt:len32
-	Data []byte
+	RawHash       string
+	Filename      string
+	CallbackToken uint32
+	ShouldCache   bool
 }
 
 // ToCltChatMsg tells the client that is has received a chat message.
