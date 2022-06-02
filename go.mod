@@ -1,4 +1,4 @@
-module github.com/anon55555/mt
+module github.com/Minetest-j45/mt
 
 go 1.16
 
