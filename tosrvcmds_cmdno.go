@@ -10,6 +10,7 @@ func (*ToSrvLeaveModChan) toSrvCmdNo() uint16   { return 24 }
 func (*ToSrvMsgModChan) toSrvCmdNo() uint16     { return 25 }
 func (*ToSrvPlayerPos) toSrvCmdNo() uint16      { return 35 }
 func (*ToSrvGotBlks) toSrvCmdNo() uint16        { return 36 }
+func (*ToSrvHaveMedia) toSrvCmdNo() uint16      { return 41 }
 func (*ToSrvDeletedBlks) toSrvCmdNo() uint16    { return 37 }
 func (*ToSrvInvAction) toSrvCmdNo() uint16      { return 49 }
 func (*ToSrvChatMsg) toSrvCmdNo() uint16        { return 50 }
@@ -36,6 +37,7 @@ var newToSrvCmd = map[uint16]func() Cmd{
 	35: func() Cmd { return new(ToSrvPlayerPos) },
 	36: func() Cmd { return new(ToSrvGotBlks) },
 	37: func() Cmd { return new(ToSrvDeletedBlks) },
+	41: func() Cmd { return new(ToSrvHaveMedia) },
 	49: func() Cmd { return new(ToSrvInvAction) },
 	50: func() Cmd { return new(ToSrvChatMsg) },
 	53: func() Cmd { return new(ToSrvFallDmg) },

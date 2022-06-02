@@ -69,6 +69,7 @@ func (*ToSrvLeaveModChan) DefaultPktInfo() rudp.PktInfo          { return rudp.P
 func (*ToSrvMsgModChan) DefaultPktInfo() rudp.PktInfo            { return rudp.PktInfo{0, false} }
 func (*ToSrvPlayerPos) DefaultPktInfo() rudp.PktInfo             { return rudp.PktInfo{0, true} }
 func (*ToSrvGotBlks) DefaultPktInfo() rudp.PktInfo               { return rudp.PktInfo{2, false} }
+func (*ToSrvHaveMedia) DefaultPktInfo() rudp.PktInfo             { return rudp.PktInfo{0, false} }
 func (*ToSrvDeletedBlks) DefaultPktInfo() rudp.PktInfo           { return rudp.PktInfo{2, false} }
 func (*ToSrvInvAction) DefaultPktInfo() rudp.PktInfo             { return rudp.PktInfo{0, false} }
 func (*ToSrvChatMsg) DefaultPktInfo() rudp.PktInfo               { return rudp.PktInfo{0, false} }

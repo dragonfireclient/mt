@@ -63,6 +63,7 @@ ToSrvLeaveModChan	0	rel
 ToSrvMsgModChan	0	rel
 ToSrvPlayerPos	0	unrel
 ToSrvGotBlks	2	rel
+ToSrvHaveMedia   0   rel
 ToSrvDeletedBlks	2	rel
 ToSrvInvAction	0	rel
 ToSrvChatMsg	0	rel

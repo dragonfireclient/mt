@@ -68,6 +68,7 @@ func (*ToSrvLeaveModChan) cmd()   {}
 func (*ToSrvMsgModChan) cmd()     {}
 func (*ToSrvPlayerPos) cmd()      {}
 func (*ToSrvGotBlks) cmd()        {}
+func (*ToSrvHaveMedia) cmd()      {}
 func (*ToSrvDeletedBlks) cmd()    {}
 func (*ToSrvInvAction) cmd()      {}
 func (*ToSrvChatMsg) cmd()        {}

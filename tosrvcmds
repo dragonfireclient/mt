@@ -7,6 +7,7 @@
 35	PlayerPos
 36	GotBlks
 37	DeletedBlks
+41  HaveMedia
 49	InvAction
 50	ChatMsg
 53	FallDmg
