@@ -52,5 +52,7 @@ type ItemDef struct {
 
 	ShortDesc string
 
+	PlaceParam2 uint8
+
 	//mt:end
 }
