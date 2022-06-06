@@ -5,7 +5,7 @@ import (
 	"io"
 	"net"
 
-	"github.com/Minetest-j45/mt/rudp"
+	"github.com/dragonfireclient/mt/rudp"
 )
 
 // A Pkt is a deserialized rudp.Pkt.

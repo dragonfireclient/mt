@@ -1,4 +1,4 @@
-module github.com/Minetest-j45/mt
+module github.com/dragonfireclient/mt
 
 go 1.16
 

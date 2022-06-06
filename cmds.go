@@ -4,7 +4,7 @@
 package mt
 
 import (
-	"github.com/Minetest-j45/mt/rudp"
+	"github.com/dragonfireclient/mt/rudp"
 )
 
 type Cmd interface {

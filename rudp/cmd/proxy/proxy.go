@@ -16,7 +16,7 @@ import (
 	"net"
 	"os"
 
-	"github.com/Minetest-j45/mt/rudp"
+	"github.com/dragonfireclient/mt/rudp"
 )
 
 func main() {

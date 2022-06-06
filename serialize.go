@@ -82,7 +82,7 @@ func (obj *ToSrvInit) serialize(w io.Writer) {
 		if err == io.EOF {
 			chk(io.EOF)
 		}
-		chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.CompressionModes", err))
+		chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.CompressionModes", err))
 	}
 	{
 		x := (*(*(struct {
@@ -192,7 +192,7 @@ func (obj *ToSrvInit) deserialize(r io.Reader) {
 		if err == io.EOF {
 			chk(io.EOF)
 		}
-		chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.CompressionModes", err))
+		chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.CompressionModes", err))
 	}
 	{
 		p := &(*(*(struct {
@@ -459,7 +459,7 @@ func (obj *ToSrvPlayerPos) serialize(w io.Writer) {
 		if err == io.EOF {
 			chk(io.EOF)
 		}
-		chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.PlayerPos", err))
+		chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.PlayerPos", err))
 	}
 }
 
@@ -472,7 +472,7 @@ func (obj *ToSrvPlayerPos) deserialize(r io.Reader) {
 		if err == io.EOF {
 			chk(io.EOF)
 		}
-		chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.PlayerPos", err))
+		chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.PlayerPos", err))
 	}
 }
 
@@ -719,7 +719,7 @@ func (obj *ToSrvInteract) serialize(w io.Writer) {
 		if err == io.EOF {
 			chk(io.EOF)
 		}
-		chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.Interaction", err))
+		chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.Interaction", err))
 	}
 	{
 		x := (*(*(struct {
@@ -775,7 +775,7 @@ func (obj *ToSrvInteract) serialize(w io.Writer) {
 		if err == io.EOF {
 			chk(io.EOF)
 		}
-		chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.PlayerPos", err))
+		chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.PlayerPos", err))
 	}
 }
 
@@ -793,7 +793,7 @@ func (obj *ToSrvInteract) deserialize(r io.Reader) {
 		if err == io.EOF {
 			chk(io.EOF)
 		}
-		chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.Interaction", err))
+		chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.Interaction", err))
 	}
 	{
 		p := &(*(*(struct {
@@ -845,7 +845,7 @@ func (obj *ToSrvInteract) deserialize(r io.Reader) {
 		if err == io.EOF {
 			chk(io.EOF)
 		}
-		chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.PlayerPos", err))
+		chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.PlayerPos", err))
 	}
 }
 
@@ -872,7 +872,7 @@ func (obj *ToSrvRemovedSounds) serialize(w io.Writer) {
 			if err == io.EOF {
 				chk(io.EOF)
 			}
-			chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.SoundID", err))
+			chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.SoundID", err))
 		}
 	}
 }
@@ -897,7 +897,7 @@ func (obj *ToSrvRemovedSounds) deserialize(r io.Reader) {
 			if err == io.EOF {
 				chk(io.EOF)
 			}
-			chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.SoundID", err))
+			chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.SoundID", err))
 		}
 	}
 }
@@ -970,7 +970,7 @@ func (obj *ToSrvNodeMetaFields) serialize(w io.Writer) {
 			if err == io.EOF {
 				chk(io.EOF)
 			}
-			chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.Field", err))
+			chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.Field", err))
 		}
 	}
 }
@@ -1031,7 +1031,7 @@ func (obj *ToSrvNodeMetaFields) deserialize(r io.Reader) {
 			if err == io.EOF {
 				chk(io.EOF)
 			}
-			chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.Field", err))
+			chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.Field", err))
 		}
 	}
 }
@@ -1083,7 +1083,7 @@ func (obj *ToSrvInvFields) serialize(w io.Writer) {
 			if err == io.EOF {
 				chk(io.EOF)
 			}
-			chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.Field", err))
+			chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.Field", err))
 		}
 	}
 }
@@ -1126,7 +1126,7 @@ func (obj *ToSrvInvFields) deserialize(r io.Reader) {
 			if err == io.EOF {
 				chk(io.EOF)
 			}
-			chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.Field", err))
+			chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.Field", err))
 		}
 	}
 }
@@ -1590,7 +1590,7 @@ func (obj *ToCltHello) serialize(w io.Writer) {
 		if err == io.EOF {
 			chk(io.EOF)
 		}
-		chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.CompressionModes", err))
+		chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.CompressionModes", err))
 	}
 	{
 		x := (*(*(struct {
@@ -1614,7 +1614,7 @@ func (obj *ToCltHello) serialize(w io.Writer) {
 		if err == io.EOF {
 			chk(io.EOF)
 		}
-		chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.AuthMethods", err))
+		chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.AuthMethods", err))
 	}
 	if len(([]byte((*(*(struct {
 		SerializeVer uint8
@@ -1670,7 +1670,7 @@ func (obj *ToCltHello) deserialize(r io.Reader) {
 		if err == io.EOF {
 			chk(io.EOF)
 		}
-		chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.CompressionModes", err))
+		chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.CompressionModes", err))
 	}
 	{
 		p := &(*(*(struct {
@@ -1694,7 +1694,7 @@ func (obj *ToCltHello) deserialize(r io.Reader) {
 		if err == io.EOF {
 			chk(io.EOF)
 		}
-		chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.AuthMethods", err))
+		chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.AuthMethods", err))
 	}
 	var local55 []uint8
 	var local56 uint16
@@ -1732,7 +1732,7 @@ func (obj *ToCltAcceptAuth) serialize(w io.Writer) {
 		if err == io.EOF {
 			chk(io.EOF)
 		}
-		chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.Pos", err))
+		chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.Pos", err))
 	}
 	{
 		x := (*(*(struct {
@@ -1775,7 +1775,7 @@ func (obj *ToCltAcceptAuth) serialize(w io.Writer) {
 		if err == io.EOF {
 			chk(io.EOF)
 		}
-		chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.AuthMethods", err))
+		chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.AuthMethods", err))
 	}
 }
 
@@ -1795,7 +1795,7 @@ func (obj *ToCltAcceptAuth) deserialize(r io.Reader) {
 		if err == io.EOF {
 			chk(io.EOF)
 		}
-		chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.Pos", err))
+		chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.Pos", err))
 	}
 	{
 		p := &(*(*(struct {
@@ -1838,7 +1838,7 @@ func (obj *ToCltAcceptAuth) deserialize(r io.Reader) {
 		if err == io.EOF {
 			chk(io.EOF)
 		}
-		chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.AuthMethods", err))
+		chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.AuthMethods", err))
 	}
 }
 
@@ -1851,7 +1851,7 @@ func (obj *ToCltAcceptSudoMode) serialize(w io.Writer) {
 		if err == io.EOF {
 			chk(io.EOF)
 		}
-		chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.AuthMethods", err))
+		chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.AuthMethods", err))
 	}
 	{
 		local57 := [15]byte{}
@@ -1871,7 +1871,7 @@ func (obj *ToCltAcceptSudoMode) deserialize(r io.Reader) {
 		if err == io.EOF {
 			chk(io.EOF)
 		}
-		chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.AuthMethods", err))
+		chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.AuthMethods", err))
 	}
 	{
 		var local58 [15]byte
@@ -1907,7 +1907,7 @@ func (obj *ToCltKick) serialize(w io.Writer) {
 		if err == io.EOF {
 			chk(io.EOF)
 		}
-		chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.KickReason", err))
+		chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.KickReason", err))
 	}
 	if !((*(*(struct {
 		Reason KickReason
@@ -2008,7 +2008,7 @@ func (obj *ToCltKick) deserialize(r io.Reader) {
 		if err == io.EOF {
 			chk(io.EOF)
 		}
-		chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.KickReason", err))
+		chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.KickReason", err))
 	}
 	if !((*(*(struct {
 		Reason KickReason
@@ -2104,7 +2104,7 @@ func (obj *ToCltBlkData) serialize(w io.Writer) {
 		if err == io.EOF {
 			chk(io.EOF)
 		}
-		chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.MapBlk", err))
+		chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.MapBlk", err))
 	}
 }
 
@@ -2130,7 +2130,7 @@ func (obj *ToCltBlkData) deserialize(r io.Reader) {
 		if err == io.EOF {
 			chk(io.EOF)
 		}
-		chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.MapBlk", err))
+		chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.MapBlk", err))
 	}
 }
 
@@ -2159,7 +2159,7 @@ func (obj *ToCltAddNode) serialize(w io.Writer) {
 		if err == io.EOF {
 			chk(io.EOF)
 		}
-		chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.Node", err))
+		chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.Node", err))
 	}
 	{
 		x := (*(*(struct {
@@ -2200,7 +2200,7 @@ func (obj *ToCltAddNode) deserialize(r io.Reader) {
 		if err == io.EOF {
 			chk(io.EOF)
 		}
-		chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.Node", err))
+		chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.Node", err))
 	}
 	{
 		p := &(*(*(struct {
@@ -2315,7 +2315,7 @@ func (obj *ToCltCSMRestrictionFlags) serialize(w io.Writer) {
 		if err == io.EOF {
 			chk(io.EOF)
 		}
-		chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.CSMRestrictionFlags", err))
+		chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.CSMRestrictionFlags", err))
 	}
 	{
 		x := (*(*(struct {
@@ -2342,7 +2342,7 @@ func (obj *ToCltCSMRestrictionFlags) deserialize(r io.Reader) {
 		if err == io.EOF {
 			chk(io.EOF)
 		}
-		chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.CSMRestrictionFlags", err))
+		chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.CSMRestrictionFlags", err))
 	}
 	{
 		p := &(*(*(struct {
@@ -2365,7 +2365,7 @@ func (obj *ToCltAddPlayerVel) serialize(w io.Writer) {
 		if err == io.EOF {
 			chk(io.EOF)
 		}
-		chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.Vec", err))
+		chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.Vec", err))
 	}
 }
 
@@ -2378,7 +2378,7 @@ func (obj *ToCltAddPlayerVel) deserialize(r io.Reader) {
 		if err == io.EOF {
 			chk(io.EOF)
 		}
-		chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.Vec", err))
+		chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.Vec", err))
 	}
 }
 
@@ -2542,7 +2542,7 @@ func (obj *ToCltChatMsg) serialize(w io.Writer) {
 		if err == io.EOF {
 			chk(io.EOF)
 		}
-		chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.ChatMsgType", err))
+		chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.ChatMsgType", err))
 	}
 	local74 := utf16.Encode([]rune((*(*(struct {
 		Type ChatMsgType
@@ -2624,7 +2624,7 @@ func (obj *ToCltChatMsg) deserialize(r io.Reader) {
 		if err == io.EOF {
 			chk(io.EOF)
 		}
-		chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.ChatMsgType", err))
+		chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.ChatMsgType", err))
 	}
 	var local80 []uint16
 	var local81 uint16
@@ -2708,7 +2708,7 @@ func (obj *ToCltAORmAdd) serialize(w io.Writer) {
 			if err == io.EOF {
 				chk(io.EOF)
 			}
-			chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.AOID", err))
+			chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.AOID", err))
 		}
 	}
 	if len(((*(*(struct {
@@ -2737,7 +2737,7 @@ func (obj *ToCltAORmAdd) serialize(w io.Writer) {
 			if err == io.EOF {
 				chk(io.EOF)
 			}
-			chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.AOAdd", err))
+			chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.AOAdd", err))
 		}
 	}
 }
@@ -2765,7 +2765,7 @@ func (obj *ToCltAORmAdd) deserialize(r io.Reader) {
 			if err == io.EOF {
 				chk(io.EOF)
 			}
-			chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.AOID", err))
+			chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.AOID", err))
 		}
 	}
 	var local90 uint16
@@ -2790,7 +2790,7 @@ func (obj *ToCltAORmAdd) deserialize(r io.Reader) {
 			if err == io.EOF {
 				chk(io.EOF)
 			}
-			chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.AOAdd", err))
+			chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.AOAdd", err))
 		}
 	}
 }
@@ -2809,7 +2809,7 @@ func (obj *ToCltAOMsgs) serialize(w io.Writer) {
 			if err == io.EOF {
 				chk(io.EOF)
 			}
-			chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.IDAOMsg", err))
+			chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.IDAOMsg", err))
 		}
 	}
 }
@@ -2824,7 +2824,7 @@ func (obj *ToCltAOMsgs) deserialize(r io.Reader) {
 				if err == io.EOF {
 					chk(io.EOF)
 				}
-				chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.IDAOMsg", err))
+				chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.IDAOMsg", err))
 			}
 		})
 		if err == io.EOF {
@@ -2869,7 +2869,7 @@ func (obj *ToCltMovePlayer) serialize(w io.Writer) {
 		if err == io.EOF {
 			chk(io.EOF)
 		}
-		chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.Pos", err))
+		chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.Pos", err))
 	}
 	{
 		x := (*(*(struct {
@@ -2897,7 +2897,7 @@ func (obj *ToCltMovePlayer) deserialize(r io.Reader) {
 		if err == io.EOF {
 			chk(io.EOF)
 		}
-		chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.Pos", err))
+		chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.Pos", err))
 	}
 	{
 		p := &(*(*(struct {
@@ -3041,7 +3041,7 @@ func (obj *ToCltDeathScreen) serialize(w io.Writer) {
 		if err == io.EOF {
 			chk(io.EOF)
 		}
-		chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.Pos", err))
+		chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.Pos", err))
 	}
 }
 
@@ -3069,7 +3069,7 @@ func (obj *ToCltDeathScreen) deserialize(r io.Reader) {
 		if err == io.EOF {
 			chk(io.EOF)
 		}
-		chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.Pos", err))
+		chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.Pos", err))
 	}
 }
 
@@ -3714,7 +3714,7 @@ func (obj *ToCltItemDefs) serialize(w io.Writer) {
 					if err == io.EOF {
 						chk(io.EOF)
 					}
-					chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.ItemDef", err))
+					chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.ItemDef", err))
 				}
 			}
 			if len(((*(*(struct {
@@ -3839,7 +3839,7 @@ func (obj *ToCltItemDefs) deserialize(r io.Reader) {
 					if err == io.EOF {
 						chk(io.EOF)
 					}
-					chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.ItemDef", err))
+					chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.ItemDef", err))
 				}
 			}
 			var local124 uint16
@@ -3915,7 +3915,7 @@ func (obj *ToCltPlaySound) serialize(w io.Writer) {
 		if err == io.EOF {
 			chk(io.EOF)
 		}
-		chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.SoundID", err))
+		chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.SoundID", err))
 	}
 	if len(([]byte((*(*(struct {
 		ID      SoundID
@@ -3993,7 +3993,7 @@ func (obj *ToCltPlaySound) serialize(w io.Writer) {
 		if err == io.EOF {
 			chk(io.EOF)
 		}
-		chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.SoundSrcType", err))
+		chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.SoundSrcType", err))
 	}
 	if err := pcall(func() {
 		((*(*(struct {
@@ -4012,7 +4012,7 @@ func (obj *ToCltPlaySound) serialize(w io.Writer) {
 		if err == io.EOF {
 			chk(io.EOF)
 		}
-		chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.Pos", err))
+		chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.Pos", err))
 	}
 	if err := pcall(func() {
 		((*(*(struct {
@@ -4031,7 +4031,7 @@ func (obj *ToCltPlaySound) serialize(w io.Writer) {
 		if err == io.EOF {
 			chk(io.EOF)
 		}
-		chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.AOID", err))
+		chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.AOID", err))
 	}
 	{
 		x := (*(*(struct {
@@ -4121,7 +4121,7 @@ func (obj *ToCltPlaySound) deserialize(r io.Reader) {
 		if err == io.EOF {
 			chk(io.EOF)
 		}
-		chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.SoundID", err))
+		chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.SoundID", err))
 	}
 	var local130 []uint8
 	var local131 uint16
@@ -4178,7 +4178,7 @@ func (obj *ToCltPlaySound) deserialize(r io.Reader) {
 		if err == io.EOF {
 			chk(io.EOF)
 		}
-		chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.SoundSrcType", err))
+		chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.SoundSrcType", err))
 	}
 	if err := pcall(func() {
 		((*(*(struct {
@@ -4197,7 +4197,7 @@ func (obj *ToCltPlaySound) deserialize(r io.Reader) {
 		if err == io.EOF {
 			chk(io.EOF)
 		}
-		chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.Pos", err))
+		chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.Pos", err))
 	}
 	if err := pcall(func() {
 		((*(*(struct {
@@ -4216,7 +4216,7 @@ func (obj *ToCltPlaySound) deserialize(r io.Reader) {
 		if err == io.EOF {
 			chk(io.EOF)
 		}
-		chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.AOID", err))
+		chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.AOID", err))
 	}
 	{
 		p := &(*(*(struct {
@@ -4303,7 +4303,7 @@ func (obj *ToCltStopSound) serialize(w io.Writer) {
 		if err == io.EOF {
 			chk(io.EOF)
 		}
-		chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.SoundID", err))
+		chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.SoundID", err))
 	}
 }
 
@@ -4316,7 +4316,7 @@ func (obj *ToCltStopSound) deserialize(r io.Reader) {
 		if err == io.EOF {
 			chk(io.EOF)
 		}
-		chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.SoundID", err))
+		chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.SoundID", err))
 	}
 }
 
@@ -5199,7 +5199,7 @@ func (obj *ToCltSpawnParticle) serialize(w io.Writer) {
 		if err == io.EOF {
 			chk(io.EOF)
 		}
-		chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.TileAnim", err))
+		chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.TileAnim", err))
 	}
 	{
 		x := (*(*(struct {
@@ -5270,7 +5270,7 @@ func (obj *ToCltSpawnParticle) serialize(w io.Writer) {
 		if err == io.EOF {
 			chk(io.EOF)
 		}
-		chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.Content", err))
+		chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.Content", err))
 	}
 	{
 		x := (*(*(struct {
@@ -5615,7 +5615,7 @@ func (obj *ToCltSpawnParticle) deserialize(r io.Reader) {
 		if err == io.EOF {
 			chk(io.EOF)
 		}
-		chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.TileAnim", err))
+		chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.TileAnim", err))
 	}
 	{
 		p := &(*(*(struct {
@@ -5689,7 +5689,7 @@ func (obj *ToCltSpawnParticle) deserialize(r io.Reader) {
 		if err == io.EOF {
 			chk(io.EOF)
 		}
-		chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.Content", err))
+		chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.Content", err))
 	}
 	{
 		p := &(*(*(struct {
@@ -6225,7 +6225,7 @@ func (obj *ToCltAddParticleSpawner) serialize(w io.Writer) {
 		if err == io.EOF {
 			chk(io.EOF)
 		}
-		chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.ParticleSpawnerID", err))
+		chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.ParticleSpawnerID", err))
 	}
 	{
 		x := (*(*(struct {
@@ -6312,7 +6312,7 @@ func (obj *ToCltAddParticleSpawner) serialize(w io.Writer) {
 		if err == io.EOF {
 			chk(io.EOF)
 		}
-		chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.AOID", err))
+		chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.AOID", err))
 	}
 	if err := pcall(func() {
 		((*(*(struct {
@@ -6341,7 +6341,7 @@ func (obj *ToCltAddParticleSpawner) serialize(w io.Writer) {
 		if err == io.EOF {
 			chk(io.EOF)
 		}
-		chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.TileAnim", err))
+		chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.TileAnim", err))
 	}
 	{
 		x := (*(*(struct {
@@ -6424,7 +6424,7 @@ func (obj *ToCltAddParticleSpawner) serialize(w io.Writer) {
 		if err == io.EOF {
 			chk(io.EOF)
 		}
-		chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.Content", err))
+		chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.Content", err))
 	}
 	{
 		x := (*(*(struct {
@@ -6930,7 +6930,7 @@ func (obj *ToCltAddParticleSpawner) deserialize(r io.Reader) {
 		if err == io.EOF {
 			chk(io.EOF)
 		}
-		chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.ParticleSpawnerID", err))
+		chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.ParticleSpawnerID", err))
 	}
 	{
 		p := &(*(*(struct {
@@ -7023,7 +7023,7 @@ func (obj *ToCltAddParticleSpawner) deserialize(r io.Reader) {
 		if err == io.EOF {
 			chk(io.EOF)
 		}
-		chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.AOID", err))
+		chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.AOID", err))
 	}
 	if err := pcall(func() {
 		((*(*(struct {
@@ -7052,7 +7052,7 @@ func (obj *ToCltAddParticleSpawner) deserialize(r io.Reader) {
 		if err == io.EOF {
 			chk(io.EOF)
 		}
-		chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.TileAnim", err))
+		chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.TileAnim", err))
 	}
 	{
 		p := &(*(*(struct {
@@ -7138,7 +7138,7 @@ func (obj *ToCltAddParticleSpawner) deserialize(r io.Reader) {
 		if err == io.EOF {
 			chk(io.EOF)
 		}
-		chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.Content", err))
+		chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.Content", err))
 	}
 	{
 		p := &(*(*(struct {
@@ -7202,7 +7202,7 @@ func (obj *ToCltAddHUD) serialize(w io.Writer) {
 		if err == io.EOF {
 			chk(io.EOF)
 		}
-		chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.HUDID", err))
+		chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.HUDID", err))
 	}
 	if err := pcall(func() {
 		((*(*(struct {
@@ -7213,7 +7213,7 @@ func (obj *ToCltAddHUD) serialize(w io.Writer) {
 		if err == io.EOF {
 			chk(io.EOF)
 		}
-		chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.HUD", err))
+		chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.HUD", err))
 	}
 }
 
@@ -7227,7 +7227,7 @@ func (obj *ToCltAddHUD) deserialize(r io.Reader) {
 		if err == io.EOF {
 			chk(io.EOF)
 		}
-		chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.HUDID", err))
+		chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.HUDID", err))
 	}
 	if err := pcall(func() {
 		((*(*(struct {
@@ -7238,7 +7238,7 @@ func (obj *ToCltAddHUD) deserialize(r io.Reader) {
 		if err == io.EOF {
 			chk(io.EOF)
 		}
-		chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.HUD", err))
+		chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.HUD", err))
 	}
 }
 
@@ -7251,7 +7251,7 @@ func (obj *ToCltRmHUD) serialize(w io.Writer) {
 		if err == io.EOF {
 			chk(io.EOF)
 		}
-		chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.HUDID", err))
+		chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.HUDID", err))
 	}
 }
 
@@ -7264,7 +7264,7 @@ func (obj *ToCltRmHUD) deserialize(r io.Reader) {
 		if err == io.EOF {
 			chk(io.EOF)
 		}
-		chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.HUDID", err))
+		chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.HUDID", err))
 	}
 }
 
@@ -7321,7 +7321,7 @@ func (obj *ToCltChangeHUD) serialize(w io.Writer) {
 		if err == io.EOF {
 			chk(io.EOF)
 		}
-		chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.HUDID", err))
+		chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.HUDID", err))
 	}
 	if err := pcall(func() {
 		((*(*(struct {
@@ -7375,7 +7375,7 @@ func (obj *ToCltChangeHUD) serialize(w io.Writer) {
 		if err == io.EOF {
 			chk(io.EOF)
 		}
-		chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.HUDField", err))
+		chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.HUDField", err))
 	}
 	if !((*(*(struct {
 		ID HUDID
@@ -8797,7 +8797,7 @@ func (obj *ToCltChangeHUD) serialize(w io.Writer) {
 			if err == io.EOF {
 				chk(io.EOF)
 			}
-			chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.Pos", err))
+			chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.Pos", err))
 		}
 	}
 	if (*(*(struct {
@@ -9340,7 +9340,7 @@ func (obj *ToCltChangeHUD) serialize(w io.Writer) {
 			if err == io.EOF {
 				chk(io.EOF)
 			}
-			chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.HUDStyleFlags", err))
+			chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.HUDStyleFlags", err))
 		}
 	}
 }
@@ -9398,7 +9398,7 @@ func (obj *ToCltChangeHUD) deserialize(r io.Reader) {
 		if err == io.EOF {
 			chk(io.EOF)
 		}
-		chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.HUDID", err))
+		chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.HUDID", err))
 	}
 	if err := pcall(func() {
 		((*(*(struct {
@@ -9452,7 +9452,7 @@ func (obj *ToCltChangeHUD) deserialize(r io.Reader) {
 		if err == io.EOF {
 			chk(io.EOF)
 		}
-		chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.HUDField", err))
+		chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.HUDField", err))
 	}
 	if !((*(*(struct {
 		ID HUDID
@@ -10692,7 +10692,7 @@ func (obj *ToCltChangeHUD) deserialize(r io.Reader) {
 			if err == io.EOF {
 				chk(io.EOF)
 			}
-			chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.Pos", err))
+			chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.Pos", err))
 		}
 	}
 	if (*(*(struct {
@@ -11144,7 +11144,7 @@ func (obj *ToCltChangeHUD) deserialize(r io.Reader) {
 			if err == io.EOF {
 				chk(io.EOF)
 			}
-			chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.HUDStyleFlags", err))
+			chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.HUDStyleFlags", err))
 		}
 	}
 }
@@ -11160,7 +11160,7 @@ func (obj *ToCltHUDFlags) serialize(w io.Writer) {
 		if err == io.EOF {
 			chk(io.EOF)
 		}
-		chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.HUDFlags", err))
+		chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.HUDFlags", err))
 	}
 	if err := pcall(func() {
 		((*(*(struct {
@@ -11172,7 +11172,7 @@ func (obj *ToCltHUDFlags) serialize(w io.Writer) {
 		if err == io.EOF {
 			chk(io.EOF)
 		}
-		chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.HUDFlags", err))
+		chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.HUDFlags", err))
 	}
 }
 
@@ -11187,7 +11187,7 @@ func (obj *ToCltHUDFlags) deserialize(r io.Reader) {
 		if err == io.EOF {
 			chk(io.EOF)
 		}
-		chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.HUDFlags", err))
+		chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.HUDFlags", err))
 	}
 	if err := pcall(func() {
 		((*(*(struct {
@@ -11199,7 +11199,7 @@ func (obj *ToCltHUDFlags) deserialize(r io.Reader) {
 		if err == io.EOF {
 			chk(io.EOF)
 		}
-		chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.HUDFlags", err))
+		chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.HUDFlags", err))
 	}
 }
 
@@ -11219,7 +11219,7 @@ func (obj *ToCltSetHotbarParam) serialize(w io.Writer) {
 		if err == io.EOF {
 			chk(io.EOF)
 		}
-		chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.HotbarParam", err))
+		chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.HotbarParam", err))
 	}
 	if (*(*(struct {
 		Param HotbarParam
@@ -11277,7 +11277,7 @@ func (obj *ToCltSetHotbarParam) serialize(w io.Writer) {
 			if err == io.EOF {
 				chk(io.EOF)
 			}
-			chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.Texture", err))
+			chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.Texture", err))
 		}
 	}
 }
@@ -11298,7 +11298,7 @@ func (obj *ToCltSetHotbarParam) deserialize(r io.Reader) {
 		if err == io.EOF {
 			chk(io.EOF)
 		}
-		chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.HotbarParam", err))
+		chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.HotbarParam", err))
 	}
 	if (*(*(struct {
 		Param HotbarParam
@@ -11360,7 +11360,7 @@ func (obj *ToCltSetHotbarParam) deserialize(r io.Reader) {
 			if err == io.EOF {
 				chk(io.EOF)
 			}
-			chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.Texture", err))
+			chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.Texture", err))
 		}
 	}
 }
@@ -11681,7 +11681,7 @@ func (obj *ToCltSkyParams) serialize(w io.Writer) {
 				if err == io.EOF {
 					chk(io.EOF)
 				}
-				chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.Texture", err))
+				chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.Texture", err))
 			}
 		}
 	}
@@ -12067,7 +12067,7 @@ func (obj *ToCltSkyParams) deserialize(r io.Reader) {
 				if err == io.EOF {
 					chk(io.EOF)
 				}
-				chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.Texture", err))
+				chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.Texture", err))
 			}
 		}
 	}
@@ -12401,7 +12401,7 @@ func (obj *ToCltEyeOffset) serialize(w io.Writer) {
 		if err == io.EOF {
 			chk(io.EOF)
 		}
-		chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.Vec", err))
+		chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.Vec", err))
 	}
 	if err := pcall(func() {
 		((*(*(struct {
@@ -12411,7 +12411,7 @@ func (obj *ToCltEyeOffset) serialize(w io.Writer) {
 		if err == io.EOF {
 			chk(io.EOF)
 		}
-		chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.Vec", err))
+		chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.Vec", err))
 	}
 }
 
@@ -12424,7 +12424,7 @@ func (obj *ToCltEyeOffset) deserialize(r io.Reader) {
 		if err == io.EOF {
 			chk(io.EOF)
 		}
-		chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.Vec", err))
+		chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.Vec", err))
 	}
 	if err := pcall(func() {
 		((*(*(struct {
@@ -12434,7 +12434,7 @@ func (obj *ToCltEyeOffset) deserialize(r io.Reader) {
 		if err == io.EOF {
 			chk(io.EOF)
 		}
-		chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.Vec", err))
+		chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.Vec", err))
 	}
 }
 
@@ -12447,7 +12447,7 @@ func (obj *ToCltDelParticleSpawner) serialize(w io.Writer) {
 		if err == io.EOF {
 			chk(io.EOF)
 		}
-		chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.ParticleSpawnerID", err))
+		chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.ParticleSpawnerID", err))
 	}
 }
 
@@ -12460,7 +12460,7 @@ func (obj *ToCltDelParticleSpawner) deserialize(r io.Reader) {
 		if err == io.EOF {
 			chk(io.EOF)
 		}
-		chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.ParticleSpawnerID", err))
+		chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.ParticleSpawnerID", err))
 	}
 }
 
@@ -12631,7 +12631,7 @@ func (obj *ToCltFadeSound) serialize(w io.Writer) {
 		if err == io.EOF {
 			chk(io.EOF)
 		}
-		chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.SoundID", err))
+		chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.SoundID", err))
 	}
 	{
 		x := (*(*(struct {
@@ -12662,7 +12662,7 @@ func (obj *ToCltFadeSound) deserialize(r io.Reader) {
 		if err == io.EOF {
 			chk(io.EOF)
 		}
-		chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.SoundID", err))
+		chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.SoundID", err))
 	}
 	{
 		p := &(*(*(struct {
@@ -12692,7 +12692,7 @@ func (obj *ToCltUpdatePlayerList) serialize(w io.Writer) {
 		if err == io.EOF {
 			chk(io.EOF)
 		}
-		chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.PlayerListUpdateType", err))
+		chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.PlayerListUpdateType", err))
 	}
 	if len(((*(*(struct {
 		Type    PlayerListUpdateType
@@ -12744,7 +12744,7 @@ func (obj *ToCltUpdatePlayerList) deserialize(r io.Reader) {
 		if err == io.EOF {
 			chk(io.EOF)
 		}
-		chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.PlayerListUpdateType", err))
+		chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.PlayerListUpdateType", err))
 	}
 	var local209 uint16
 	{
@@ -12910,7 +12910,7 @@ func (obj *ToCltModChanSig) serialize(w io.Writer) {
 		if err == io.EOF {
 			chk(io.EOF)
 		}
-		chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.ModChanSig", err))
+		chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.ModChanSig", err))
 	}
 	if len(([]byte((*(*(struct {
 		Signal  ModChanSig
@@ -12944,7 +12944,7 @@ func (obj *ToCltModChanSig) deserialize(r io.Reader) {
 		if err == io.EOF {
 			chk(io.EOF)
 		}
-		chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.ModChanSig", err))
+		chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.ModChanSig", err))
 	}
 	var local219 []uint8
 	var local220 uint16
@@ -13098,7 +13098,7 @@ func (obj *ToCltSunParams) serialize(w io.Writer) {
 		if err == io.EOF {
 			chk(io.EOF)
 		}
-		chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.Texture", err))
+		chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.Texture", err))
 	}
 	if err := pcall(func() {
 		((*(*(struct {
@@ -13113,7 +13113,7 @@ func (obj *ToCltSunParams) serialize(w io.Writer) {
 		if err == io.EOF {
 			chk(io.EOF)
 		}
-		chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.Texture", err))
+		chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.Texture", err))
 	}
 	if err := pcall(func() {
 		((*(*(struct {
@@ -13128,7 +13128,7 @@ func (obj *ToCltSunParams) serialize(w io.Writer) {
 		if err == io.EOF {
 			chk(io.EOF)
 		}
-		chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.Texture", err))
+		chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.Texture", err))
 	}
 	{
 		x := (*(*(struct {
@@ -13190,7 +13190,7 @@ func (obj *ToCltSunParams) deserialize(r io.Reader) {
 		if err == io.EOF {
 			chk(io.EOF)
 		}
-		chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.Texture", err))
+		chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.Texture", err))
 	}
 	if err := pcall(func() {
 		((*(*(struct {
@@ -13205,7 +13205,7 @@ func (obj *ToCltSunParams) deserialize(r io.Reader) {
 		if err == io.EOF {
 			chk(io.EOF)
 		}
-		chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.Texture", err))
+		chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.Texture", err))
 	}
 	if err := pcall(func() {
 		((*(*(struct {
@@ -13220,7 +13220,7 @@ func (obj *ToCltSunParams) deserialize(r io.Reader) {
 		if err == io.EOF {
 			chk(io.EOF)
 		}
-		chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.Texture", err))
+		chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.Texture", err))
 	}
 	{
 		p := &(*(*(struct {
@@ -13278,7 +13278,7 @@ func (obj *ToCltMoonParams) serialize(w io.Writer) {
 		if err == io.EOF {
 			chk(io.EOF)
 		}
-		chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.Texture", err))
+		chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.Texture", err))
 	}
 	if err := pcall(func() {
 		((*(*(struct {
@@ -13291,7 +13291,7 @@ func (obj *ToCltMoonParams) serialize(w io.Writer) {
 		if err == io.EOF {
 			chk(io.EOF)
 		}
-		chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.Texture", err))
+		chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.Texture", err))
 	}
 	{
 		x := (*(*(struct {
@@ -13332,7 +13332,7 @@ func (obj *ToCltMoonParams) deserialize(r io.Reader) {
 		if err == io.EOF {
 			chk(io.EOF)
 		}
-		chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.Texture", err))
+		chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.Texture", err))
 	}
 	if err := pcall(func() {
 		((*(*(struct {
@@ -13345,7 +13345,7 @@ func (obj *ToCltMoonParams) deserialize(r io.Reader) {
 		if err == io.EOF {
 			chk(io.EOF)
 		}
-		chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.Texture", err))
+		chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.Texture", err))
 	}
 	{
 		p := &(*(*(struct {
@@ -13561,7 +13561,7 @@ func (obj *AOCmdProps) serialize(w io.Writer) {
 		if err == io.EOF {
 			chk(io.EOF)
 		}
-		chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.AOProps", err))
+		chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.AOProps", err))
 	}
 }
 
@@ -13574,7 +13574,7 @@ func (obj *AOCmdProps) deserialize(r io.Reader) {
 		if err == io.EOF {
 			chk(io.EOF)
 		}
-		chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.AOProps", err))
+		chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.AOProps", err))
 	}
 }
 
@@ -13587,7 +13587,7 @@ func (obj *AOCmdPos) serialize(w io.Writer) {
 		if err == io.EOF {
 			chk(io.EOF)
 		}
-		chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.AOPos", err))
+		chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.AOPos", err))
 	}
 }
 
@@ -13600,7 +13600,7 @@ func (obj *AOCmdPos) deserialize(r io.Reader) {
 		if err == io.EOF {
 			chk(io.EOF)
 		}
-		chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.AOPos", err))
+		chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.AOPos", err))
 	}
 }
 
@@ -13613,7 +13613,7 @@ func (obj *AOCmdTextureMod) serialize(w io.Writer) {
 		if err == io.EOF {
 			chk(io.EOF)
 		}
-		chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.Texture", err))
+		chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.Texture", err))
 	}
 }
 
@@ -13626,7 +13626,7 @@ func (obj *AOCmdTextureMod) deserialize(r io.Reader) {
 		if err == io.EOF {
 			chk(io.EOF)
 		}
-		chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.Texture", err))
+		chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.Texture", err))
 	}
 }
 
@@ -13639,7 +13639,7 @@ func (obj *AOCmdSprite) serialize(w io.Writer) {
 		if err == io.EOF {
 			chk(io.EOF)
 		}
-		chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.AOSprite", err))
+		chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.AOSprite", err))
 	}
 }
 
@@ -13652,7 +13652,7 @@ func (obj *AOCmdSprite) deserialize(r io.Reader) {
 		if err == io.EOF {
 			chk(io.EOF)
 		}
-		chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.AOSprite", err))
+		chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.AOSprite", err))
 	}
 }
 
@@ -13697,7 +13697,7 @@ func (obj *AOCmdArmorGroups) serialize(w io.Writer) {
 			if err == io.EOF {
 				chk(io.EOF)
 			}
-			chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.Group", err))
+			chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.Group", err))
 		}
 	}
 }
@@ -13722,7 +13722,7 @@ func (obj *AOCmdArmorGroups) deserialize(r io.Reader) {
 			if err == io.EOF {
 				chk(io.EOF)
 			}
-			chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.Group", err))
+			chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.Group", err))
 		}
 	}
 }
@@ -13736,7 +13736,7 @@ func (obj *AOCmdAnim) serialize(w io.Writer) {
 		if err == io.EOF {
 			chk(io.EOF)
 		}
-		chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.AOAnim", err))
+		chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.AOAnim", err))
 	}
 }
 
@@ -13749,7 +13749,7 @@ func (obj *AOCmdAnim) deserialize(r io.Reader) {
 		if err == io.EOF {
 			chk(io.EOF)
 		}
-		chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.AOAnim", err))
+		chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.AOAnim", err))
 	}
 }
 
@@ -13783,7 +13783,7 @@ func (obj *AOCmdBonePos) serialize(w io.Writer) {
 		if err == io.EOF {
 			chk(io.EOF)
 		}
-		chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.AOBonePos", err))
+		chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.AOBonePos", err))
 	}
 }
 
@@ -13812,7 +13812,7 @@ func (obj *AOCmdBonePos) deserialize(r io.Reader) {
 		if err == io.EOF {
 			chk(io.EOF)
 		}
-		chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.AOBonePos", err))
+		chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.AOBonePos", err))
 	}
 }
 
@@ -13825,7 +13825,7 @@ func (obj *AOCmdAttach) serialize(w io.Writer) {
 		if err == io.EOF {
 			chk(io.EOF)
 		}
-		chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.AOAttach", err))
+		chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.AOAttach", err))
 	}
 }
 
@@ -13838,7 +13838,7 @@ func (obj *AOCmdAttach) deserialize(r io.Reader) {
 		if err == io.EOF {
 			chk(io.EOF)
 		}
-		chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.AOAttach", err))
+		chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.AOAttach", err))
 	}
 }
 
@@ -13851,7 +13851,7 @@ func (obj *AOCmdPhysOverride) serialize(w io.Writer) {
 		if err == io.EOF {
 			chk(io.EOF)
 		}
-		chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.AOPhysOverride", err))
+		chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.AOPhysOverride", err))
 	}
 }
 
@@ -13864,7 +13864,7 @@ func (obj *AOCmdPhysOverride) deserialize(r io.Reader) {
 		if err == io.EOF {
 			chk(io.EOF)
 		}
-		chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.AOPhysOverride", err))
+		chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.AOPhysOverride", err))
 	}
 }
 
@@ -13877,7 +13877,7 @@ func (obj *AOCmdSpawnInfant) serialize(w io.Writer) {
 		if err == io.EOF {
 			chk(io.EOF)
 		}
-		chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.AOID", err))
+		chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.AOID", err))
 	}
 	{
 		local230 := genericCAO
@@ -13887,7 +13887,7 @@ func (obj *AOCmdSpawnInfant) serialize(w io.Writer) {
 			if err == io.EOF {
 				chk(io.EOF)
 			}
-			chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.aoType", err))
+			chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.aoType", err))
 		}
 	}
 }
@@ -13901,7 +13901,7 @@ func (obj *AOCmdSpawnInfant) deserialize(r io.Reader) {
 		if err == io.EOF {
 			chk(io.EOF)
 		}
-		chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.AOID", err))
+		chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.AOID", err))
 	}
 	{
 		var local231 aoType
@@ -13912,7 +13912,7 @@ func (obj *AOCmdSpawnInfant) deserialize(r io.Reader) {
 			if err == io.EOF {
 				chk(io.EOF)
 			}
-			chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.aoType", err))
+			chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.aoType", err))
 		}
 		if local231 != local232 {
 			chk(fmt.Errorf("const %v: %v", "genericCAO", local231))
@@ -13973,7 +13973,7 @@ func (obj *NodeMeta) serialize(w io.Writer) {
 			if err == io.EOF {
 				chk(io.EOF)
 			}
-			chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.NodeMetaField", err))
+			chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.NodeMetaField", err))
 		}
 	}
 	chk(((*(*(struct {
@@ -14013,7 +14013,7 @@ func (obj *NodeMeta) deserialize(r io.Reader) {
 			if err == io.EOF {
 				chk(io.EOF)
 			}
-			chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.NodeMetaField", err))
+			chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.NodeMetaField", err))
 		}
 	}
 	chk(((*(*(struct {
@@ -14037,7 +14037,7 @@ func (obj *MinimapMode) serialize(w io.Writer) {
 		if err == io.EOF {
 			chk(io.EOF)
 		}
-		chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.MinimapType", err))
+		chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.MinimapType", err))
 	}
 	if len(([]byte((*(*(struct {
 		Type  MinimapType
@@ -14090,7 +14090,7 @@ func (obj *MinimapMode) serialize(w io.Writer) {
 		if err == io.EOF {
 			chk(io.EOF)
 		}
-		chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.Texture", err))
+		chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.Texture", err))
 	}
 	{
 		x := (*(*(struct {
@@ -14117,7 +14117,7 @@ func (obj *MinimapMode) deserialize(r io.Reader) {
 		if err == io.EOF {
 			chk(io.EOF)
 		}
-		chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.MinimapType", err))
+		chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.MinimapType", err))
 	}
 	var local236 []uint8
 	var local237 uint16
@@ -14159,7 +14159,7 @@ func (obj *MinimapMode) deserialize(r io.Reader) {
 		if err == io.EOF {
 			chk(io.EOF)
 		}
-		chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.Texture", err))
+		chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.Texture", err))
 	}
 	{
 		p := &(*(*(struct {
@@ -14242,7 +14242,7 @@ func (obj *NodeDef) serialize(w io.Writer) {
 		if err == io.EOF {
 			chk(io.EOF)
 		}
-		chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.Content", err))
+		chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.Content", err))
 	}
 	{
 		ow := w
@@ -14713,7 +14713,7 @@ func (obj *NodeDef) serialize(w io.Writer) {
 				if err == io.EOF {
 					chk(io.EOF)
 				}
-				chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.Group", err))
+				chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.Group", err))
 			}
 		}
 		if err := pcall(func() {
@@ -14784,7 +14784,7 @@ func (obj *NodeDef) serialize(w io.Writer) {
 			if err == io.EOF {
 				chk(io.EOF)
 			}
-			chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.Param1Type", err))
+			chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.Param1Type", err))
 		}
 		if err := pcall(func() {
 			((*(*(struct {
@@ -14854,7 +14854,7 @@ func (obj *NodeDef) serialize(w io.Writer) {
 			if err == io.EOF {
 				chk(io.EOF)
 			}
-			chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.Param2Type", err))
+			chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.Param2Type", err))
 		}
 		if err := pcall(func() {
 			((*(*(struct {
@@ -14924,7 +14924,7 @@ func (obj *NodeDef) serialize(w io.Writer) {
 			if err == io.EOF {
 				chk(io.EOF)
 			}
-			chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.DrawType", err))
+			chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.DrawType", err))
 		}
 		if len(([]byte((*(*(struct {
 			Param0 Content
@@ -15327,7 +15327,7 @@ func (obj *NodeDef) serialize(w io.Writer) {
 				if err == io.EOF {
 					chk(io.EOF)
 				}
-				chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.TileDef", err))
+				chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.TileDef", err))
 			}
 		}
 		for local242 := range (*(*(struct {
@@ -15461,7 +15461,7 @@ func (obj *NodeDef) serialize(w io.Writer) {
 				if err == io.EOF {
 					chk(io.EOF)
 				}
-				chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.TileDef", err))
+				chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.TileDef", err))
 			}
 		}
 		{
@@ -15602,7 +15602,7 @@ func (obj *NodeDef) serialize(w io.Writer) {
 				if err == io.EOF {
 					chk(io.EOF)
 				}
-				chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.TileDef", err))
+				chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.TileDef", err))
 			}
 		}
 		{
@@ -15739,7 +15739,7 @@ func (obj *NodeDef) serialize(w io.Writer) {
 			if err == io.EOF {
 				chk(io.EOF)
 			}
-			chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.Texture", err))
+			chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.Texture", err))
 		}
 		if err := pcall(func() {
 			((*(*(struct {
@@ -15809,7 +15809,7 @@ func (obj *NodeDef) serialize(w io.Writer) {
 			if err == io.EOF {
 				chk(io.EOF)
 			}
-			chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.WaveType", err))
+			chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.WaveType", err))
 		}
 		{
 			x := (*(*(struct {
@@ -16139,7 +16139,7 @@ func (obj *NodeDef) serialize(w io.Writer) {
 				if err == io.EOF {
 					chk(io.EOF)
 				}
-				chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.Content", err))
+				chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.Content", err))
 			}
 		}
 		{
@@ -17104,7 +17104,7 @@ func (obj *NodeDef) serialize(w io.Writer) {
 			if err == io.EOF {
 				chk(io.EOF)
 			}
-			chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.LiquidType", err))
+			chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.LiquidType", err))
 		}
 		if len(([]byte((*(*(struct {
 			Param0 Content
@@ -17906,7 +17906,7 @@ func (obj *NodeDef) serialize(w io.Writer) {
 			if err == io.EOF {
 				chk(io.EOF)
 			}
-			chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.NodeBox", err))
+			chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.NodeBox", err))
 		}
 		if err := pcall(func() {
 			((*(*(struct {
@@ -17976,7 +17976,7 @@ func (obj *NodeDef) serialize(w io.Writer) {
 			if err == io.EOF {
 				chk(io.EOF)
 			}
-			chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.NodeBox", err))
+			chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.NodeBox", err))
 		}
 		if err := pcall(func() {
 			((*(*(struct {
@@ -18046,7 +18046,7 @@ func (obj *NodeDef) serialize(w io.Writer) {
 			if err == io.EOF {
 				chk(io.EOF)
 			}
-			chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.NodeBox", err))
+			chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.NodeBox", err))
 		}
 		if err := pcall(func() {
 			((*(*(struct {
@@ -18116,7 +18116,7 @@ func (obj *NodeDef) serialize(w io.Writer) {
 			if err == io.EOF {
 				chk(io.EOF)
 			}
-			chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.SoundDef", err))
+			chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.SoundDef", err))
 		}
 		if err := pcall(func() {
 			((*(*(struct {
@@ -18186,7 +18186,7 @@ func (obj *NodeDef) serialize(w io.Writer) {
 			if err == io.EOF {
 				chk(io.EOF)
 			}
-			chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.SoundDef", err))
+			chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.SoundDef", err))
 		}
 		if err := pcall(func() {
 			((*(*(struct {
@@ -18256,7 +18256,7 @@ func (obj *NodeDef) serialize(w io.Writer) {
 			if err == io.EOF {
 				chk(io.EOF)
 			}
-			chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.SoundDef", err))
+			chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.SoundDef", err))
 		}
 		{
 			x := (*(*(struct {
@@ -18729,7 +18729,7 @@ func (obj *NodeDef) serialize(w io.Writer) {
 			if err == io.EOF {
 				chk(io.EOF)
 			}
-			chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.AlphaUse", err))
+			chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.AlphaUse", err))
 		}
 		{
 			buf := w
@@ -18818,7 +18818,7 @@ func (obj *NodeDef) deserialize(r io.Reader) {
 		if err == io.EOF {
 			chk(io.EOF)
 		}
-		chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.Content", err))
+		chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.Content", err))
 	}
 	{
 		var n uint16
@@ -19111,7 +19111,7 @@ func (obj *NodeDef) deserialize(r io.Reader) {
 				if err == io.EOF {
 					chk(io.EOF)
 				}
-				chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.Group", err))
+				chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.Group", err))
 			}
 		}
 		if err := pcall(func() {
@@ -19182,7 +19182,7 @@ func (obj *NodeDef) deserialize(r io.Reader) {
 			if err == io.EOF {
 				chk(io.EOF)
 			}
-			chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.Param1Type", err))
+			chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.Param1Type", err))
 		}
 		if err := pcall(func() {
 			((*(*(struct {
@@ -19252,7 +19252,7 @@ func (obj *NodeDef) deserialize(r io.Reader) {
 			if err == io.EOF {
 				chk(io.EOF)
 			}
-			chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.Param2Type", err))
+			chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.Param2Type", err))
 		}
 		if err := pcall(func() {
 			((*(*(struct {
@@ -19322,7 +19322,7 @@ func (obj *NodeDef) deserialize(r io.Reader) {
 			if err == io.EOF {
 				chk(io.EOF)
 			}
-			chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.DrawType", err))
+			chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.DrawType", err))
 		}
 		var local252 []uint8
 		var local253 uint16
@@ -19606,7 +19606,7 @@ func (obj *NodeDef) deserialize(r io.Reader) {
 				if err == io.EOF {
 					chk(io.EOF)
 				}
-				chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.TileDef", err))
+				chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.TileDef", err))
 			}
 		}
 		for local257 := range (*(*(struct {
@@ -19740,7 +19740,7 @@ func (obj *NodeDef) deserialize(r io.Reader) {
 				if err == io.EOF {
 					chk(io.EOF)
 				}
-				chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.TileDef", err))
+				chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.TileDef", err))
 			}
 		}
 		{
@@ -19885,7 +19885,7 @@ func (obj *NodeDef) deserialize(r io.Reader) {
 				if err == io.EOF {
 					chk(io.EOF)
 				}
-				chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.TileDef", err))
+				chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.TileDef", err))
 			}
 		}
 		{
@@ -20022,7 +20022,7 @@ func (obj *NodeDef) deserialize(r io.Reader) {
 			if err == io.EOF {
 				chk(io.EOF)
 			}
-			chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.Texture", err))
+			chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.Texture", err))
 		}
 		if err := pcall(func() {
 			((*(*(struct {
@@ -20092,7 +20092,7 @@ func (obj *NodeDef) deserialize(r io.Reader) {
 			if err == io.EOF {
 				chk(io.EOF)
 			}
-			chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.WaveType", err))
+			chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.WaveType", err))
 		}
 		{
 			p := &(*(*(struct {
@@ -20359,7 +20359,7 @@ func (obj *NodeDef) deserialize(r io.Reader) {
 				if err == io.EOF {
 					chk(io.EOF)
 				}
-				chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.Content", err))
+				chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.Content", err))
 			}
 		}
 		{
@@ -21351,7 +21351,7 @@ func (obj *NodeDef) deserialize(r io.Reader) {
 			if err == io.EOF {
 				chk(io.EOF)
 			}
-			chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.LiquidType", err))
+			chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.LiquidType", err))
 		}
 		var local263 []uint8
 		var local264 uint16
@@ -21913,7 +21913,7 @@ func (obj *NodeDef) deserialize(r io.Reader) {
 			if err == io.EOF {
 				chk(io.EOF)
 			}
-			chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.NodeBox", err))
+			chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.NodeBox", err))
 		}
 		if err := pcall(func() {
 			((*(*(struct {
@@ -21983,7 +21983,7 @@ func (obj *NodeDef) deserialize(r io.Reader) {
 			if err == io.EOF {
 				chk(io.EOF)
 			}
-			chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.NodeBox", err))
+			chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.NodeBox", err))
 		}
 		if err := pcall(func() {
 			((*(*(struct {
@@ -22053,7 +22053,7 @@ func (obj *NodeDef) deserialize(r io.Reader) {
 			if err == io.EOF {
 				chk(io.EOF)
 			}
-			chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.NodeBox", err))
+			chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.NodeBox", err))
 		}
 		if err := pcall(func() {
 			((*(*(struct {
@@ -22123,7 +22123,7 @@ func (obj *NodeDef) deserialize(r io.Reader) {
 			if err == io.EOF {
 				chk(io.EOF)
 			}
-			chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.SoundDef", err))
+			chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.SoundDef", err))
 		}
 		if err := pcall(func() {
 			((*(*(struct {
@@ -22193,7 +22193,7 @@ func (obj *NodeDef) deserialize(r io.Reader) {
 			if err == io.EOF {
 				chk(io.EOF)
 			}
-			chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.SoundDef", err))
+			chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.SoundDef", err))
 		}
 		if err := pcall(func() {
 			((*(*(struct {
@@ -22263,7 +22263,7 @@ func (obj *NodeDef) deserialize(r io.Reader) {
 			if err == io.EOF {
 				chk(io.EOF)
 			}
-			chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.SoundDef", err))
+			chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.SoundDef", err))
 		}
 		{
 			p := &(*(*(struct {
@@ -22619,7 +22619,7 @@ func (obj *NodeDef) deserialize(r io.Reader) {
 			if err == io.EOF {
 				chk(io.EOF)
 			}
-			chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.AlphaUse", err))
+			chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.AlphaUse", err))
 		}
 		if r.N > 0 {
 			chk(fmt.Errorf("%d bytes of trailing data", r.N))
@@ -22682,7 +22682,7 @@ func (obj *PointedAO) serialize(w io.Writer) {
 		if err == io.EOF {
 			chk(io.EOF)
 		}
-		chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.AOID", err))
+		chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.AOID", err))
 	}
 }
 
@@ -22695,7 +22695,7 @@ func (obj *PointedAO) deserialize(r io.Reader) {
 		if err == io.EOF {
 			chk(io.EOF)
 		}
-		chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.AOID", err))
+		chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.AOID", err))
 	}
 }
 
@@ -22782,7 +22782,7 @@ func (obj *PlayerPos) serialize(w io.Writer) {
 		if err == io.EOF {
 			chk(io.EOF)
 		}
-		chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.Keys", err))
+		chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.Keys", err))
 	}
 	{
 		x := (*(*(struct {
@@ -22875,7 +22875,7 @@ func (obj *PlayerPos) deserialize(r io.Reader) {
 		if err == io.EOF {
 			chk(io.EOF)
 		}
-		chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.Keys", err))
+		chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.Keys", err))
 	}
 	{
 		p := &(*(*(struct {
@@ -23040,7 +23040,7 @@ func (obj *Pos) serialize(w io.Writer) {
 		if err == io.EOF {
 			chk(io.EOF)
 		}
-		chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.Vec", err))
+		chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.Vec", err))
 	}
 }
 
@@ -23051,7 +23051,7 @@ func (obj *Pos) deserialize(r io.Reader) {
 		if err == io.EOF {
 			chk(io.EOF)
 		}
-		chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.Vec", err))
+		chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.Vec", err))
 	}
 }
 
@@ -23086,7 +23086,7 @@ func (obj *MapBlk) serialize(w io.Writer) {
 		if err == io.EOF {
 			chk(io.EOF)
 		}
-		chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.MapBlkFlags", err))
+		chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.MapBlkFlags", err))
 	}
 	if err := pcall(func() {
 		((*(*(struct {
@@ -23104,7 +23104,7 @@ func (obj *MapBlk) serialize(w io.Writer) {
 		if err == io.EOF {
 			chk(io.EOF)
 		}
-		chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.LitFromBlks", err))
+		chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.LitFromBlks", err))
 	}
 	{
 		local281 := uint8(2) // Size of param0 in bytes.
@@ -23150,7 +23150,7 @@ func (obj *MapBlk) serialize(w io.Writer) {
 				if err == io.EOF {
 					chk(io.EOF)
 				}
-				chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.Content", err))
+				chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.Content", err))
 			}
 		}
 		{
@@ -23256,7 +23256,7 @@ func (obj *MapBlk) deserialize(r io.Reader) {
 		if err == io.EOF {
 			chk(io.EOF)
 		}
-		chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.MapBlkFlags", err))
+		chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.MapBlkFlags", err))
 	}
 	if err := pcall(func() {
 		((*(*(struct {
@@ -23274,7 +23274,7 @@ func (obj *MapBlk) deserialize(r io.Reader) {
 		if err == io.EOF {
 			chk(io.EOF)
 		}
-		chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.LitFromBlks", err))
+		chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.LitFromBlks", err))
 	}
 	{
 		var local285 uint8
@@ -23328,7 +23328,7 @@ func (obj *MapBlk) deserialize(r io.Reader) {
 				if err == io.EOF {
 					chk(io.EOF)
 				}
-				chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.Content", err))
+				chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.Content", err))
 			}
 		}
 		{
@@ -23417,7 +23417,7 @@ func (obj *Node) serialize(w io.Writer) {
 		if err == io.EOF {
 			chk(io.EOF)
 		}
-		chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.Content", err))
+		chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.Content", err))
 	}
 	{
 		x := (*(*(struct {
@@ -23445,7 +23445,7 @@ func (obj *Node) deserialize(r io.Reader) {
 		if err == io.EOF {
 			chk(io.EOF)
 		}
-		chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.Content", err))
+		chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.Content", err))
 	}
 	{
 		p := &(*(*(struct {
@@ -23535,7 +23535,7 @@ func (obj *AOAdd) serialize(w io.Writer) {
 		if err == io.EOF {
 			chk(io.EOF)
 		}
-		chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.AOID", err))
+		chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.AOID", err))
 	}
 	{
 		local294 := genericCAO
@@ -23545,7 +23545,7 @@ func (obj *AOAdd) serialize(w io.Writer) {
 			if err == io.EOF {
 				chk(io.EOF)
 			}
-			chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.aoType", err))
+			chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.aoType", err))
 		}
 	}
 	{
@@ -23562,7 +23562,7 @@ func (obj *AOAdd) serialize(w io.Writer) {
 			if err == io.EOF {
 				chk(io.EOF)
 			}
-			chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.AOInitData", err))
+			chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.AOInitData", err))
 		}
 		{
 			buf := w
@@ -23594,7 +23594,7 @@ func (obj *AOAdd) deserialize(r io.Reader) {
 		if err == io.EOF {
 			chk(io.EOF)
 		}
-		chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.AOID", err))
+		chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.AOID", err))
 	}
 	{
 		var local295 aoType
@@ -23605,7 +23605,7 @@ func (obj *AOAdd) deserialize(r io.Reader) {
 			if err == io.EOF {
 				chk(io.EOF)
 			}
-			chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.aoType", err))
+			chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.aoType", err))
 		}
 		if local295 != local296 {
 			chk(fmt.Errorf("const %v: %v", "genericCAO", local295))
@@ -23629,7 +23629,7 @@ func (obj *AOAdd) deserialize(r io.Reader) {
 			if err == io.EOF {
 				chk(io.EOF)
 			}
-			chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.AOInitData", err))
+			chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.AOInitData", err))
 		}
 		if r.N > 0 {
 			chk(fmt.Errorf("%d bytes of trailing data", r.N))
@@ -23648,7 +23648,7 @@ func (obj *IDAOMsg) serialize(w io.Writer) {
 		if err == io.EOF {
 			chk(io.EOF)
 		}
-		chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.AOID", err))
+		chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.AOID", err))
 	}
 	{
 		ow := w
@@ -23690,7 +23690,7 @@ func (obj *IDAOMsg) deserialize(r io.Reader) {
 		if err == io.EOF {
 			chk(io.EOF)
 		}
-		chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.AOID", err))
+		chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.AOID", err))
 	}
 	{
 		var n uint16
@@ -23766,7 +23766,7 @@ func (obj *ItemDef) serialize(w io.Writer) {
 			if err == io.EOF {
 				chk(io.EOF)
 			}
-			chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.ItemType", err))
+			chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.ItemType", err))
 		}
 		if len(([]byte((*(*(struct {
 			Type ItemType
@@ -24020,7 +24020,7 @@ func (obj *ItemDef) serialize(w io.Writer) {
 			if err == io.EOF {
 				chk(io.EOF)
 			}
-			chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.Texture", err))
+			chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.Texture", err))
 		}
 		if err := pcall(func() {
 			((*(*(struct {
@@ -24060,7 +24060,7 @@ func (obj *ItemDef) serialize(w io.Writer) {
 			if err == io.EOF {
 				chk(io.EOF)
 			}
-			chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.Texture", err))
+			chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.Texture", err))
 		}
 		for local298 := range (*(*(struct {
 			Type ItemType
@@ -24286,7 +24286,7 @@ func (obj *ItemDef) serialize(w io.Writer) {
 			if err == io.EOF {
 				chk(io.EOF)
 			}
-			chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.ToolCaps", err))
+			chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.ToolCaps", err))
 		}
 		if len(((*(*(struct {
 			Type ItemType
@@ -24430,7 +24430,7 @@ func (obj *ItemDef) serialize(w io.Writer) {
 				if err == io.EOF {
 					chk(io.EOF)
 				}
-				chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.Group", err))
+				chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.Group", err))
 			}
 		}
 		if len(([]byte((*(*(struct {
@@ -24578,7 +24578,7 @@ func (obj *ItemDef) serialize(w io.Writer) {
 			if err == io.EOF {
 				chk(io.EOF)
 			}
-			chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.SoundDef", err))
+			chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.SoundDef", err))
 		}
 		if err := pcall(func() {
 			((*(*(struct {
@@ -24618,7 +24618,7 @@ func (obj *ItemDef) serialize(w io.Writer) {
 			if err == io.EOF {
 				chk(io.EOF)
 			}
-			chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.SoundDef", err))
+			chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.SoundDef", err))
 		}
 		{
 			x := (*(*(struct {
@@ -24694,7 +24694,7 @@ func (obj *ItemDef) serialize(w io.Writer) {
 			if err == io.EOF {
 				chk(io.EOF)
 			}
-			chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.Texture", err))
+			chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.Texture", err))
 		}
 		{
 			x := (*(*(struct {
@@ -24770,7 +24770,7 @@ func (obj *ItemDef) serialize(w io.Writer) {
 			if err == io.EOF {
 				chk(io.EOF)
 			}
-			chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.Texture", err))
+			chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.Texture", err))
 		}
 		if err := pcall(func() {
 			((*(*(struct {
@@ -24810,7 +24810,7 @@ func (obj *ItemDef) serialize(w io.Writer) {
 			if err == io.EOF {
 				chk(io.EOF)
 			}
-			chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.Texture", err))
+			chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.Texture", err))
 		}
 		if len(([]byte((*(*(struct {
 			Type ItemType
@@ -24994,7 +24994,7 @@ func (obj *ItemDef) deserialize(r io.Reader) {
 			if err == io.EOF {
 				chk(io.EOF)
 			}
-			chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.ItemType", err))
+			chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.ItemType", err))
 		}
 		var local302 []uint8
 		var local303 uint16
@@ -25122,7 +25122,7 @@ func (obj *ItemDef) deserialize(r io.Reader) {
 			if err == io.EOF {
 				chk(io.EOF)
 			}
-			chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.Texture", err))
+			chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.Texture", err))
 		}
 		if err := pcall(func() {
 			((*(*(struct {
@@ -25162,7 +25162,7 @@ func (obj *ItemDef) deserialize(r io.Reader) {
 			if err == io.EOF {
 				chk(io.EOF)
 			}
-			chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.Texture", err))
+			chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.Texture", err))
 		}
 		for local306 := range (*(*(struct {
 			Type ItemType
@@ -25394,7 +25394,7 @@ func (obj *ItemDef) deserialize(r io.Reader) {
 			if err == io.EOF {
 				chk(io.EOF)
 			}
-			chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.ToolCaps", err))
+			chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.ToolCaps", err))
 		}
 		var local307 uint16
 		{
@@ -25505,7 +25505,7 @@ func (obj *ItemDef) deserialize(r io.Reader) {
 				if err == io.EOF {
 					chk(io.EOF)
 				}
-				chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.Group", err))
+				chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.Group", err))
 			}
 		}
 		var local309 []uint8
@@ -25590,7 +25590,7 @@ func (obj *ItemDef) deserialize(r io.Reader) {
 			if err == io.EOF {
 				chk(io.EOF)
 			}
-			chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.SoundDef", err))
+			chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.SoundDef", err))
 		}
 		if err := pcall(func() {
 			((*(*(struct {
@@ -25630,7 +25630,7 @@ func (obj *ItemDef) deserialize(r io.Reader) {
 			if err == io.EOF {
 				chk(io.EOF)
 			}
-			chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.SoundDef", err))
+			chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.SoundDef", err))
 		}
 		{
 			p := &(*(*(struct {
@@ -25706,7 +25706,7 @@ func (obj *ItemDef) deserialize(r io.Reader) {
 			if err == io.EOF {
 				chk(io.EOF)
 			}
-			chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.Texture", err))
+			chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.Texture", err))
 		}
 		{
 			p := &(*(*(struct {
@@ -25782,7 +25782,7 @@ func (obj *ItemDef) deserialize(r io.Reader) {
 			if err == io.EOF {
 				chk(io.EOF)
 			}
-			chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.Texture", err))
+			chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.Texture", err))
 		}
 		if err := pcall(func() {
 			((*(*(struct {
@@ -25822,7 +25822,7 @@ func (obj *ItemDef) deserialize(r io.Reader) {
 			if err == io.EOF {
 				chk(io.EOF)
 			}
-			chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.Texture", err))
+			chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.Texture", err))
 		}
 		var local311 []uint8
 		var local312 uint16
@@ -25907,7 +25907,7 @@ func (obj *TileAnim) serialize(w io.Writer) {
 		if err == io.EOF {
 			chk(io.EOF)
 		}
-		chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.AnimType", err))
+		chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.AnimType", err))
 	}
 	if !((*(*(struct {
 		Type AnimType
@@ -26049,7 +26049,7 @@ func (obj *TileAnim) deserialize(r io.Reader) {
 		if err == io.EOF {
 			chk(io.EOF)
 		}
-		chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.AnimType", err))
+		chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.AnimType", err))
 	}
 	if !((*(*(struct {
 		Type AnimType
@@ -26238,7 +26238,7 @@ func (obj *HUD) serialize(w io.Writer) {
 		if err == io.EOF {
 			chk(io.EOF)
 		}
-		chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.HUDType", err))
+		chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.HUDType", err))
 	}
 	for local315 := range (*(*(struct {
 		Type HUDType
@@ -26610,7 +26610,7 @@ func (obj *HUD) serialize(w io.Writer) {
 		if err == io.EOF {
 			chk(io.EOF)
 		}
-		chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.Pos", err))
+		chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.Pos", err))
 	}
 	for local319 := range (*(*(struct {
 		Type HUDType
@@ -26782,7 +26782,7 @@ func (obj *HUD) deserialize(r io.Reader) {
 		if err == io.EOF {
 			chk(io.EOF)
 		}
-		chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.HUDType", err))
+		chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.HUDType", err))
 	}
 	for local320 := range (*(*(struct {
 		Type HUDType
@@ -27088,7 +27088,7 @@ func (obj *HUD) deserialize(r io.Reader) {
 		if err == io.EOF {
 			chk(io.EOF)
 		}
-		chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.Pos", err))
+		chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.Pos", err))
 	}
 	for local328 := range (*(*(struct {
 		Type HUDType
@@ -27486,7 +27486,7 @@ func (obj *AOProps) serialize(w io.Writer) {
 		if err == io.EOF {
 			chk(io.EOF)
 		}
-		chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.Box", err))
+		chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.Box", err))
 	}
 	if err := pcall(func() {
 		((*(*(struct {
@@ -27529,7 +27529,7 @@ func (obj *AOProps) serialize(w io.Writer) {
 		if err == io.EOF {
 			chk(io.EOF)
 		}
-		chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.Box", err))
+		chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.Box", err))
 	}
 	{
 		x := (*(*(struct {
@@ -27920,7 +27920,7 @@ func (obj *AOProps) serialize(w io.Writer) {
 			if err == io.EOF {
 				chk(io.EOF)
 			}
-			chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.Texture", err))
+			chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.Texture", err))
 		}
 	}
 	for local336 := range (*(*(struct {
@@ -29342,7 +29342,7 @@ func (obj *AOProps) serialize(w io.Writer) {
 		if err == io.EOF {
 			chk(io.EOF)
 		}
-		chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.Texture", err))
+		chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.Texture", err))
 	}
 	{
 		x := (*(*(struct {
@@ -29648,7 +29648,7 @@ func (obj *AOProps) deserialize(r io.Reader) {
 		if err == io.EOF {
 			chk(io.EOF)
 		}
-		chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.Box", err))
+		chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.Box", err))
 	}
 	if err := pcall(func() {
 		((*(*(struct {
@@ -29691,7 +29691,7 @@ func (obj *AOProps) deserialize(r io.Reader) {
 		if err == io.EOF {
 			chk(io.EOF)
 		}
-		chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.Box", err))
+		chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.Box", err))
 	}
 	{
 		p := &(*(*(struct {
@@ -29980,7 +29980,7 @@ func (obj *AOProps) deserialize(r io.Reader) {
 			if err == io.EOF {
 				chk(io.EOF)
 			}
-			chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.Texture", err))
+			chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.Texture", err))
 		}
 	}
 	for local346 := range (*(*(struct {
@@ -31108,7 +31108,7 @@ func (obj *AOProps) deserialize(r io.Reader) {
 		if err == io.EOF {
 			chk(io.EOF)
 		}
-		chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.Texture", err))
+		chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.Texture", err))
 	}
 	{
 		p := &(*(*(struct {
@@ -31258,7 +31258,7 @@ func (obj *AOPos) serialize(w io.Writer) {
 		if err == io.EOF {
 			chk(io.EOF)
 		}
-		chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.Pos", err))
+		chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.Pos", err))
 	}
 	if err := pcall(func() {
 		((*(*(struct {
@@ -31274,7 +31274,7 @@ func (obj *AOPos) serialize(w io.Writer) {
 		if err == io.EOF {
 			chk(io.EOF)
 		}
-		chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.Vec", err))
+		chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.Vec", err))
 	}
 	if err := pcall(func() {
 		((*(*(struct {
@@ -31290,7 +31290,7 @@ func (obj *AOPos) serialize(w io.Writer) {
 		if err == io.EOF {
 			chk(io.EOF)
 		}
-		chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.Vec", err))
+		chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.Vec", err))
 	}
 	for local358 := range (*(*(struct {
 		Pos
@@ -31375,7 +31375,7 @@ func (obj *AOPos) deserialize(r io.Reader) {
 		if err == io.EOF {
 			chk(io.EOF)
 		}
-		chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.Pos", err))
+		chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.Pos", err))
 	}
 	if err := pcall(func() {
 		((*(*(struct {
@@ -31391,7 +31391,7 @@ func (obj *AOPos) deserialize(r io.Reader) {
 		if err == io.EOF {
 			chk(io.EOF)
 		}
-		chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.Vec", err))
+		chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.Vec", err))
 	}
 	if err := pcall(func() {
 		((*(*(struct {
@@ -31407,7 +31407,7 @@ func (obj *AOPos) deserialize(r io.Reader) {
 		if err == io.EOF {
 			chk(io.EOF)
 		}
-		chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.Vec", err))
+		chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.Vec", err))
 	}
 	for local359 := range (*(*(struct {
 		Pos
@@ -31754,7 +31754,7 @@ func (obj *AOBonePos) serialize(w io.Writer) {
 		if err == io.EOF {
 			chk(io.EOF)
 		}
-		chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.Vec", err))
+		chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.Vec", err))
 	}
 	for local366 := range (*(*(struct {
 		Pos Vec
@@ -31780,7 +31780,7 @@ func (obj *AOBonePos) deserialize(r io.Reader) {
 		if err == io.EOF {
 			chk(io.EOF)
 		}
-		chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.Vec", err))
+		chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.Vec", err))
 	}
 	for local367 := range (*(*(struct {
 		Pos Vec
@@ -31809,7 +31809,7 @@ func (obj *AOAttach) serialize(w io.Writer) {
 		if err == io.EOF {
 			chk(io.EOF)
 		}
-		chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.AOID", err))
+		chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.AOID", err))
 	}
 	if len(([]byte((*(*(struct {
 		ParentID     AOID
@@ -31852,7 +31852,7 @@ func (obj *AOAttach) serialize(w io.Writer) {
 		if err == io.EOF {
 			chk(io.EOF)
 		}
-		chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.Vec", err))
+		chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.Vec", err))
 	}
 	for local368 := range (*(*(struct {
 		ParentID     AOID
@@ -31901,7 +31901,7 @@ func (obj *AOAttach) deserialize(r io.Reader) {
 		if err == io.EOF {
 			chk(io.EOF)
 		}
-		chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.AOID", err))
+		chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.AOID", err))
 	}
 	var local369 []uint8
 	var local370 uint16
@@ -31933,7 +31933,7 @@ func (obj *AOAttach) deserialize(r io.Reader) {
 		if err == io.EOF {
 			chk(io.EOF)
 		}
-		chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.Vec", err))
+		chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.Vec", err))
 	}
 	for local371 := range (*(*(struct {
 		ParentID     AOID
@@ -32143,7 +32143,7 @@ func (obj *NodeMetaField) serialize(w io.Writer) {
 		if err == io.EOF {
 			chk(io.EOF)
 		}
-		chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.Field", err))
+		chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.Field", err))
 	}
 	{
 		x := (*(*(struct {
@@ -32168,7 +32168,7 @@ func (obj *NodeMetaField) deserialize(r io.Reader) {
 		if err == io.EOF {
 			chk(io.EOF)
 		}
-		chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.Field", err))
+		chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.Field", err))
 	}
 	{
 		p := &(*(*(struct {
@@ -32269,7 +32269,7 @@ func (obj *TileDef) serialize(w io.Writer) {
 		if err == io.EOF {
 			chk(io.EOF)
 		}
-		chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.Texture", err))
+		chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.Texture", err))
 	}
 	if err := pcall(func() {
 		((*(*(struct {
@@ -32290,7 +32290,7 @@ func (obj *TileDef) serialize(w io.Writer) {
 		if err == io.EOF {
 			chk(io.EOF)
 		}
-		chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.TileAnim", err))
+		chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.TileAnim", err))
 	}
 	if err := pcall(func() {
 		((*(*(struct {
@@ -32311,7 +32311,7 @@ func (obj *TileDef) serialize(w io.Writer) {
 		if err == io.EOF {
 			chk(io.EOF)
 		}
-		chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.TileFlags", err))
+		chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.TileFlags", err))
 	}
 	if (*(*(struct {
 		Texture
@@ -32444,7 +32444,7 @@ func (obj *TileDef) serialize(w io.Writer) {
 			if err == io.EOF {
 				chk(io.EOF)
 			}
-			chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.AlignType", err))
+			chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.AlignType", err))
 		}
 	}
 }
@@ -32480,7 +32480,7 @@ func (obj *TileDef) deserialize(r io.Reader) {
 		if err == io.EOF {
 			chk(io.EOF)
 		}
-		chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.Texture", err))
+		chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.Texture", err))
 	}
 	if err := pcall(func() {
 		((*(*(struct {
@@ -32501,7 +32501,7 @@ func (obj *TileDef) deserialize(r io.Reader) {
 		if err == io.EOF {
 			chk(io.EOF)
 		}
-		chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.TileAnim", err))
+		chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.TileAnim", err))
 	}
 	if err := pcall(func() {
 		((*(*(struct {
@@ -32522,7 +32522,7 @@ func (obj *TileDef) deserialize(r io.Reader) {
 		if err == io.EOF {
 			chk(io.EOF)
 		}
-		chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.TileFlags", err))
+		chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.TileFlags", err))
 	}
 	if (*(*(struct {
 		Texture
@@ -32655,7 +32655,7 @@ func (obj *TileDef) deserialize(r io.Reader) {
 			if err == io.EOF {
 				chk(io.EOF)
 			}
-			chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.AlignType", err))
+			chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.AlignType", err))
 		}
 	}
 }
@@ -32714,7 +32714,7 @@ func (obj *NodeBox) serialize(w io.Writer) {
 		if err == io.EOF {
 			chk(io.EOF)
 		}
-		chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.NodeBoxType", err))
+		chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.NodeBoxType", err))
 	}
 	if !((*(*(struct {
 		Type NodeBoxType
@@ -32762,7 +32762,7 @@ func (obj *NodeBox) serialize(w io.Writer) {
 			if err == io.EOF {
 				chk(io.EOF)
 			}
-			chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.Box", err))
+			chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.Box", err))
 		}
 		if err := pcall(func() {
 			((*(*(struct {
@@ -32782,7 +32782,7 @@ func (obj *NodeBox) serialize(w io.Writer) {
 			if err == io.EOF {
 				chk(io.EOF)
 			}
-			chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.Box", err))
+			chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.Box", err))
 		}
 		if err := pcall(func() {
 			((*(*(struct {
@@ -32802,7 +32802,7 @@ func (obj *NodeBox) serialize(w io.Writer) {
 			if err == io.EOF {
 				chk(io.EOF)
 			}
-			chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.Box", err))
+			chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.Box", err))
 		}
 	}
 	if t := (*(*(struct {
@@ -32880,7 +32880,7 @@ func (obj *NodeBox) serialize(w io.Writer) {
 				if err == io.EOF {
 					chk(io.EOF)
 				}
-				chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.Box", err))
+				chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.Box", err))
 			}
 		}
 	}
@@ -32915,7 +32915,7 @@ func (obj *NodeBox) serialize(w io.Writer) {
 			if err == io.EOF {
 				chk(io.EOF)
 			}
-			chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.DirBoxes", err))
+			chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.DirBoxes", err))
 		}
 		if err := pcall(func() {
 			((*(*(struct {
@@ -32935,7 +32935,7 @@ func (obj *NodeBox) serialize(w io.Writer) {
 			if err == io.EOF {
 				chk(io.EOF)
 			}
-			chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.DirBoxes", err))
+			chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.DirBoxes", err))
 		}
 		if len(((*(*(struct {
 			Type NodeBoxType
@@ -32999,7 +32999,7 @@ func (obj *NodeBox) serialize(w io.Writer) {
 				if err == io.EOF {
 					chk(io.EOF)
 				}
-				chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.Box", err))
+				chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.Box", err))
 			}
 		}
 		if len(((*(*(struct {
@@ -33064,7 +33064,7 @@ func (obj *NodeBox) serialize(w io.Writer) {
 				if err == io.EOF {
 					chk(io.EOF)
 				}
-				chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.Box", err))
+				chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.Box", err))
 			}
 		}
 	}
@@ -33100,7 +33100,7 @@ func (obj *NodeBox) deserialize(r io.Reader) {
 		if err == io.EOF {
 			chk(io.EOF)
 		}
-		chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.NodeBoxType", err))
+		chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.NodeBoxType", err))
 	}
 	if !((*(*(struct {
 		Type NodeBoxType
@@ -33148,7 +33148,7 @@ func (obj *NodeBox) deserialize(r io.Reader) {
 			if err == io.EOF {
 				chk(io.EOF)
 			}
-			chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.Box", err))
+			chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.Box", err))
 		}
 		if err := pcall(func() {
 			((*(*(struct {
@@ -33168,7 +33168,7 @@ func (obj *NodeBox) deserialize(r io.Reader) {
 			if err == io.EOF {
 				chk(io.EOF)
 			}
-			chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.Box", err))
+			chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.Box", err))
 		}
 		if err := pcall(func() {
 			((*(*(struct {
@@ -33188,7 +33188,7 @@ func (obj *NodeBox) deserialize(r io.Reader) {
 			if err == io.EOF {
 				chk(io.EOF)
 			}
-			chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.Box", err))
+			chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.Box", err))
 		}
 	}
 	if t := (*(*(struct {
@@ -33253,7 +33253,7 @@ func (obj *NodeBox) deserialize(r io.Reader) {
 				if err == io.EOF {
 					chk(io.EOF)
 				}
-				chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.Box", err))
+				chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.Box", err))
 			}
 		}
 	}
@@ -33288,7 +33288,7 @@ func (obj *NodeBox) deserialize(r io.Reader) {
 			if err == io.EOF {
 				chk(io.EOF)
 			}
-			chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.DirBoxes", err))
+			chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.DirBoxes", err))
 		}
 		if err := pcall(func() {
 			((*(*(struct {
@@ -33308,7 +33308,7 @@ func (obj *NodeBox) deserialize(r io.Reader) {
 			if err == io.EOF {
 				chk(io.EOF)
 			}
-			chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.DirBoxes", err))
+			chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.DirBoxes", err))
 		}
 		var local383 uint16
 		{
@@ -33359,7 +33359,7 @@ func (obj *NodeBox) deserialize(r io.Reader) {
 				if err == io.EOF {
 					chk(io.EOF)
 				}
-				chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.Box", err))
+				chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.Box", err))
 			}
 		}
 		var local385 uint16
@@ -33411,7 +33411,7 @@ func (obj *NodeBox) deserialize(r io.Reader) {
 				if err == io.EOF {
 					chk(io.EOF)
 				}
-				chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.Box", err))
+				chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.Box", err))
 			}
 		}
 	}
@@ -33664,7 +33664,7 @@ func (obj *AOInitData) serialize(w io.Writer) {
 		if err == io.EOF {
 			chk(io.EOF)
 		}
-		chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.AOID", err))
+		chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.AOID", err))
 	}
 	if err := pcall(func() {
 		((*(*(struct {
@@ -33687,7 +33687,7 @@ func (obj *AOInitData) serialize(w io.Writer) {
 		if err == io.EOF {
 			chk(io.EOF)
 		}
-		chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.Pos", err))
+		chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.Pos", err))
 	}
 	for local390 := range (*(*(struct {
 
@@ -33866,7 +33866,7 @@ func (obj *AOInitData) deserialize(r io.Reader) {
 		if err == io.EOF {
 			chk(io.EOF)
 		}
-		chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.AOID", err))
+		chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.AOID", err))
 	}
 	if err := pcall(func() {
 		((*(*(struct {
@@ -33889,7 +33889,7 @@ func (obj *AOInitData) deserialize(r io.Reader) {
 		if err == io.EOF {
 			chk(io.EOF)
 		}
-		chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.Pos", err))
+		chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.Pos", err))
 	}
 	for local395 := range (*(*(struct {
 
@@ -34188,7 +34188,7 @@ func (obj *ToolCaps) serialize(w io.Writer) {
 						if err == io.EOF {
 							chk(io.EOF)
 						}
-						chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.ToolGroupCap", err))
+						chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.ToolGroupCap", err))
 					}
 				}
 				if len(((*(*(struct {
@@ -34265,7 +34265,7 @@ func (obj *ToolCaps) serialize(w io.Writer) {
 						if err == io.EOF {
 							chk(io.EOF)
 						}
-						chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.Group", err))
+						chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.Group", err))
 					}
 				}
 				{
@@ -34500,7 +34500,7 @@ func (obj *ToolCaps) deserialize(r io.Reader) {
 						if err == io.EOF {
 							chk(io.EOF)
 						}
-						chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.ToolGroupCap", err))
+						chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.ToolGroupCap", err))
 					}
 				}
 				var local403 uint32
@@ -34561,7 +34561,7 @@ func (obj *ToolCaps) deserialize(r io.Reader) {
 						if err == io.EOF {
 							chk(io.EOF)
 						}
-						chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.Group", err))
+						chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.Group", err))
 					}
 				}
 				var local405 uint16
@@ -34629,7 +34629,7 @@ func (obj *Box) serialize(w io.Writer) {
 			if err == io.EOF {
 				chk(io.EOF)
 			}
-			chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.Vec", err))
+			chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.Vec", err))
 		}
 	}
 }
@@ -34642,7 +34642,7 @@ func (obj *Box) deserialize(r io.Reader) {
 			if err == io.EOF {
 				chk(io.EOF)
 			}
-			chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.Vec", err))
+			chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.Vec", err))
 		}
 	}
 }
@@ -34716,7 +34716,7 @@ func (obj *DirBoxes) serialize(w io.Writer) {
 			if err == io.EOF {
 				chk(io.EOF)
 			}
-			chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.Box", err))
+			chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.Box", err))
 		}
 	}
 	if len(((*(*(struct {
@@ -34745,7 +34745,7 @@ func (obj *DirBoxes) serialize(w io.Writer) {
 			if err == io.EOF {
 				chk(io.EOF)
 			}
-			chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.Box", err))
+			chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.Box", err))
 		}
 	}
 	if len(((*(*(struct {
@@ -34774,7 +34774,7 @@ func (obj *DirBoxes) serialize(w io.Writer) {
 			if err == io.EOF {
 				chk(io.EOF)
 			}
-			chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.Box", err))
+			chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.Box", err))
 		}
 	}
 	if len(((*(*(struct {
@@ -34803,7 +34803,7 @@ func (obj *DirBoxes) serialize(w io.Writer) {
 			if err == io.EOF {
 				chk(io.EOF)
 			}
-			chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.Box", err))
+			chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.Box", err))
 		}
 	}
 	if len(((*(*(struct {
@@ -34832,7 +34832,7 @@ func (obj *DirBoxes) serialize(w io.Writer) {
 			if err == io.EOF {
 				chk(io.EOF)
 			}
-			chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.Box", err))
+			chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.Box", err))
 		}
 	}
 	if len(((*(*(struct {
@@ -34861,7 +34861,7 @@ func (obj *DirBoxes) serialize(w io.Writer) {
 			if err == io.EOF {
 				chk(io.EOF)
 			}
-			chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.Box", err))
+			chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.Box", err))
 		}
 	}
 }
@@ -34889,7 +34889,7 @@ func (obj *DirBoxes) deserialize(r io.Reader) {
 			if err == io.EOF {
 				chk(io.EOF)
 			}
-			chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.Box", err))
+			chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.Box", err))
 		}
 	}
 	var local416 uint16
@@ -34914,7 +34914,7 @@ func (obj *DirBoxes) deserialize(r io.Reader) {
 			if err == io.EOF {
 				chk(io.EOF)
 			}
-			chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.Box", err))
+			chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.Box", err))
 		}
 	}
 	var local418 uint16
@@ -34939,7 +34939,7 @@ func (obj *DirBoxes) deserialize(r io.Reader) {
 			if err == io.EOF {
 				chk(io.EOF)
 			}
-			chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.Box", err))
+			chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.Box", err))
 		}
 	}
 	var local420 uint16
@@ -34964,7 +34964,7 @@ func (obj *DirBoxes) deserialize(r io.Reader) {
 			if err == io.EOF {
 				chk(io.EOF)
 			}
-			chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.Box", err))
+			chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.Box", err))
 		}
 	}
 	var local422 uint16
@@ -34989,7 +34989,7 @@ func (obj *DirBoxes) deserialize(r io.Reader) {
 			if err == io.EOF {
 				chk(io.EOF)
 			}
-			chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.Box", err))
+			chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.Box", err))
 		}
 	}
 	var local424 uint16
@@ -35014,7 +35014,7 @@ func (obj *DirBoxes) deserialize(r io.Reader) {
 			if err == io.EOF {
 				chk(io.EOF)
 			}
-			chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.Box", err))
+			chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.Box", err))
 		}
 	}
 }
@@ -35143,7 +35143,7 @@ func (obj *ToolGroupCap) serialize(w io.Writer) {
 			if err == io.EOF {
 				chk(io.EOF)
 			}
-			chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.DigTime", err))
+			chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.DigTime", err))
 		}
 	}
 }
@@ -35244,7 +35244,7 @@ func (obj *ToolGroupCap) deserialize(r io.Reader) {
 			if err == io.EOF {
 				chk(io.EOF)
 			}
-			chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.DigTime", err))
+			chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.DigTime", err))
 		}
 	}
 }

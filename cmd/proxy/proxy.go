@@ -16,7 +16,7 @@ import (
 	"net"
 	"os"
 
-	"github.com/Minetest-j45/mt"
+	"github.com/dragonfireclient/mt"
 )
 
 func main() {
