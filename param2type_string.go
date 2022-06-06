@@ -20,11 +20,12 @@ func _() {
 	_ = x[P2ColorFaceDir-9]
 	_ = x[P2ColorMounted-10]
 	_ = x[P2GlassLikeLevel-11]
+	_ = x[P2ColorRotation-12]
 }
 
-const _Param2Type_name = "NibbleByteFlowingFaceDirMountedLeveledRotationMeshColorColorFaceDirColorMountedGlassLikeLevel"
+const _Param2Type_name = "NibbleByteFlowingFaceDirMountedLeveledRotationMeshColorColorFaceDirColorMountedGlassLikeLevelColorRotation"
 
-var _Param2Type_index = [...]uint8{0, 6, 10, 17, 24, 31, 38, 46, 50, 55, 67, 79, 93}
+var _Param2Type_index = [...]uint8{0, 6, 10, 17, 24, 31, 38, 46, 50, 55, 67, 79, 93, 106}
 
 func (i Param2Type) String() string {
 	if i >= Param2Type(len(_Param2Type_index)-1) {

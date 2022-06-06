@@ -26,6 +26,7 @@ const (
 	P2ColorFaceDir
 	P2ColorMounted
 	P2GlassLikeLevel
+	P2ColorRotation
 )
 
 //go:generate stringer -trimprefix P2 -type Param2Type
@@ -155,6 +156,10 @@ type NodeDef struct {
 	MaxLvl uint8
 
 	AlphaUse
+
+	MoveResistance uint8
+
+	LiquidMovePhysics bool
 
 	//mt:end
 }
