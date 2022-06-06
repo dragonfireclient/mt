@@ -10,8 +10,8 @@ func (*ToSrvLeaveModChan) toSrvCmdNo() uint16   { return 24 }
 func (*ToSrvMsgModChan) toSrvCmdNo() uint16     { return 25 }
 func (*ToSrvPlayerPos) toSrvCmdNo() uint16      { return 35 }
 func (*ToSrvGotBlks) toSrvCmdNo() uint16        { return 36 }
-func (*ToSrvHaveMedia) toSrvCmdNo() uint16      { return 41 }
 func (*ToSrvDeletedBlks) toSrvCmdNo() uint16    { return 37 }
+func (*ToSrvHaveMedia) toSrvCmdNo() uint16      { return 41 }
 func (*ToSrvInvAction) toSrvCmdNo() uint16      { return 49 }
 func (*ToSrvChatMsg) toSrvCmdNo() uint16        { return 50 }
 func (*ToSrvFallDmg) toSrvCmdNo() uint16        { return 53 }

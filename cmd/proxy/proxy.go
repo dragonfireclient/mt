@@ -16,7 +16,7 @@ import (
 	"net"
 	"os"
 
-	"github.com/anon55555/mt"
+	"github.com/Minetest-j45/mt"
 )
 
 func main() {

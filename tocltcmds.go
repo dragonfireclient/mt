@@ -6,7 +6,7 @@ import (
 	"io"
 	"math"
 
-	"github.com/anon55555/mt/rudp"
+	"github.com/Minetest-j45/mt/rudp"
 )
 
 type ToCltCmd interface {
