@@ -429,6 +429,7 @@ type HUD struct {
 	Size     [2]int32
 	ZIndex   int16
 	Text2    string
+	Style uint32
 }
 
 type HUDID uint32
@@ -516,6 +517,10 @@ type ToCltChangeHUD struct {
 	//mt:if %s.Field == HUDText2
 	Text2 string
 	//mt:end
+
+	//mt:if %s.Field == HUDStyle
+	Style HUDStyleFlags
+	//mt:end
 }
 
 type HUDField uint8
@@ -534,10 +539,21 @@ const (
 	HUDSize
 	HUDZIndex
 	HUDText2
+	HUDStyle
 	hudMax
 )
 
 //go:generate stringer -trimprefix HUD -type HUDField
+
+type HUDStyleFlags uint32
+
+const (
+	StyleBold HUDStyleFlags = 1 << iota
+	StyleItalic
+	StyleMono
+)
+
+//go:generate stringer -trimprefix Style -type HUDStyleFlags
 
 // ToCltHUDFlags tells the client to update its HUD flags.
 type ToCltHUDFlags struct {

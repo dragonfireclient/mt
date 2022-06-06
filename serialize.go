@@ -7313,6 +7313,9 @@ func (obj *ToCltChangeHUD) serialize(w io.Writer) {
 
 			//mt:if %s.Field == HUDText2
 			Text2 string
+
+			//mt:if %s.Field == HUDStyle
+			Style HUDStyleFlags
 		}))(obj)).ID).serialize(w)
 	}); err != nil {
 		if err == io.EOF {
@@ -7364,6 +7367,9 @@ func (obj *ToCltChangeHUD) serialize(w io.Writer) {
 
 			//mt:if %s.Field == HUDText2
 			Text2 string
+
+			//mt:if %s.Field == HUDStyle
+			Style HUDStyleFlags
 		}))(obj)).Field).serialize(w)
 	}); err != nil {
 		if err == io.EOF {
@@ -7414,6 +7420,9 @@ func (obj *ToCltChangeHUD) serialize(w io.Writer) {
 
 		//mt:if %s.Field == HUDText2
 		Text2 string
+
+		//mt:if %s.Field == HUDStyle
+		Style HUDStyleFlags
 	}))(obj)).Field < hudMax) {
 		chk(errors.New("assertion failed: %s.Field < hudMax"))
 	}
@@ -7460,6 +7469,9 @@ func (obj *ToCltChangeHUD) serialize(w io.Writer) {
 
 		//mt:if %s.Field == HUDText2
 		Text2 string
+
+		//mt:if %s.Field == HUDStyle
+		Style HUDStyleFlags
 	}))(obj)).Field == HUDPos {
 		for local172 := range (*(*(struct {
 			ID HUDID
@@ -7504,6 +7516,9 @@ func (obj *ToCltChangeHUD) serialize(w io.Writer) {
 
 			//mt:if %s.Field == HUDText2
 			Text2 string
+
+			//mt:if %s.Field == HUDStyle
+			Style HUDStyleFlags
 		}))(obj)).Pos {
 			{
 				x := ((*(*(struct {
@@ -7549,6 +7564,9 @@ func (obj *ToCltChangeHUD) serialize(w io.Writer) {
 
 					//mt:if %s.Field == HUDText2
 					Text2 string
+
+					//mt:if %s.Field == HUDStyle
+					Style HUDStyleFlags
 				}))(obj)).Pos)[local172]
 				write32(w, math.Float32bits(x))
 			}
@@ -7597,6 +7615,9 @@ func (obj *ToCltChangeHUD) serialize(w io.Writer) {
 
 		//mt:if %s.Field == HUDText2
 		Text2 string
+
+		//mt:if %s.Field == HUDStyle
+		Style HUDStyleFlags
 	}))(obj)).Field == HUDName {
 		if len(([]byte((*(*(struct {
 			ID HUDID
@@ -7641,6 +7662,9 @@ func (obj *ToCltChangeHUD) serialize(w io.Writer) {
 
 			//mt:if %s.Field == HUDText2
 			Text2 string
+
+			//mt:if %s.Field == HUDStyle
+			Style HUDStyleFlags
 		}))(obj)).Name))) > math.MaxUint16 {
 			chk(ErrTooLong)
 		}
@@ -7688,6 +7712,9 @@ func (obj *ToCltChangeHUD) serialize(w io.Writer) {
 
 				//mt:if %s.Field == HUDText2
 				Text2 string
+
+				//mt:if %s.Field == HUDStyle
+				Style HUDStyleFlags
 			}))(obj)).Name))))
 			write16(w, uint16(x))
 		}
@@ -7735,6 +7762,9 @@ func (obj *ToCltChangeHUD) serialize(w io.Writer) {
 
 				//mt:if %s.Field == HUDText2
 				Text2 string
+
+				//mt:if %s.Field == HUDStyle
+				Style HUDStyleFlags
 			}))(obj)).Name))[:])
 			chk(err)
 		}
@@ -7782,6 +7812,9 @@ func (obj *ToCltChangeHUD) serialize(w io.Writer) {
 
 		//mt:if %s.Field == HUDText2
 		Text2 string
+
+		//mt:if %s.Field == HUDStyle
+		Style HUDStyleFlags
 	}))(obj)).Field == HUDScale {
 		for local173 := range (*(*(struct {
 			ID HUDID
@@ -7826,6 +7859,9 @@ func (obj *ToCltChangeHUD) serialize(w io.Writer) {
 
 			//mt:if %s.Field == HUDText2
 			Text2 string
+
+			//mt:if %s.Field == HUDStyle
+			Style HUDStyleFlags
 		}))(obj)).Scale {
 			{
 				x := ((*(*(struct {
@@ -7871,6 +7907,9 @@ func (obj *ToCltChangeHUD) serialize(w io.Writer) {
 
 					//mt:if %s.Field == HUDText2
 					Text2 string
+
+					//mt:if %s.Field == HUDStyle
+					Style HUDStyleFlags
 				}))(obj)).Scale)[local173]
 				write32(w, math.Float32bits(x))
 			}
@@ -7919,6 +7958,9 @@ func (obj *ToCltChangeHUD) serialize(w io.Writer) {
 
 		//mt:if %s.Field == HUDText2
 		Text2 string
+
+		//mt:if %s.Field == HUDStyle
+		Style HUDStyleFlags
 	}))(obj)).Field == HUDText {
 		if len(([]byte((*(*(struct {
 			ID HUDID
@@ -7963,6 +8005,9 @@ func (obj *ToCltChangeHUD) serialize(w io.Writer) {
 
 			//mt:if %s.Field == HUDText2
 			Text2 string
+
+			//mt:if %s.Field == HUDStyle
+			Style HUDStyleFlags
 		}))(obj)).Text))) > math.MaxUint16 {
 			chk(ErrTooLong)
 		}
@@ -8010,6 +8055,9 @@ func (obj *ToCltChangeHUD) serialize(w io.Writer) {
 
 				//mt:if %s.Field == HUDText2
 				Text2 string
+
+				//mt:if %s.Field == HUDStyle
+				Style HUDStyleFlags
 			}))(obj)).Text))))
 			write16(w, uint16(x))
 		}
@@ -8057,6 +8105,9 @@ func (obj *ToCltChangeHUD) serialize(w io.Writer) {
 
 				//mt:if %s.Field == HUDText2
 				Text2 string
+
+				//mt:if %s.Field == HUDStyle
+				Style HUDStyleFlags
 			}))(obj)).Text))[:])
 			chk(err)
 		}
@@ -8104,6 +8155,9 @@ func (obj *ToCltChangeHUD) serialize(w io.Writer) {
 
 		//mt:if %s.Field == HUDText2
 		Text2 string
+
+		//mt:if %s.Field == HUDStyle
+		Style HUDStyleFlags
 	}))(obj)).Field == HUDNumber {
 		{
 			x := (*(*(struct {
@@ -8149,6 +8203,9 @@ func (obj *ToCltChangeHUD) serialize(w io.Writer) {
 
 				//mt:if %s.Field == HUDText2
 				Text2 string
+
+				//mt:if %s.Field == HUDStyle
+				Style HUDStyleFlags
 			}))(obj)).Number
 			write32(w, uint32(x))
 		}
@@ -8196,6 +8253,9 @@ func (obj *ToCltChangeHUD) serialize(w io.Writer) {
 
 		//mt:if %s.Field == HUDText2
 		Text2 string
+
+		//mt:if %s.Field == HUDStyle
+		Style HUDStyleFlags
 	}))(obj)).Field == HUDItem {
 		{
 			x := (*(*(struct {
@@ -8241,6 +8301,9 @@ func (obj *ToCltChangeHUD) serialize(w io.Writer) {
 
 				//mt:if %s.Field == HUDText2
 				Text2 string
+
+				//mt:if %s.Field == HUDStyle
+				Style HUDStyleFlags
 			}))(obj)).Item
 			write32(w, uint32(x))
 		}
@@ -8288,6 +8351,9 @@ func (obj *ToCltChangeHUD) serialize(w io.Writer) {
 
 		//mt:if %s.Field == HUDText2
 		Text2 string
+
+		//mt:if %s.Field == HUDStyle
+		Style HUDStyleFlags
 	}))(obj)).Field == HUDDir {
 		{
 			x := (*(*(struct {
@@ -8333,6 +8399,9 @@ func (obj *ToCltChangeHUD) serialize(w io.Writer) {
 
 				//mt:if %s.Field == HUDText2
 				Text2 string
+
+				//mt:if %s.Field == HUDStyle
+				Style HUDStyleFlags
 			}))(obj)).Dir
 			write32(w, uint32(x))
 		}
@@ -8380,6 +8449,9 @@ func (obj *ToCltChangeHUD) serialize(w io.Writer) {
 
 		//mt:if %s.Field == HUDText2
 		Text2 string
+
+		//mt:if %s.Field == HUDStyle
+		Style HUDStyleFlags
 	}))(obj)).Field == HUDAlign {
 		for local174 := range (*(*(struct {
 			ID HUDID
@@ -8424,6 +8496,9 @@ func (obj *ToCltChangeHUD) serialize(w io.Writer) {
 
 			//mt:if %s.Field == HUDText2
 			Text2 string
+
+			//mt:if %s.Field == HUDStyle
+			Style HUDStyleFlags
 		}))(obj)).Align {
 			{
 				x := ((*(*(struct {
@@ -8469,6 +8544,9 @@ func (obj *ToCltChangeHUD) serialize(w io.Writer) {
 
 					//mt:if %s.Field == HUDText2
 					Text2 string
+
+					//mt:if %s.Field == HUDStyle
+					Style HUDStyleFlags
 				}))(obj)).Align)[local174]
 				write32(w, math.Float32bits(x))
 			}
@@ -8517,6 +8595,9 @@ func (obj *ToCltChangeHUD) serialize(w io.Writer) {
 
 		//mt:if %s.Field == HUDText2
 		Text2 string
+
+		//mt:if %s.Field == HUDStyle
+		Style HUDStyleFlags
 	}))(obj)).Field == HUDOffset {
 		for local175 := range (*(*(struct {
 			ID HUDID
@@ -8561,6 +8642,9 @@ func (obj *ToCltChangeHUD) serialize(w io.Writer) {
 
 			//mt:if %s.Field == HUDText2
 			Text2 string
+
+			//mt:if %s.Field == HUDStyle
+			Style HUDStyleFlags
 		}))(obj)).Offset {
 			{
 				x := ((*(*(struct {
@@ -8606,6 +8690,9 @@ func (obj *ToCltChangeHUD) serialize(w io.Writer) {
 
 					//mt:if %s.Field == HUDText2
 					Text2 string
+
+					//mt:if %s.Field == HUDStyle
+					Style HUDStyleFlags
 				}))(obj)).Offset)[local175]
 				write32(w, math.Float32bits(x))
 			}
@@ -8654,6 +8741,9 @@ func (obj *ToCltChangeHUD) serialize(w io.Writer) {
 
 		//mt:if %s.Field == HUDText2
 		Text2 string
+
+		//mt:if %s.Field == HUDStyle
+		Style HUDStyleFlags
 	}))(obj)).Field == HUDWorldPos {
 		if err := pcall(func() {
 			((*(*(struct {
@@ -8699,6 +8789,9 @@ func (obj *ToCltChangeHUD) serialize(w io.Writer) {
 
 				//mt:if %s.Field == HUDText2
 				Text2 string
+
+				//mt:if %s.Field == HUDStyle
+				Style HUDStyleFlags
 			}))(obj)).WorldPos).serialize(w)
 		}); err != nil {
 			if err == io.EOF {
@@ -8750,6 +8843,9 @@ func (obj *ToCltChangeHUD) serialize(w io.Writer) {
 
 		//mt:if %s.Field == HUDText2
 		Text2 string
+
+		//mt:if %s.Field == HUDStyle
+		Style HUDStyleFlags
 	}))(obj)).Field == HUDSize {
 		for local176 := range (*(*(struct {
 			ID HUDID
@@ -8794,6 +8890,9 @@ func (obj *ToCltChangeHUD) serialize(w io.Writer) {
 
 			//mt:if %s.Field == HUDText2
 			Text2 string
+
+			//mt:if %s.Field == HUDStyle
+			Style HUDStyleFlags
 		}))(obj)).Size {
 			{
 				x := ((*(*(struct {
@@ -8839,6 +8938,9 @@ func (obj *ToCltChangeHUD) serialize(w io.Writer) {
 
 					//mt:if %s.Field == HUDText2
 					Text2 string
+
+					//mt:if %s.Field == HUDStyle
+					Style HUDStyleFlags
 				}))(obj)).Size)[local176]
 				write32(w, uint32(x))
 			}
@@ -8887,6 +8989,9 @@ func (obj *ToCltChangeHUD) serialize(w io.Writer) {
 
 		//mt:if %s.Field == HUDText2
 		Text2 string
+
+		//mt:if %s.Field == HUDStyle
+		Style HUDStyleFlags
 	}))(obj)).Field == HUDZIndex {
 		{
 			x := (*(*(struct {
@@ -8932,6 +9037,9 @@ func (obj *ToCltChangeHUD) serialize(w io.Writer) {
 
 				//mt:if %s.Field == HUDText2
 				Text2 string
+
+				//mt:if %s.Field == HUDStyle
+				Style HUDStyleFlags
 			}))(obj)).ZIndex
 			write32(w, uint32(x))
 		}
@@ -8979,6 +9087,9 @@ func (obj *ToCltChangeHUD) serialize(w io.Writer) {
 
 		//mt:if %s.Field == HUDText2
 		Text2 string
+
+		//mt:if %s.Field == HUDStyle
+		Style HUDStyleFlags
 	}))(obj)).Field == HUDText2 {
 		if len(([]byte((*(*(struct {
 			ID HUDID
@@ -9023,6 +9134,9 @@ func (obj *ToCltChangeHUD) serialize(w io.Writer) {
 
 			//mt:if %s.Field == HUDText2
 			Text2 string
+
+			//mt:if %s.Field == HUDStyle
+			Style HUDStyleFlags
 		}))(obj)).Text2))) > math.MaxUint16 {
 			chk(ErrTooLong)
 		}
@@ -9070,6 +9184,9 @@ func (obj *ToCltChangeHUD) serialize(w io.Writer) {
 
 				//mt:if %s.Field == HUDText2
 				Text2 string
+
+				//mt:if %s.Field == HUDStyle
+				Style HUDStyleFlags
 			}))(obj)).Text2))))
 			write16(w, uint16(x))
 		}
@@ -9117,8 +9234,113 @@ func (obj *ToCltChangeHUD) serialize(w io.Writer) {
 
 				//mt:if %s.Field == HUDText2
 				Text2 string
+
+				//mt:if %s.Field == HUDStyle
+				Style HUDStyleFlags
 			}))(obj)).Text2))[:])
 			chk(err)
+		}
+	}
+	if (*(*(struct {
+		ID HUDID
+
+		Field HUDField
+
+		//mt:if %s.Field == HUDPos
+		Pos [2]float32
+
+		//mt:if %s.Field == HUDName
+		Name string
+
+		//mt:if %s.Field == HUDScale
+		Scale [2]float32
+
+		//mt:if %s.Field == HUDText
+		Text string
+
+		//mt:if %s.Field == HUDNumber
+		Number uint32
+
+		//mt:if %s.Field == HUDItem
+		Item uint32
+
+		//mt:if %s.Field == HUDDir
+		Dir uint32
+
+		//mt:if %s.Field == HUDAlign
+		Align [2]float32
+
+		//mt:if %s.Field == HUDOffset
+		Offset [2]float32
+
+		//mt:if %s.Field == HUDWorldPos
+		WorldPos Pos
+
+		//mt:if %s.Field == HUDSize
+		Size [2]int32
+
+		//mt:if %s.Field == HUDZIndex
+		ZIndex int32
+
+		//mt:if %s.Field == HUDText2
+		Text2 string
+
+		//mt:if %s.Field == HUDStyle
+		Style HUDStyleFlags
+	}))(obj)).Field == HUDStyle {
+		if err := pcall(func() {
+			((*(*(struct {
+				ID HUDID
+
+				Field HUDField
+
+				//mt:if %s.Field == HUDPos
+				Pos [2]float32
+
+				//mt:if %s.Field == HUDName
+				Name string
+
+				//mt:if %s.Field == HUDScale
+				Scale [2]float32
+
+				//mt:if %s.Field == HUDText
+				Text string
+
+				//mt:if %s.Field == HUDNumber
+				Number uint32
+
+				//mt:if %s.Field == HUDItem
+				Item uint32
+
+				//mt:if %s.Field == HUDDir
+				Dir uint32
+
+				//mt:if %s.Field == HUDAlign
+				Align [2]float32
+
+				//mt:if %s.Field == HUDOffset
+				Offset [2]float32
+
+				//mt:if %s.Field == HUDWorldPos
+				WorldPos Pos
+
+				//mt:if %s.Field == HUDSize
+				Size [2]int32
+
+				//mt:if %s.Field == HUDZIndex
+				ZIndex int32
+
+				//mt:if %s.Field == HUDText2
+				Text2 string
+
+				//mt:if %s.Field == HUDStyle
+				Style HUDStyleFlags
+			}))(obj)).Style).serialize(w)
+		}); err != nil {
+			if err == io.EOF {
+				chk(io.EOF)
+			}
+			chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.HUDStyleFlags", err))
 		}
 	}
 }
@@ -9168,6 +9390,9 @@ func (obj *ToCltChangeHUD) deserialize(r io.Reader) {
 
 			//mt:if %s.Field == HUDText2
 			Text2 string
+
+			//mt:if %s.Field == HUDStyle
+			Style HUDStyleFlags
 		}))(obj)).ID).deserialize(r)
 	}); err != nil {
 		if err == io.EOF {
@@ -9219,6 +9444,9 @@ func (obj *ToCltChangeHUD) deserialize(r io.Reader) {
 
 			//mt:if %s.Field == HUDText2
 			Text2 string
+
+			//mt:if %s.Field == HUDStyle
+			Style HUDStyleFlags
 		}))(obj)).Field).deserialize(r)
 	}); err != nil {
 		if err == io.EOF {
@@ -9269,6 +9497,9 @@ func (obj *ToCltChangeHUD) deserialize(r io.Reader) {
 
 		//mt:if %s.Field == HUDText2
 		Text2 string
+
+		//mt:if %s.Field == HUDStyle
+		Style HUDStyleFlags
 	}))(obj)).Field < hudMax) {
 		chk(errors.New("assertion failed: %s.Field < hudMax"))
 	}
@@ -9315,6 +9546,9 @@ func (obj *ToCltChangeHUD) deserialize(r io.Reader) {
 
 		//mt:if %s.Field == HUDText2
 		Text2 string
+
+		//mt:if %s.Field == HUDStyle
+		Style HUDStyleFlags
 	}))(obj)).Field == HUDPos {
 		for local177 := range (*(*(struct {
 			ID HUDID
@@ -9359,6 +9593,9 @@ func (obj *ToCltChangeHUD) deserialize(r io.Reader) {
 
 			//mt:if %s.Field == HUDText2
 			Text2 string
+
+			//mt:if %s.Field == HUDStyle
+			Style HUDStyleFlags
 		}))(obj)).Pos {
 			{
 				p := &((*(*(struct {
@@ -9404,6 +9641,9 @@ func (obj *ToCltChangeHUD) deserialize(r io.Reader) {
 
 					//mt:if %s.Field == HUDText2
 					Text2 string
+
+					//mt:if %s.Field == HUDStyle
+					Style HUDStyleFlags
 				}))(obj)).Pos)[local177]
 				*p = math.Float32frombits(read32(r))
 			}
@@ -9452,6 +9692,9 @@ func (obj *ToCltChangeHUD) deserialize(r io.Reader) {
 
 		//mt:if %s.Field == HUDText2
 		Text2 string
+
+		//mt:if %s.Field == HUDStyle
+		Style HUDStyleFlags
 	}))(obj)).Field == HUDName {
 		var local178 []uint8
 		var local179 uint16
@@ -9507,6 +9750,9 @@ func (obj *ToCltChangeHUD) deserialize(r io.Reader) {
 
 			//mt:if %s.Field == HUDText2
 			Text2 string
+
+			//mt:if %s.Field == HUDStyle
+			Style HUDStyleFlags
 		}))(obj)).Name) = string(local178)
 	}
 	if (*(*(struct {
@@ -9552,6 +9798,9 @@ func (obj *ToCltChangeHUD) deserialize(r io.Reader) {
 
 		//mt:if %s.Field == HUDText2
 		Text2 string
+
+		//mt:if %s.Field == HUDStyle
+		Style HUDStyleFlags
 	}))(obj)).Field == HUDScale {
 		for local180 := range (*(*(struct {
 			ID HUDID
@@ -9596,6 +9845,9 @@ func (obj *ToCltChangeHUD) deserialize(r io.Reader) {
 
 			//mt:if %s.Field == HUDText2
 			Text2 string
+
+			//mt:if %s.Field == HUDStyle
+			Style HUDStyleFlags
 		}))(obj)).Scale {
 			{
 				p := &((*(*(struct {
@@ -9641,6 +9893,9 @@ func (obj *ToCltChangeHUD) deserialize(r io.Reader) {
 
 					//mt:if %s.Field == HUDText2
 					Text2 string
+
+					//mt:if %s.Field == HUDStyle
+					Style HUDStyleFlags
 				}))(obj)).Scale)[local180]
 				*p = math.Float32frombits(read32(r))
 			}
@@ -9689,6 +9944,9 @@ func (obj *ToCltChangeHUD) deserialize(r io.Reader) {
 
 		//mt:if %s.Field == HUDText2
 		Text2 string
+
+		//mt:if %s.Field == HUDStyle
+		Style HUDStyleFlags
 	}))(obj)).Field == HUDText {
 		var local181 []uint8
 		var local182 uint16
@@ -9744,6 +10002,9 @@ func (obj *ToCltChangeHUD) deserialize(r io.Reader) {
 
 			//mt:if %s.Field == HUDText2
 			Text2 string
+
+			//mt:if %s.Field == HUDStyle
+			Style HUDStyleFlags
 		}))(obj)).Text) = string(local181)
 	}
 	if (*(*(struct {
@@ -9789,6 +10050,9 @@ func (obj *ToCltChangeHUD) deserialize(r io.Reader) {
 
 		//mt:if %s.Field == HUDText2
 		Text2 string
+
+		//mt:if %s.Field == HUDStyle
+		Style HUDStyleFlags
 	}))(obj)).Field == HUDNumber {
 		{
 			p := &(*(*(struct {
@@ -9834,6 +10098,9 @@ func (obj *ToCltChangeHUD) deserialize(r io.Reader) {
 
 				//mt:if %s.Field == HUDText2
 				Text2 string
+
+				//mt:if %s.Field == HUDStyle
+				Style HUDStyleFlags
 			}))(obj)).Number
 			*p = read32(r)
 		}
@@ -9881,6 +10148,9 @@ func (obj *ToCltChangeHUD) deserialize(r io.Reader) {
 
 		//mt:if %s.Field == HUDText2
 		Text2 string
+
+		//mt:if %s.Field == HUDStyle
+		Style HUDStyleFlags
 	}))(obj)).Field == HUDItem {
 		{
 			p := &(*(*(struct {
@@ -9926,6 +10196,9 @@ func (obj *ToCltChangeHUD) deserialize(r io.Reader) {
 
 				//mt:if %s.Field == HUDText2
 				Text2 string
+
+				//mt:if %s.Field == HUDStyle
+				Style HUDStyleFlags
 			}))(obj)).Item
 			*p = read32(r)
 		}
@@ -9973,6 +10246,9 @@ func (obj *ToCltChangeHUD) deserialize(r io.Reader) {
 
 		//mt:if %s.Field == HUDText2
 		Text2 string
+
+		//mt:if %s.Field == HUDStyle
+		Style HUDStyleFlags
 	}))(obj)).Field == HUDDir {
 		{
 			p := &(*(*(struct {
@@ -10018,6 +10294,9 @@ func (obj *ToCltChangeHUD) deserialize(r io.Reader) {
 
 				//mt:if %s.Field == HUDText2
 				Text2 string
+
+				//mt:if %s.Field == HUDStyle
+				Style HUDStyleFlags
 			}))(obj)).Dir
 			*p = read32(r)
 		}
@@ -10065,6 +10344,9 @@ func (obj *ToCltChangeHUD) deserialize(r io.Reader) {
 
 		//mt:if %s.Field == HUDText2
 		Text2 string
+
+		//mt:if %s.Field == HUDStyle
+		Style HUDStyleFlags
 	}))(obj)).Field == HUDAlign {
 		for local183 := range (*(*(struct {
 			ID HUDID
@@ -10109,6 +10391,9 @@ func (obj *ToCltChangeHUD) deserialize(r io.Reader) {
 
 			//mt:if %s.Field == HUDText2
 			Text2 string
+
+			//mt:if %s.Field == HUDStyle
+			Style HUDStyleFlags
 		}))(obj)).Align {
 			{
 				p := &((*(*(struct {
@@ -10154,6 +10439,9 @@ func (obj *ToCltChangeHUD) deserialize(r io.Reader) {
 
 					//mt:if %s.Field == HUDText2
 					Text2 string
+
+					//mt:if %s.Field == HUDStyle
+					Style HUDStyleFlags
 				}))(obj)).Align)[local183]
 				*p = math.Float32frombits(read32(r))
 			}
@@ -10202,6 +10490,9 @@ func (obj *ToCltChangeHUD) deserialize(r io.Reader) {
 
 		//mt:if %s.Field == HUDText2
 		Text2 string
+
+		//mt:if %s.Field == HUDStyle
+		Style HUDStyleFlags
 	}))(obj)).Field == HUDOffset {
 		for local184 := range (*(*(struct {
 			ID HUDID
@@ -10246,6 +10537,9 @@ func (obj *ToCltChangeHUD) deserialize(r io.Reader) {
 
 			//mt:if %s.Field == HUDText2
 			Text2 string
+
+			//mt:if %s.Field == HUDStyle
+			Style HUDStyleFlags
 		}))(obj)).Offset {
 			{
 				p := &((*(*(struct {
@@ -10291,6 +10585,9 @@ func (obj *ToCltChangeHUD) deserialize(r io.Reader) {
 
 					//mt:if %s.Field == HUDText2
 					Text2 string
+
+					//mt:if %s.Field == HUDStyle
+					Style HUDStyleFlags
 				}))(obj)).Offset)[local184]
 				*p = math.Float32frombits(read32(r))
 			}
@@ -10339,6 +10636,9 @@ func (obj *ToCltChangeHUD) deserialize(r io.Reader) {
 
 		//mt:if %s.Field == HUDText2
 		Text2 string
+
+		//mt:if %s.Field == HUDStyle
+		Style HUDStyleFlags
 	}))(obj)).Field == HUDWorldPos {
 		if err := pcall(func() {
 			((*(*(struct {
@@ -10384,6 +10684,9 @@ func (obj *ToCltChangeHUD) deserialize(r io.Reader) {
 
 				//mt:if %s.Field == HUDText2
 				Text2 string
+
+				//mt:if %s.Field == HUDStyle
+				Style HUDStyleFlags
 			}))(obj)).WorldPos).deserialize(r)
 		}); err != nil {
 			if err == io.EOF {
@@ -10435,6 +10738,9 @@ func (obj *ToCltChangeHUD) deserialize(r io.Reader) {
 
 		//mt:if %s.Field == HUDText2
 		Text2 string
+
+		//mt:if %s.Field == HUDStyle
+		Style HUDStyleFlags
 	}))(obj)).Field == HUDSize {
 		for local185 := range (*(*(struct {
 			ID HUDID
@@ -10479,6 +10785,9 @@ func (obj *ToCltChangeHUD) deserialize(r io.Reader) {
 
 			//mt:if %s.Field == HUDText2
 			Text2 string
+
+			//mt:if %s.Field == HUDStyle
+			Style HUDStyleFlags
 		}))(obj)).Size {
 			{
 				p := &((*(*(struct {
@@ -10524,6 +10833,9 @@ func (obj *ToCltChangeHUD) deserialize(r io.Reader) {
 
 					//mt:if %s.Field == HUDText2
 					Text2 string
+
+					//mt:if %s.Field == HUDStyle
+					Style HUDStyleFlags
 				}))(obj)).Size)[local185]
 				*p = int32(read32(r))
 			}
@@ -10572,6 +10884,9 @@ func (obj *ToCltChangeHUD) deserialize(r io.Reader) {
 
 		//mt:if %s.Field == HUDText2
 		Text2 string
+
+		//mt:if %s.Field == HUDStyle
+		Style HUDStyleFlags
 	}))(obj)).Field == HUDZIndex {
 		{
 			p := &(*(*(struct {
@@ -10617,6 +10932,9 @@ func (obj *ToCltChangeHUD) deserialize(r io.Reader) {
 
 				//mt:if %s.Field == HUDText2
 				Text2 string
+
+				//mt:if %s.Field == HUDStyle
+				Style HUDStyleFlags
 			}))(obj)).ZIndex
 			*p = int32(read32(r))
 		}
@@ -10664,6 +10982,9 @@ func (obj *ToCltChangeHUD) deserialize(r io.Reader) {
 
 		//mt:if %s.Field == HUDText2
 		Text2 string
+
+		//mt:if %s.Field == HUDStyle
+		Style HUDStyleFlags
 	}))(obj)).Field == HUDText2 {
 		var local186 []uint8
 		var local187 uint16
@@ -10719,7 +11040,112 @@ func (obj *ToCltChangeHUD) deserialize(r io.Reader) {
 
 			//mt:if %s.Field == HUDText2
 			Text2 string
+
+			//mt:if %s.Field == HUDStyle
+			Style HUDStyleFlags
 		}))(obj)).Text2) = string(local186)
+	}
+	if (*(*(struct {
+		ID HUDID
+
+		Field HUDField
+
+		//mt:if %s.Field == HUDPos
+		Pos [2]float32
+
+		//mt:if %s.Field == HUDName
+		Name string
+
+		//mt:if %s.Field == HUDScale
+		Scale [2]float32
+
+		//mt:if %s.Field == HUDText
+		Text string
+
+		//mt:if %s.Field == HUDNumber
+		Number uint32
+
+		//mt:if %s.Field == HUDItem
+		Item uint32
+
+		//mt:if %s.Field == HUDDir
+		Dir uint32
+
+		//mt:if %s.Field == HUDAlign
+		Align [2]float32
+
+		//mt:if %s.Field == HUDOffset
+		Offset [2]float32
+
+		//mt:if %s.Field == HUDWorldPos
+		WorldPos Pos
+
+		//mt:if %s.Field == HUDSize
+		Size [2]int32
+
+		//mt:if %s.Field == HUDZIndex
+		ZIndex int32
+
+		//mt:if %s.Field == HUDText2
+		Text2 string
+
+		//mt:if %s.Field == HUDStyle
+		Style HUDStyleFlags
+	}))(obj)).Field == HUDStyle {
+		if err := pcall(func() {
+			((*(*(struct {
+				ID HUDID
+
+				Field HUDField
+
+				//mt:if %s.Field == HUDPos
+				Pos [2]float32
+
+				//mt:if %s.Field == HUDName
+				Name string
+
+				//mt:if %s.Field == HUDScale
+				Scale [2]float32
+
+				//mt:if %s.Field == HUDText
+				Text string
+
+				//mt:if %s.Field == HUDNumber
+				Number uint32
+
+				//mt:if %s.Field == HUDItem
+				Item uint32
+
+				//mt:if %s.Field == HUDDir
+				Dir uint32
+
+				//mt:if %s.Field == HUDAlign
+				Align [2]float32
+
+				//mt:if %s.Field == HUDOffset
+				Offset [2]float32
+
+				//mt:if %s.Field == HUDWorldPos
+				WorldPos Pos
+
+				//mt:if %s.Field == HUDSize
+				Size [2]int32
+
+				//mt:if %s.Field == HUDZIndex
+				ZIndex int32
+
+				//mt:if %s.Field == HUDText2
+				Text2 string
+
+				//mt:if %s.Field == HUDStyle
+				Style HUDStyleFlags
+			}))(obj)).Style).deserialize(r)
+		}); err != nil {
+			if err == io.EOF {
+				chk(io.EOF)
+			}
+			chk(fmt.Errorf("%s: %w", "github.com/Minetest-j45/mt.HUDStyleFlags", err))
+		}
 	}
 }
 
@@ -25806,6 +26232,7 @@ func (obj *HUD) serialize(w io.Writer) {
 			Size     [2]int32
 			ZIndex   int16
 			Text2    string
+			Style    uint32
 		}))(obj)).Type).serialize(w)
 	}); err != nil {
 		if err == io.EOF {
@@ -25829,6 +26256,7 @@ func (obj *HUD) serialize(w io.Writer) {
 		Size     [2]int32
 		ZIndex   int16
 		Text2    string
+		Style    uint32
 	}))(obj)).Pos {
 		{
 			x := ((*(*(struct {
@@ -25847,6 +26275,7 @@ func (obj *HUD) serialize(w io.Writer) {
 				Size     [2]int32
 				ZIndex   int16
 				Text2    string
+				Style    uint32
 			}))(obj)).Pos)[local315]
 			write32(w, math.Float32bits(x))
 		}
@@ -25867,6 +26296,7 @@ func (obj *HUD) serialize(w io.Writer) {
 		Size     [2]int32
 		ZIndex   int16
 		Text2    string
+		Style    uint32
 	}))(obj)).Name))) > math.MaxUint16 {
 		chk(ErrTooLong)
 	}
@@ -25887,6 +26317,7 @@ func (obj *HUD) serialize(w io.Writer) {
 			Size     [2]int32
 			ZIndex   int16
 			Text2    string
+			Style    uint32
 		}))(obj)).Name))))
 		write16(w, uint16(x))
 	}
@@ -25907,6 +26338,7 @@ func (obj *HUD) serialize(w io.Writer) {
 			Size     [2]int32
 			ZIndex   int16
 			Text2    string
+			Style    uint32
 		}))(obj)).Name))[:])
 		chk(err)
 	}
@@ -25926,6 +26358,7 @@ func (obj *HUD) serialize(w io.Writer) {
 		Size     [2]int32
 		ZIndex   int16
 		Text2    string
+		Style    uint32
 	}))(obj)).Scale {
 		{
 			x := ((*(*(struct {
@@ -25944,6 +26377,7 @@ func (obj *HUD) serialize(w io.Writer) {
 				Size     [2]int32
 				ZIndex   int16
 				Text2    string
+				Style    uint32
 			}))(obj)).Scale)[local316]
 			write32(w, math.Float32bits(x))
 		}
@@ -25964,6 +26398,7 @@ func (obj *HUD) serialize(w io.Writer) {
 		Size     [2]int32
 		ZIndex   int16
 		Text2    string
+		Style    uint32
 	}))(obj)).Text))) > math.MaxUint16 {
 		chk(ErrTooLong)
 	}
@@ -25984,6 +26419,7 @@ func (obj *HUD) serialize(w io.Writer) {
 			Size     [2]int32
 			ZIndex   int16
 			Text2    string
+			Style    uint32
 		}))(obj)).Text))))
 		write16(w, uint16(x))
 	}
@@ -26004,6 +26440,7 @@ func (obj *HUD) serialize(w io.Writer) {
 			Size     [2]int32
 			ZIndex   int16
 			Text2    string
+			Style    uint32
 		}))(obj)).Text))[:])
 		chk(err)
 	}
@@ -26024,6 +26461,7 @@ func (obj *HUD) serialize(w io.Writer) {
 			Size     [2]int32
 			ZIndex   int16
 			Text2    string
+			Style    uint32
 		}))(obj)).Number
 		write32(w, uint32(x))
 	}
@@ -26044,6 +26482,7 @@ func (obj *HUD) serialize(w io.Writer) {
 			Size     [2]int32
 			ZIndex   int16
 			Text2    string
+			Style    uint32
 		}))(obj)).Item
 		write32(w, uint32(x))
 	}
@@ -26064,6 +26503,7 @@ func (obj *HUD) serialize(w io.Writer) {
 			Size     [2]int32
 			ZIndex   int16
 			Text2    string
+			Style    uint32
 		}))(obj)).Dir
 		write32(w, uint32(x))
 	}
@@ -26083,6 +26523,7 @@ func (obj *HUD) serialize(w io.Writer) {
 		Size     [2]int32
 		ZIndex   int16
 		Text2    string
+		Style    uint32
 	}))(obj)).Align {
 		{
 			x := ((*(*(struct {
@@ -26101,6 +26542,7 @@ func (obj *HUD) serialize(w io.Writer) {
 				Size     [2]int32
 				ZIndex   int16
 				Text2    string
+				Style    uint32
 			}))(obj)).Align)[local317]
 			write32(w, math.Float32bits(x))
 		}
@@ -26121,6 +26563,7 @@ func (obj *HUD) serialize(w io.Writer) {
 		Size     [2]int32
 		ZIndex   int16
 		Text2    string
+		Style    uint32
 	}))(obj)).Offset {
 		{
 			x := ((*(*(struct {
@@ -26139,6 +26582,7 @@ func (obj *HUD) serialize(w io.Writer) {
 				Size     [2]int32
 				ZIndex   int16
 				Text2    string
+				Style    uint32
 			}))(obj)).Offset)[local318]
 			write32(w, math.Float32bits(x))
 		}
@@ -26160,6 +26604,7 @@ func (obj *HUD) serialize(w io.Writer) {
 			Size     [2]int32
 			ZIndex   int16
 			Text2    string
+			Style    uint32
 		}))(obj)).WorldPos).serialize(w)
 	}); err != nil {
 		if err == io.EOF {
@@ -26183,6 +26628,7 @@ func (obj *HUD) serialize(w io.Writer) {
 		Size     [2]int32
 		ZIndex   int16
 		Text2    string
+		Style    uint32
 	}))(obj)).Size {
 		{
 			x := ((*(*(struct {
@@ -26201,6 +26647,7 @@ func (obj *HUD) serialize(w io.Writer) {
 				Size     [2]int32
 				ZIndex   int16
 				Text2    string
+				Style    uint32
 			}))(obj)).Size)[local319]
 			write32(w, uint32(x))
 		}
@@ -26222,6 +26669,7 @@ func (obj *HUD) serialize(w io.Writer) {
 			Size     [2]int32
 			ZIndex   int16
 			Text2    string
+			Style    uint32
 		}))(obj)).ZIndex
 		write16(w, uint16(x))
 	}
@@ -26241,6 +26689,7 @@ func (obj *HUD) serialize(w io.Writer) {
 		Size     [2]int32
 		ZIndex   int16
 		Text2    string
+		Style    uint32
 	}))(obj)).Text2))) > math.MaxUint16 {
 		chk(ErrTooLong)
 	}
@@ -26261,6 +26710,7 @@ func (obj *HUD) serialize(w io.Writer) {
 			Size     [2]int32
 			ZIndex   int16
 			Text2    string
+			Style    uint32
 		}))(obj)).Text2))))
 		write16(w, uint16(x))
 	}
@@ -26281,8 +26731,30 @@ func (obj *HUD) serialize(w io.Writer) {
 			Size     [2]int32
 			ZIndex   int16
 			Text2    string
+			Style    uint32
 		}))(obj)).Text2))[:])
 		chk(err)
+	}
+	{
+		x := (*(*(struct {
+			Type HUDType
+
+			Pos      [2]float32
+			Name     string
+			Scale    [2]float32
+			Text     string
+			Number   uint32
+			Item     uint32
+			Dir      uint32
+			Align    [2]float32
+			Offset   [2]float32
+			WorldPos Pos
+			Size     [2]int32
+			ZIndex   int16
+			Text2    string
+			Style    uint32
+		}))(obj)).Style
+		write32(w, uint32(x))
 	}
 }
 
@@ -26304,6 +26776,7 @@ func (obj *HUD) deserialize(r io.Reader) {
 			Size     [2]int32
 			ZIndex   int16
 			Text2    string
+			Style    uint32
 		}))(obj)).Type).deserialize(r)
 	}); err != nil {
 		if err == io.EOF {
@@ -26327,6 +26800,7 @@ func (obj *HUD) deserialize(r io.Reader) {
 		Size     [2]int32
 		ZIndex   int16
 		Text2    string
+		Style    uint32
 	}))(obj)).Pos {
 		{
 			p := &((*(*(struct {
@@ -26345,6 +26819,7 @@ func (obj *HUD) deserialize(r io.Reader) {
 				Size     [2]int32
 				ZIndex   int16
 				Text2    string
+				Style    uint32
 			}))(obj)).Pos)[local320]
 			*p = math.Float32frombits(read32(r))
 		}
@@ -26376,6 +26851,7 @@ func (obj *HUD) deserialize(r io.Reader) {
 		Size     [2]int32
 		ZIndex   int16
 		Text2    string
+		Style    uint32
 	}))(obj)).Name) = string(local321)
 	for local323 := range (*(*(struct {
 		Type HUDType
@@ -26393,6 +26869,7 @@ func (obj *HUD) deserialize(r io.Reader) {
 		Size     [2]int32
 		ZIndex   int16
 		Text2    string
+		Style    uint32
 	}))(obj)).Scale {
 		{
 			p := &((*(*(struct {
@@ -26411,6 +26888,7 @@ func (obj *HUD) deserialize(r io.Reader) {
 				Size     [2]int32
 				ZIndex   int16
 				Text2    string
+				Style    uint32
 			}))(obj)).Scale)[local323]
 			*p = math.Float32frombits(read32(r))
 		}
@@ -26442,6 +26920,7 @@ func (obj *HUD) deserialize(r io.Reader) {
 		Size     [2]int32
 		ZIndex   int16
 		Text2    string
+		Style    uint32
 	}))(obj)).Text) = string(local324)
 	{
 		p := &(*(*(struct {
@@ -26460,6 +26939,7 @@ func (obj *HUD) deserialize(r io.Reader) {
 			Size     [2]int32
 			ZIndex   int16
 			Text2    string
+			Style    uint32
 		}))(obj)).Number
 		*p = read32(r)
 	}
@@ -26480,6 +26960,7 @@ func (obj *HUD) deserialize(r io.Reader) {
 			Size     [2]int32
 			ZIndex   int16
 			Text2    string
+			Style    uint32
 		}))(obj)).Item
 		*p = read32(r)
 	}
@@ -26500,6 +26981,7 @@ func (obj *HUD) deserialize(r io.Reader) {
 			Size     [2]int32
 			ZIndex   int16
 			Text2    string
+			Style    uint32
 		}))(obj)).Dir
 		*p = read32(r)
 	}
@@ -26519,6 +27001,7 @@ func (obj *HUD) deserialize(r io.Reader) {
 		Size     [2]int32
 		ZIndex   int16
 		Text2    string
+		Style    uint32
 	}))(obj)).Align {
 		{
 			p := &((*(*(struct {
@@ -26537,6 +27020,7 @@ func (obj *HUD) deserialize(r io.Reader) {
 				Size     [2]int32
 				ZIndex   int16
 				Text2    string
+				Style    uint32
 			}))(obj)).Align)[local326]
 			*p = math.Float32frombits(read32(r))
 		}
@@ -26557,6 +27041,7 @@ func (obj *HUD) deserialize(r io.Reader) {
 		Size     [2]int32
 		ZIndex   int16
 		Text2    string
+		Style    uint32
 	}))(obj)).Offset {
 		{
 			p := &((*(*(struct {
@@ -26575,6 +27060,7 @@ func (obj *HUD) deserialize(r io.Reader) {
 				Size     [2]int32
 				ZIndex   int16
 				Text2    string
+				Style    uint32
 			}))(obj)).Offset)[local327]
 			*p = math.Float32frombits(read32(r))
 		}
@@ -26596,6 +27082,7 @@ func (obj *HUD) deserialize(r io.Reader) {
 			Size     [2]int32
 			ZIndex   int16
 			Text2    string
+			Style    uint32
 		}))(obj)).WorldPos).deserialize(r)
 	}); err != nil {
 		if err == io.EOF {
@@ -26619,6 +27106,7 @@ func (obj *HUD) deserialize(r io.Reader) {
 		Size     [2]int32
 		ZIndex   int16
 		Text2    string
+		Style    uint32
 	}))(obj)).Size {
 		{
 			p := &((*(*(struct {
@@ -26637,6 +27125,7 @@ func (obj *HUD) deserialize(r io.Reader) {
 				Size     [2]int32
 				ZIndex   int16
 				Text2    string
+				Style    uint32
 			}))(obj)).Size)[local328]
 			*p = int32(read32(r))
 		}
@@ -26658,6 +27147,7 @@ func (obj *HUD) deserialize(r io.Reader) {
 			Size     [2]int32
 			ZIndex   int16
 			Text2    string
+			Style    uint32
 		}))(obj)).ZIndex
 		*p = int16(read16(r))
 	}
@@ -26688,7 +27178,29 @@ func (obj *HUD) deserialize(r io.Reader) {
 		Size     [2]int32
 		ZIndex   int16
 		Text2    string
+		Style    uint32
 	}))(obj)).Text2) = string(local329)
+	{
+		p := &(*(*(struct {
+			Type HUDType
+
+			Pos      [2]float32
+			Name     string
+			Scale    [2]float32
+			Text     string
+			Number   uint32
+			Item     uint32
+			Dir      uint32
+			Align    [2]float32
+			Offset   [2]float32
+			WorldPos Pos
+			Size     [2]int32
+			ZIndex   int16
+			Text2    string
+			Style    uint32
+		}))(obj)).Style
+		*p = read32(r)
+	}
 }
 
 func (obj *HUDField) serialize(w io.Writer) {
@@ -26702,6 +27214,20 @@ func (obj *HUDField) deserialize(r io.Reader) {
 	{
 		p := &*(*(uint8))(obj)
 		*p = read8(r)
+	}
+}
+
+func (obj *HUDStyleFlags) serialize(w io.Writer) {
+	{
+		x := *(*(uint32))(obj)
+		write32(w, uint32(x))
+	}
+}
+
+func (obj *HUDStyleFlags) deserialize(r io.Reader) {
+	{
+		p := &*(*(uint32))(obj)
+		*p = read32(r)
 	}
 }
 

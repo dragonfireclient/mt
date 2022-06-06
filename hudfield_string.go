@@ -21,12 +21,13 @@ func _() {
 	_ = x[HUDSize-10]
 	_ = x[HUDZIndex-11]
 	_ = x[HUDText2-12]
-	_ = x[hudMax-13]
+	_ = x[HUDStyle-13]
+	_ = x[hudMax-14]
 }
 
-const _HUDField_name = "PosNameScaleTextNumberItemDirAlignOffsetWorldPosSizeZIndexText2hudMax"
+const _HUDField_name = "PosNameScaleTextNumberItemDirAlignOffsetWorldPosSizeZIndexText2StylehudMax"
 
-var _HUDField_index = [...]uint8{0, 3, 7, 12, 16, 22, 26, 29, 34, 40, 48, 52, 58, 63, 69}
+var _HUDField_index = [...]uint8{0, 3, 7, 12, 16, 22, 26, 29, 34, 40, 48, 52, 58, 63, 68, 74}
 
 func (i HUDField) String() string {
 	if i >= HUDField(len(_HUDField_index)-1) {
