@@ -45,8 +45,6 @@ AOMsg	writeAOMsg(w, x)
 image/color.NRGBA	w.Write([]byte{x.A, x.R, x.G, x.B})
 
 map[uint16]*NodeMeta	{
-		w := zlib.NewWriter(w)
-
 		if x == nil {
 			write8(w, 0)
 		} else {
@@ -80,8 +78,6 @@ map[uint16]*NodeMeta	{
 				chk(serialize(w, x[key]))
 			}
 		}
-
-		chk(w.Close())
 	}
 
 map[[3]int16]*NodeMeta	{

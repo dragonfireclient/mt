@@ -42,9 +42,6 @@ AOMsg	{
 image/color.NRGBA	*p = color.NRGBA{A: read8(r), R: read8(r), G: read8(r), B: read8(r)}
 
 map[uint16]*NodeMeta	{
-		r, err := zlib.NewReader(byteReader{r})
-		chk(err)
-
 		switch ver := read8(r); ver {
 		case 0:
 			*p = nil
@@ -60,8 +57,6 @@ map[uint16]*NodeMeta	{
 		default:
 			chk(fmt.Errorf("unsupported nodemetas version: %d", ver))
 		}
-
-		chk(r.Close())
 	}
 
 map[[3]int16]*NodeMeta	{

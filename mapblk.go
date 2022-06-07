@@ -24,16 +24,14 @@ type MapBlk struct {
 	//mt:const uint8(2)     // Size of param0 in bytes.
 	//mt:const uint8(1 + 1) // Size of param1 and param2 combined, in bytes.
 
-	//mt:zstd
 	Param0 [4096]Content
 	Param1 [4096]uint8
 	Param2 [4096]uint8
-	//mt:end
 
 	NodeMetas map[uint16]*NodeMeta
 
 	// net info
-	//mt:const uint8(2) // version
+	// mt:const uint8(2) // version
 }
 
 // Pos2BlkPos converts a node position to a MapBlk position and index.
