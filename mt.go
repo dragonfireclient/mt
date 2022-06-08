@@ -1,5 +1,5 @@
 // Package mt implements the high-level Minetest protocol.
-// This version is compatible with Minetest 5.4.1.
+// This version is compatible with Minetest 5.5.0.
 package mt
 
 type Node struct {
