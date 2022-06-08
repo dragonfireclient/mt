@@ -123,7 +123,7 @@ func (cmd ToCltKick) String() (msg string) {
 type ToCltBlkData struct {
 	Blkpos [3]int16
 	//mt:zstd
-	Blk    MapBlk
+	Blk MapBlk
 	//mt:end
 }
 
@@ -431,7 +431,7 @@ type HUD struct {
 	Size     [2]int32
 	ZIndex   int16
 	Text2    string
-	Style uint32
+	Style    HUDStyleFlags
 }
 
 type HUDID uint32
