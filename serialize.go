@@ -27166,7 +27166,7 @@ func (obj *HUD) serialize(w io.Writer) {
 			Size     [2]int32
 			ZIndex   int16
 			Text2    string
-			Style    uint32
+			Style    HUDStyleFlags
 		}))(obj)).Type).serialize(w)
 	}); err != nil {
 		if err == io.EOF {
@@ -27190,7 +27190,7 @@ func (obj *HUD) serialize(w io.Writer) {
 		Size     [2]int32
 		ZIndex   int16
 		Text2    string
-		Style    uint32
+		Style    HUDStyleFlags
 	}))(obj)).Pos {
 		{
 			x := ((*(*(struct {
@@ -27209,7 +27209,7 @@ func (obj *HUD) serialize(w io.Writer) {
 				Size     [2]int32
 				ZIndex   int16
 				Text2    string
-				Style    uint32
+				Style    HUDStyleFlags
 			}))(obj)).Pos)[local312]
 			write32(w, math.Float32bits(x))
 		}
@@ -27230,7 +27230,7 @@ func (obj *HUD) serialize(w io.Writer) {
 		Size     [2]int32
 		ZIndex   int16
 		Text2    string
-		Style    uint32
+		Style    HUDStyleFlags
 	}))(obj)).Name))) > math.MaxUint16 {
 		chk(ErrTooLong)
 	}
@@ -27251,7 +27251,7 @@ func (obj *HUD) serialize(w io.Writer) {
 			Size     [2]int32
 			ZIndex   int16
 			Text2    string
-			Style    uint32
+			Style    HUDStyleFlags
 		}))(obj)).Name))))
 		write16(w, uint16(x))
 	}
@@ -27272,7 +27272,7 @@ func (obj *HUD) serialize(w io.Writer) {
 			Size     [2]int32
 			ZIndex   int16
 			Text2    string
-			Style    uint32
+			Style    HUDStyleFlags
 		}))(obj)).Name))[:])
 		chk(err)
 	}
@@ -27292,7 +27292,7 @@ func (obj *HUD) serialize(w io.Writer) {
 		Size     [2]int32
 		ZIndex   int16
 		Text2    string
-		Style    uint32
+		Style    HUDStyleFlags
 	}))(obj)).Scale {
 		{
 			x := ((*(*(struct {
@@ -27311,7 +27311,7 @@ func (obj *HUD) serialize(w io.Writer) {
 				Size     [2]int32
 				ZIndex   int16
 				Text2    string
-				Style    uint32
+				Style    HUDStyleFlags
 			}))(obj)).Scale)[local313]
 			write32(w, math.Float32bits(x))
 		}
@@ -27332,7 +27332,7 @@ func (obj *HUD) serialize(w io.Writer) {
 		Size     [2]int32
 		ZIndex   int16
 		Text2    string
-		Style    uint32
+		Style    HUDStyleFlags
 	}))(obj)).Text))) > math.MaxUint16 {
 		chk(ErrTooLong)
 	}
@@ -27353,7 +27353,7 @@ func (obj *HUD) serialize(w io.Writer) {
 			Size     [2]int32
 			ZIndex   int16
 			Text2    string
-			Style    uint32
+			Style    HUDStyleFlags
 		}))(obj)).Text))))
 		write16(w, uint16(x))
 	}
@@ -27374,7 +27374,7 @@ func (obj *HUD) serialize(w io.Writer) {
 			Size     [2]int32
 			ZIndex   int16
 			Text2    string
-			Style    uint32
+			Style    HUDStyleFlags
 		}))(obj)).Text))[:])
 		chk(err)
 	}
@@ -27395,7 +27395,7 @@ func (obj *HUD) serialize(w io.Writer) {
 			Size     [2]int32
 			ZIndex   int16
 			Text2    string
-			Style    uint32
+			Style    HUDStyleFlags
 		}))(obj)).Number
 		write32(w, uint32(x))
 	}
@@ -27416,7 +27416,7 @@ func (obj *HUD) serialize(w io.Writer) {
 			Size     [2]int32
 			ZIndex   int16
 			Text2    string
-			Style    uint32
+			Style    HUDStyleFlags
 		}))(obj)).Item
 		write32(w, uint32(x))
 	}
@@ -27437,7 +27437,7 @@ func (obj *HUD) serialize(w io.Writer) {
 			Size     [2]int32
 			ZIndex   int16
 			Text2    string
-			Style    uint32
+			Style    HUDStyleFlags
 		}))(obj)).Dir
 		write32(w, uint32(x))
 	}
@@ -27457,7 +27457,7 @@ func (obj *HUD) serialize(w io.Writer) {
 		Size     [2]int32
 		ZIndex   int16
 		Text2    string
-		Style    uint32
+		Style    HUDStyleFlags
 	}))(obj)).Align {
 		{
 			x := ((*(*(struct {
@@ -27476,7 +27476,7 @@ func (obj *HUD) serialize(w io.Writer) {
 				Size     [2]int32
 				ZIndex   int16
 				Text2    string
-				Style    uint32
+				Style    HUDStyleFlags
 			}))(obj)).Align)[local314]
 			write32(w, math.Float32bits(x))
 		}
@@ -27497,7 +27497,7 @@ func (obj *HUD) serialize(w io.Writer) {
 		Size     [2]int32
 		ZIndex   int16
 		Text2    string
-		Style    uint32
+		Style    HUDStyleFlags
 	}))(obj)).Offset {
 		{
 			x := ((*(*(struct {
@@ -27516,7 +27516,7 @@ func (obj *HUD) serialize(w io.Writer) {
 				Size     [2]int32
 				ZIndex   int16
 				Text2    string
-				Style    uint32
+				Style    HUDStyleFlags
 			}))(obj)).Offset)[local315]
 			write32(w, math.Float32bits(x))
 		}
@@ -27538,7 +27538,7 @@ func (obj *HUD) serialize(w io.Writer) {
 			Size     [2]int32
 			ZIndex   int16
 			Text2    string
-			Style    uint32
+			Style    HUDStyleFlags
 		}))(obj)).WorldPos).serialize(w)
 	}); err != nil {
 		if err == io.EOF {
@@ -27562,7 +27562,7 @@ func (obj *HUD) serialize(w io.Writer) {
 		Size     [2]int32
 		ZIndex   int16
 		Text2    string
-		Style    uint32
+		Style    HUDStyleFlags
 	}))(obj)).Size {
 		{
 			x := ((*(*(struct {
@@ -27581,7 +27581,7 @@ func (obj *HUD) serialize(w io.Writer) {
 				Size     [2]int32
 				ZIndex   int16
 				Text2    string
-				Style    uint32
+				Style    HUDStyleFlags
 			}))(obj)).Size)[local316]
 			write32(w, uint32(x))
 		}
@@ -27603,7 +27603,7 @@ func (obj *HUD) serialize(w io.Writer) {
 			Size     [2]int32
 			ZIndex   int16
 			Text2    string
-			Style    uint32
+			Style    HUDStyleFlags
 		}))(obj)).ZIndex
 		write16(w, uint16(x))
 	}
@@ -27623,7 +27623,7 @@ func (obj *HUD) serialize(w io.Writer) {
 		Size     [2]int32
 		ZIndex   int16
 		Text2    string
-		Style    uint32
+		Style    HUDStyleFlags
 	}))(obj)).Text2))) > math.MaxUint16 {
 		chk(ErrTooLong)
 	}
@@ -27644,7 +27644,7 @@ func (obj *HUD) serialize(w io.Writer) {
 			Size     [2]int32
 			ZIndex   int16
 			Text2    string
-			Style    uint32
+			Style    HUDStyleFlags
 		}))(obj)).Text2))))
 		write16(w, uint16(x))
 	}
@@ -27665,12 +27665,12 @@ func (obj *HUD) serialize(w io.Writer) {
 			Size     [2]int32
 			ZIndex   int16
 			Text2    string
-			Style    uint32
+			Style    HUDStyleFlags
 		}))(obj)).Text2))[:])
 		chk(err)
 	}
-	{
-		x := (*(*(struct {
+	if err := pcall(func() {
+		((*(*(struct {
 			Type HUDType
 
 			Pos      [2]float32
@@ -27686,9 +27686,13 @@ func (obj *HUD) serialize(w io.Writer) {
 			Size     [2]int32
 			ZIndex   int16
 			Text2    string
-			Style    uint32
-		}))(obj)).Style
-		write32(w, uint32(x))
+			Style    HUDStyleFlags
+		}))(obj)).Style).serialize(w)
+	}); err != nil {
+		if err == io.EOF {
+			chk(io.EOF)
+		}
+		chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.HUDStyleFlags", err))
 	}
 }
 
@@ -27710,7 +27714,7 @@ func (obj *HUD) deserialize(r io.Reader) {
 			Size     [2]int32
 			ZIndex   int16
 			Text2    string
-			Style    uint32
+			Style    HUDStyleFlags
 		}))(obj)).Type).deserialize(r)
 	}); err != nil {
 		if err == io.EOF {
@@ -27734,7 +27738,7 @@ func (obj *HUD) deserialize(r io.Reader) {
 		Size     [2]int32
 		ZIndex   int16
 		Text2    string
-		Style    uint32
+		Style    HUDStyleFlags
 	}))(obj)).Pos {
 		{
 			p := &((*(*(struct {
@@ -27753,7 +27757,7 @@ func (obj *HUD) deserialize(r io.Reader) {
 				Size     [2]int32
 				ZIndex   int16
 				Text2    string
-				Style    uint32
+				Style    HUDStyleFlags
 			}))(obj)).Pos)[local317]
 			*p = math.Float32frombits(read32(r))
 		}
@@ -27785,7 +27789,7 @@ func (obj *HUD) deserialize(r io.Reader) {
 		Size     [2]int32
 		ZIndex   int16
 		Text2    string
-		Style    uint32
+		Style    HUDStyleFlags
 	}))(obj)).Name) = string(local318)
 	for local320 := range (*(*(struct {
 		Type HUDType
@@ -27803,7 +27807,7 @@ func (obj *HUD) deserialize(r io.Reader) {
 		Size     [2]int32
 		ZIndex   int16
 		Text2    string
-		Style    uint32
+		Style    HUDStyleFlags
 	}))(obj)).Scale {
 		{
 			p := &((*(*(struct {
@@ -27822,7 +27826,7 @@ func (obj *HUD) deserialize(r io.Reader) {
 				Size     [2]int32
 				ZIndex   int16
 				Text2    string
-				Style    uint32
+				Style    HUDStyleFlags
 			}))(obj)).Scale)[local320]
 			*p = math.Float32frombits(read32(r))
 		}
@@ -27854,7 +27858,7 @@ func (obj *HUD) deserialize(r io.Reader) {
 		Size     [2]int32
 		ZIndex   int16
 		Text2    string
-		Style    uint32
+		Style    HUDStyleFlags
 	}))(obj)).Text) = string(local321)
 	{
 		p := &(*(*(struct {
@@ -27873,7 +27877,7 @@ func (obj *HUD) deserialize(r io.Reader) {
 			Size     [2]int32
 			ZIndex   int16
 			Text2    string
-			Style    uint32
+			Style    HUDStyleFlags
 		}))(obj)).Number
 		*p = read32(r)
 	}
@@ -27894,7 +27898,7 @@ func (obj *HUD) deserialize(r io.Reader) {
 			Size     [2]int32
 			ZIndex   int16
 			Text2    string
-			Style    uint32
+			Style    HUDStyleFlags
 		}))(obj)).Item
 		*p = read32(r)
 	}
@@ -27915,7 +27919,7 @@ func (obj *HUD) deserialize(r io.Reader) {
 			Size     [2]int32
 			ZIndex   int16
 			Text2    string
-			Style    uint32
+			Style    HUDStyleFlags
 		}))(obj)).Dir
 		*p = read32(r)
 	}
@@ -27935,7 +27939,7 @@ func (obj *HUD) deserialize(r io.Reader) {
 		Size     [2]int32
 		ZIndex   int16
 		Text2    string
-		Style    uint32
+		Style    HUDStyleFlags
 	}))(obj)).Align {
 		{
 			p := &((*(*(struct {
@@ -27954,7 +27958,7 @@ func (obj *HUD) deserialize(r io.Reader) {
 				Size     [2]int32
 				ZIndex   int16
 				Text2    string
-				Style    uint32
+				Style    HUDStyleFlags
 			}))(obj)).Align)[local323]
 			*p = math.Float32frombits(read32(r))
 		}
@@ -27975,7 +27979,7 @@ func (obj *HUD) deserialize(r io.Reader) {
 		Size     [2]int32
 		ZIndex   int16
 		Text2    string
-		Style    uint32
+		Style    HUDStyleFlags
 	}))(obj)).Offset {
 		{
 			p := &((*(*(struct {
@@ -27994,7 +27998,7 @@ func (obj *HUD) deserialize(r io.Reader) {
 				Size     [2]int32
 				ZIndex   int16
 				Text2    string
-				Style    uint32
+				Style    HUDStyleFlags
 			}))(obj)).Offset)[local324]
 			*p = math.Float32frombits(read32(r))
 		}
@@ -28016,7 +28020,7 @@ func (obj *HUD) deserialize(r io.Reader) {
 			Size     [2]int32
 			ZIndex   int16
 			Text2    string
-			Style    uint32
+			Style    HUDStyleFlags
 		}))(obj)).WorldPos).deserialize(r)
 	}); err != nil {
 		if err == io.EOF {
@@ -28040,7 +28044,7 @@ func (obj *HUD) deserialize(r io.Reader) {
 		Size     [2]int32
 		ZIndex   int16
 		Text2    string
-		Style    uint32
+		Style    HUDStyleFlags
 	}))(obj)).Size {
 		{
 			p := &((*(*(struct {
@@ -28059,7 +28063,7 @@ func (obj *HUD) deserialize(r io.Reader) {
 				Size     [2]int32
 				ZIndex   int16
 				Text2    string
-				Style    uint32
+				Style    HUDStyleFlags
 			}))(obj)).Size)[local325]
 			*p = int32(read32(r))
 		}
@@ -28081,7 +28085,7 @@ func (obj *HUD) deserialize(r io.Reader) {
 			Size     [2]int32
 			ZIndex   int16
 			Text2    string
-			Style    uint32
+			Style    HUDStyleFlags
 		}))(obj)).ZIndex
 		*p = int16(read16(r))
 	}
@@ -28112,10 +28116,10 @@ func (obj *HUD) deserialize(r io.Reader) {
 		Size     [2]int32
 		ZIndex   int16
 		Text2    string
-		Style    uint32
+		Style    HUDStyleFlags
 	}))(obj)).Text2) = string(local326)
-	{
-		p := &(*(*(struct {
+	if err := pcall(func() {
+		((*(*(struct {
 			Type HUDType
 
 			Pos      [2]float32
@@ -28131,9 +28135,13 @@ func (obj *HUD) deserialize(r io.Reader) {
 			Size     [2]int32
 			ZIndex   int16
 			Text2    string
-			Style    uint32
-		}))(obj)).Style
-		*p = read32(r)
+			Style    HUDStyleFlags
+		}))(obj)).Style).deserialize(r)
+	}); err != nil {
+		if err == io.EOF {
+			chk(io.EOF)
+		}
+		chk(fmt.Errorf("%s: %w", "github.com/dragonfireclient/mt.HUDStyleFlags", err))
 	}
 }
 
