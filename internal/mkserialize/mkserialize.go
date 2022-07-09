@@ -260,9 +260,9 @@ func genSerialize(t types.Type, expr string, pos token.Pos, doc *ast.CommentGrou
 
 		fmt.Println("if err := pcall(func() {")
 		if de {
-			fmt.Println(expr + ".deserialize(r)")
+			fmt.Println(expr + ".Deserialize(r)")
 		} else {
-			fmt.Println(expr + ".serialize(w)")
+			fmt.Println(expr + ".Serialize(w)")
 		}
 		fmt.Println("}); err != nil",
 			`{`,
@@ -642,9 +642,9 @@ func main() {
 	for i := 0; i < len(serialize); i++ {
 		for _, de := range []bool{false, true} {
 			t := serialize[i]
-			sig := "serialize(w io.Writer)"
+			sig := "Serialize(w io.Writer)"
 			if de {
-				sig = "deserialize(r io.Reader)"
+				sig = "Deserialize(r io.Reader)"
 			}
 			fmt.Println("\nfunc (obj *" + t.Obj().Name() + ") " + sig + " {")
 			pos := t.Obj().Pos()

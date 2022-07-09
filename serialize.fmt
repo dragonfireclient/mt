@@ -146,7 +146,7 @@ PointedThing	chk(writePointedThing(w, x))
 		write16(w, uint16(len(x)))
 		var b bytes.Buffer
 		for i := range x {
-			x[i].serialize(&b)
+			x[i].Serialize(&b)
 		}
 		if b.Len() > math.MaxUint32 {
 			chk(ErrTooLong)

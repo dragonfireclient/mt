@@ -108,7 +108,7 @@ PointedThing	{
 		*p = make([]NodeDef, read16(r))
 		r := &io.LimitedReader{R: r, N: int64(read32(r))}
 		for i := range *p {
-			(*p)[i].deserialize(r)
+			(*p)[i].Deserialize(r)
 		}
 		if r.N > 0 {
 			chk(fmt.Errorf("%d bytes of trailing data", r.N))
