@@ -2,21 +2,21 @@
 		_, err := w.Write([]byte{x})
 		chk(err)
 	}
-	
+
 	func write16(w io.Writer, x uint16) {
 		buf := make([]byte, 2)
 		be.PutUint16(buf, x)
 		_, err := w.Write(buf)
 		chk(err)
 	}
-	
+
 	func write32(w io.Writer, x uint32) {
 		buf := make([]byte, 4)
 		be.PutUint32(buf, x)
 		_, err := w.Write(buf)
 		chk(err)
 	}
-	
+
 	func write64(w io.Writer, x uint64) {
 		buf := make([]byte, 8)
 		be.PutUint64(buf, x)
@@ -150,7 +150,7 @@ PointedThing	chk(writePointedThing(w, x))
 		write16(w, uint16(len(x)))
 		var b bytes.Buffer
 		for i := range x {
-			x[i].serialize(&b)
+			x[i].Serialize(&b)
 		}
 		if b.Len() > math.MaxUint32 {
 			chk(ErrTooLong)
