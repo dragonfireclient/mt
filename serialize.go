@@ -2861,8 +2861,26 @@ func (obj *ToCltHP) Serialize(w io.Writer) {
 	{
 		x := (*(*(struct {
 			HP uint16
+			//mt:opt
+			DamageEffect bool
 		}))(obj)).HP
 		write16(w, uint16(x))
+	}
+	if err := pcall(func() {
+		{
+			x := (*(*(struct {
+				HP uint16
+				//mt:opt
+				DamageEffect bool
+			}))(obj)).DamageEffect
+			if x {
+				write8(w, 1)
+			} else {
+				write8(w, 0)
+			}
+		}
+	}); err != nil && err != io.EOF {
+		chk(err)
 	}
 }
 
@@ -2870,8 +2888,29 @@ func (obj *ToCltHP) Deserialize(r io.Reader) {
 	{
 		p := &(*(*(struct {
 			HP uint16
+			//mt:opt
+			DamageEffect bool
 		}))(obj)).HP
 		*p = read16(r)
+	}
+	if err := pcall(func() {
+		{
+			p := &(*(*(struct {
+				HP uint16
+				//mt:opt
+				DamageEffect bool
+			}))(obj)).DamageEffect
+			switch n := read8(r); n {
+			case 0:
+				*p = false
+			case 1:
+				*p = true
+			default:
+				chk(fmt.Errorf("invalid bool: %d", n))
+			}
+		}
+	}); err != nil && err != io.EOF {
+		chk(err)
 	}
 }
 
@@ -34979,22 +35018,23 @@ func (obj *ToolCaps) Serialize(w io.Writer) {
 		ow := w
 		w := new(bytes.Buffer)
 		/*
-		   if r.N > 0 { (*(*(struct {
-		   	//mt:if _ = %s; false
-		   	NonNil	bool
+			if r.N > 0 { (*(*(struct {
+				//mt:if _ = %s; false
+				NonNil	bool
 
-		   	AttackCooldown	float32
-		   	MaxDropLvl	int16
+				AttackCooldown	float32
+				MaxDropLvl	int16
 
-		   	//mt:len32
-		   	GroupCaps	[]ToolGroupCap
+				//mt:len32
+				GroupCaps	[]ToolGroupCap
 
-		   	//mt:len32
-		   	DmgGroups	[]Group
+				//mt:len32
+				DmgGroups	[]Group
 
-		   	//mt:32tou16
-		   	PunchUses	int32
-		   }))(obj)).NonNil = true}; /**/{
+				//mt:32tou16
+				PunchUses	int32
+			}))(obj)).NonNil = true}; /*
+		*/{
 			if (*(*(struct {
 				//mt:if _ = %s; false
 				NonNil bool
