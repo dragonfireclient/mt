@@ -16,19 +16,19 @@ var ErrTooLong = errors.New("len too long")
 var be = binary.BigEndian
 
 type serializer interface {
-	serialize(w io.Writer)
+	Serialize(w io.Writer)
 }
 
 func serialize(w io.Writer, s interface{}) error {
-	return pcall(func() { s.(serializer).serialize(w) })
+	return pcall(func() { s.(serializer).Serialize(w) })
 }
 
 type deserializer interface {
-	deserialize(r io.Reader)
+	Deserialize(r io.Reader)
 }
 
 func deserialize(r io.Reader, d interface{}) error {
-	return pcall(func() { d.(deserializer).deserialize(r) })
+	return pcall(func() { d.(deserializer).Deserialize(r) })
 }
 
 type serializationError struct {

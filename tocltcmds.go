@@ -758,7 +758,7 @@ type ToCltMinimapModes struct {
 
 var _ serializer = (*ToCltMinimapModes)(nil)
 
-func (cmd *ToCltMinimapModes) serialize(w io.Writer) {
+func (cmd *ToCltMinimapModes) Serialize(w io.Writer) {
 	buf := make([]byte, 4)
 	if len(cmd.Modes) > math.MaxUint16 {
 		chk(ErrTooLong)
@@ -774,7 +774,7 @@ func (cmd *ToCltMinimapModes) serialize(w io.Writer) {
 
 var _ deserializer = (*ToCltMinimapModes)(nil)
 
-func (cmd *ToCltMinimapModes) deserialize(r io.Reader) {
+func (cmd *ToCltMinimapModes) Deserialize(r io.Reader) {
 	buf := make([]byte, 4)
 	_, err := io.ReadFull(r, buf)
 	chk(err)
