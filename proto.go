@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"io"
 	"net"
+	"sync"
 
 	"github.com/dragonfireclient/mt/rudp"
 )
@@ -19,7 +20,7 @@ type Peer struct {
 	*rudp.Conn
 }
 
-func SerializePkt(pkt Cmd, w io.WriteCloser, toSrv bool) bool {
+func SerializePkt(pkt Cmd, w io.WriteCloser, toSrv bool, wg *sync.WaitGroup) bool {
 	var cmdNo uint16
 	if toSrv {
 		cmdNo = pkt.(ToSrvCmd).toSrvCmdNo()
@@ -31,7 +32,9 @@ func SerializePkt(pkt Cmd, w io.WriteCloser, toSrv bool) bool {
 		return false
 	}
 
+	wg.Add(1)
 	go func() (err error) {
+		defer wg.Done()
 		// defer w.CloseWithError(err)
 		defer w.Close()
 
@@ -48,7 +51,7 @@ func SerializePkt(pkt Cmd, w io.WriteCloser, toSrv bool) bool {
 
 func (p Peer) Send(pkt Pkt) (ack <-chan struct{}, err error) {
 	r, w := io.Pipe()
-	if !SerializePkt(pkt.Cmd, w, p.IsSrv()) {
+	if !SerializePkt(pkt.Cmd, w, p.IsSrv(), &sync.WaitGroup{}) {
 		return nil, p.Close()
 	}
 
